@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Pruebas</title> <!--lo que pone arriba en la pestaña-->
+        <meta name="description" content="Mis experimentos de autodidacta">
+
+        <!--establecer clases para usarse y modificarse mas tarde CSS-->
+        <style> 
+        .myDivision {
+            border: 5px outset rgb(0, 0, 0);
+            background-color: rgb(0, 247, 255);    
+            text-align: center;
+            width: 300;
+        }
+        /* margin: margen horizontal, padding: margen vertical */
+        .Tc_o {
+            color: black;
+            border: 0px solid black; 
+            margin: 0px;
+            padding: 0px;
+        }
+        .cabecera{
+            position: fixed;
+            width: 100%;
+            background-color: #ff95dc;
+            border-bottom: 3px solid rgb(0, 0, 0);
+            transform: translate(-8px, -10px);
+        }
+        .derecha {
+            position: absolute;
+            border: 0px solid black;
+            left: 100%;
+            transform: translate(-115%, -105%);
+        }
+        .agrupacionHorizontal{
+            position: absolute;
+            width: 100%;
+            border: 0px solid rgb(208, 255, 0);
+            transform: translate(-8px, 70px);
+        }
+        .mitadA{
+            background-color: #000000;
+            width: 40%;
+            float: left;
+        }
+        .mitadB{
+            width: 60%;
+            float: left; /*esto hace que se acumulen horizontalmente*/
+        }
+        </style>
+
+    </head>
+    
+    <body id="color_del_fondo" style="background-color: #ff95dc;">
+
+        <main> <!--la pagina como tal-->
+        <div class="agrupacionHorizontal"> <!--la primera division de la pagina-->
+            <div class="mitadA">
+                <!--imagen con source en scr-->
+                <img src="guia_body.png" alt="el club de las chabalas estas" width="600"> 
+                <!--alt: texto en caso de que la imagen no cargue-->
+
+                <button onclick="alert('Just Monika')"> hablar </button> <!--alert: ventana emergente-->
+            </div>
+            <div class="mitadB">
+
+                <div class="myDivision"> <!--division con el estilo de la clase establecida anteriormente-->
+                    <h1>Enlaces</h1>
+                    <p><a href="https://htmlg.com/html-editor/">html editor</a></p> <!--href: poner un enlace al texto-->
+                    <p><a href="https://www.w3schools.com/html/default.asp">docs w3schools</a></p>
+                </div>
+                
+                <table style="background-color:rgb(119, 119, 119)" > <!--tabla-->
+                    <colgroup>
+                        <col span="2" style="background-color:rgb(252, 125, 125)" width="60">
+                        <col span="1" style="background-color:rgb(0, 138, 62)" width="10">
+                    </colgroup>
+                    <tr> <!--fila con el valor de cada columna en orden-->
+                        <th>11</th>
+                        <th>12</th>
+                        <th>13</th>
+                        <th>14</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: center;">22</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>32</td>
+                        <td><strong>33</strong></td>
+                        <td>34  J</td>
+                    </tr>
+                    <tr>
+                        <td><font size="+10" >41</font></td>
+                        <td>42</td>
+                        <td>43  J</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        </main>
+
+        <header> <!--esto separa la cabecera de la pagina-->
+            <div class="cabecera">
+                <!--h1: titulo 1-->
+                <h1 class="Tc_o" style="text-align: center;" title="que mira bobo"> <!--title: lo que pone cuando dejas el raton encima-->
+                    <font size="+10">Just Monika</font> <!--font: modificar el texto-->
+                </h1>
+                <p class="Tc_o" style="text-align: center;" title="anda pa alla">
+                    remake the mob bote
+                </p>
+    
+                <div class="derecha">
+                    <!--boton que llama a la funcion al ser pulsado-->
+                    <button id="claro/oscuro" type="button" 
+                    onclick="writeFunction()" >modo claro</button>
+                    <!--el script writeFunction, escrito en javaScript-->
+                    <script> 
+                        function writeFunction() {
+                            let bodyId = document.getElementById("color_del_fondo");
+                            let texto = document.getElementsByClassName("Tc_o");
+                            let cabeceraID = document.getElementsByClassName("cabecera")[0];
+                            //"#1a0018"
+                            if (document.getElementById("claro/oscuro").innerHTML === "modo claro"){
+                                bodyId.style.backgroundColor = "#1a0018";
+                                document.getElementById("claro/oscuro").innerHTML = "modo oscuro";
+                                for (i=0; i< texto.length; i++){ //cambiar todos los elementos con la clase individualmente
+                                    texto[i].style.color = "white";
+                                }
+                                cabeceraID.style.borderColor = "white";
+                                cabeceraID.style.backgroundColor = "#1a0018";
+                            }else{
+                                bodyId.style.backgroundColor = "#ff95dc";
+                                document.getElementById("claro/oscuro").innerHTML = "modo claro";
+                                for (i=0; i< texto.length; i++){ //usando i para poder añadir N elementos a dicha clase
+                                    texto[i].style.color = "black";
+                                }
+                                cabeceraID.style.borderColor = "black";
+                                cabeceraID.style.backgroundColor = "#ff95dc";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </header>
+
+    </body>
+</html>

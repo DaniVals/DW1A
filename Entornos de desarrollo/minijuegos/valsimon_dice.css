@@ -1,0 +1,75 @@
+/*valores fijos*/
+.centradoAbajo{
+    position: absolute;
+}
+.centradoCentro{
+    position: absolute;
+}
+
+
+/*tamaño maximo*/
+@media (min-width: 1000px){ 
+    .centradoAbajo{
+        left: 50%;
+        width: 450px;
+        float: left;
+        bottom: calc(10%);
+    }
+    .centradoCentro{
+        width: 400px;
+        left: 50%;
+        float: left;
+        bottom: calc(50%);
+        transform: translate(6px);
+    }
+    #reinicio {
+        min-width: 400px;
+        min-height: 100px;
+        max-width: 400px;
+        max-height: 100px;
+    }
+}
+/*tamaño medio*/
+@media (min-width:600px) and (max-width: 999px){
+    .centradoAbajo{
+        left: 65%;
+        width: 250px;
+        float: left;
+        bottom: calc(10%);
+    }
+    .centradoCentro{
+        left: 65%;
+        float: left;
+        bottom: calc(50%);
+        width: 200px;
+    }
+    #reinicio {
+        min-width: 200px;
+        min-height: 100px;
+        max-width: 200px;
+        max-height: 100px;
+    }
+}
+/*tamaño minimo o movil*/
+@media (max-width: 599px){
+    .centradoAbajo{
+        left: 50%;
+        width: 210px;
+        float: left;
+        bottom: calc(10%);
+        transform: translate(-50%);
+    }
+    .centradoCentro{
+        left: 50%;
+        float: left;
+        top: calc(10%);
+        width: 200px;
+        transform: translate(-50%);
+    }
+    #reinicio {
+        min-width: 200px;
+        min-height: 100px;
+        max-width: 200px;
+        max-height: 100px;
+    }
+}
