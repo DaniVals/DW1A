@@ -1,0 +1,6 @@
+public class C00_hello_world {
+	public static void main(String[] args) {
+		//referencia :O
+		System.out.println("Just Monika");
+	}
+}
