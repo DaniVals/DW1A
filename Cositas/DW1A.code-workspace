@@ -1,0 +1,38 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"java.debug.settings.onBuildFailureProceed": true,
+		"workbench.activityBar.visible": true,
+		"workbench.colorCustomizations": {
+			"[Default Dark Modern]": {
+				"editor.background": "#090909",
+				
+			}
+
+			
+		} ,
+		"folder-path-color.folders": [
+
+			{ 
+				"path": "Entornos de desarrollo/minijuegos", 
+				"color": "red", 
+				"symbol": "CT"
+			},
+			{ 
+				"path": "Entornos de desarrollo", 
+				"color": "magenta", 
+				"symbol": "📟"
+			},
+			{ 
+				"path": "Programacion", 
+				"color": "green", 
+				"symbol": "💻"
+			},
+			
+		]
+	}
+}

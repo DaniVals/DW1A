@@ -1,2 +1,0 @@
-Tutorial para configurar github en VS:
-    https://www.youtube.com/watch?v=Ei1y51K8jQk

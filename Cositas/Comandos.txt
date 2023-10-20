@@ -1,0 +1,9 @@
+Tutorial para configurar github en VS:
+    https://www.youtube.com/watch?v=Ei1y51K8jQk
+
+Abrir settings.json:
+    pulsar crtl+shift+p
+    poner esto: Preferences: Open User Settings (JSON)
+
+Conversor colores
+    https://htmlcolorcodes.com/
