@@ -7,14 +7,13 @@ public class PruebaObjeto {
     public static void main(String[] args) {
         
             //declarar una referencia (direccion de memoria del objeto)
-            Bicycle bici1=null, bici2=null, bici3=null;
+            Bicycle bici1=null, bici2=null;
             //int velocidad;
             Scanner teclado=new Scanner(System.in);
             
             //crear objetos usando el constructor
             bici1=new Bicycle(1,0,3);
             bici2=new Bicycle(4,0,6);
-            bici3=bici1;
 
 
             /*
