@@ -9,13 +9,17 @@
 		"workbench.activityBar.visible": true,
 		"workbench.colorCustomizations": {
 			"[Default Dark Modern]": {
-				"editor.background": "#090909",
+				"editor.background": "#000000",
 				
 			}
-
-			
 		} ,
 		"folder-path-color.folders": [
+
+			{ 
+				"path": "Cositas", 
+				"color": "blue", 
+				"symbol": "📄"
+			},
 
 			{ 
 				"path": "Entornos de desarrollo/minijuegos", 
@@ -26,6 +30,18 @@
 				"path": "Entornos de desarrollo", 
 				"color": "magenta", 
 				"symbol": "📟"
+			},
+
+
+			{ 
+				"path": "Programacion/Java/EjerciciosJava/src/EjerciciosClass", 
+				"color": "green", 
+				"symbol": "🆑"
+			},
+			{ 
+				"path": "Programacion/Java/EjerciciosJava/src/EjerciciosObjetos", 
+				"color": "green", 
+				"symbol": "🅾"
 			},
 			{ 
 				"path": "Programacion", 

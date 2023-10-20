@@ -5,5 +5,10 @@ Abrir settings.json:
     pulsar crtl+shift+p
     poner esto: Preferences: Open User Settings (JSON)
 
+Configuracion personalizada en .code-workspace
+
 Conversor colores
     https://htmlcolorcodes.com/
+
+buscador de emojis
+    https://emojicombos.com/txt
