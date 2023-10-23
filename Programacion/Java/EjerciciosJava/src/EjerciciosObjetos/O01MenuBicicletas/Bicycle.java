@@ -1,4 +1,4 @@
-package EjerciciosObjetos.O00MenuBicicletas;
+package EjerciciosObjetos.O01MenuBicicletas;
 
 public class Bicycle {
 

@@ -71,13 +71,13 @@
 			}
 		} ,
 		"folder-path-color.folders": [
-
+			//carpeta de cosas random
 			{ 
-				"path": "Cositas", 
+				"path": "AAA", 
 				"color": "blue", 
 				"symbol": "📄"
 			},
-
+			//carpeta de entornos y juegos en HTML
 			{ 
 				"path": "Entornos de desarrollo/minijuegos", 
 				"color": "red", 
@@ -88,8 +88,7 @@
 				"color": "magenta", 
 				"symbol": "📟"
 			},
-
-
+			//carpeta de programacion
 			{ 
 				"path": "Programacion/Java/EjerciciosJava/src/EjerciciosClass", 
 				"color": "green", 
@@ -107,7 +106,13 @@
 			},
 			
 		],
+		//plugin carpetas e iconos
 		"material-icon-theme.hidesExplorerArrows": true,
-		"material-icon-theme.opacity": 1
+		"material-icon-theme.opacity": 1,
+		"material-icon-theme.files.associations": {
+			"*.js": "javascript",
+			"fileName.ts": "angular"
+		}
+		
 	}
 }
