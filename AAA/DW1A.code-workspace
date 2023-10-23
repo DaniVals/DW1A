@@ -13,7 +13,7 @@
 				//interfaz general
 				"sideBar.background": "#000000",		//panel izquierda (archivos)
 				"sideBar.foreground": "#ffffff",		//texto panel izquierda (changes commit)
-
+				
 				"tab.inactiveBackground": "#101010",	//pestañas inactivas
 				"tab.activeBackground": "#000000",		//pestaña activa
 
@@ -67,28 +67,31 @@
 				
 				"errorLens.warningBackground": "#101000",	//fondo avisos
 				"errorLens.warningForeground": "#999900",	//texto explica avisos*/
+
+				
 				
 			}
 		} ,
 		"folder-path-color.folders": [
-			//carpeta de cosas random
+			//cosas random
 			{ 
 				"path": "AAA", 
 				"color": "blue", 
 				"symbol": "📄"
 			},
-			//carpeta de entornos y juegos en HTML
+			//bases
 			{ 
-				"path": "Entornos de desarrollo/minijuegos", 
-				"color": "red", 
-				"symbol": "🙎‍♂️"
+				"path": "Bases de datos", 
+				"color": "yellow", 
+				"symbol": "🔒"
 			},
+			//entornos
 			{ 
 				"path": "Entornos de desarrollo", 
 				"color": "magenta", 
 				"symbol": "📟"
 			},
-			//carpeta de programacion
+			//programacion
 			{ 
 				"path": "Programacion/Java/EjerciciosJava/src/EjerciciosClass", 
 				"color": "green", 
@@ -104,14 +107,23 @@
 				"color": "green", 
 				"symbol": "💻"
 			},
+			//jueguitos personales jejeje
+			{ 
+				"path": "Proyectos personales", 
+				"color": "grey", 
+				"symbol": "🕹️"
+			},
 			
 		],
 		//plugin carpetas e iconos
 		"material-icon-theme.hidesExplorerArrows": true,
 		"material-icon-theme.opacity": 1,
-		"material-icon-theme.files.associations": {
-			"*.js": "javascript",
-			"fileName.ts": "angular"
+		"material-icon-theme.folders.associations": {
+			"AAA": "config",
+			"Bases de datos": "database",
+			"Entornos de desarrollo": "admin",
+			"EjerciciosJava": "java",
+			"Proyectos personales": "admin",
 		}
 		
 	}
