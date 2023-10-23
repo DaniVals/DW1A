@@ -43,5 +43,3 @@ public class PruebaObjeto {
         teclado.close();
     }
 }
-//menu para 2 bicis cambiar marcha, acelerar, frenar, mostrar datos, salir
-//validar estos datos, la marcha entre 1 y 7, acelerar y frenar positivo

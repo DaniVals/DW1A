@@ -1,0 +1,42 @@
+.body{
+    background-color: #000835;
+}
+.barraIzquierda{
+    top: 2%;
+    left: 1%;
+    right: 75%;
+    bottom: 2%;
+    position: absolute;
+    
+    background-color: aqua;
+    border-style: solid;
+    border: 5px outset #ffffff;
+    border-radius: 10px;
+
+    padding: 10px;
+    float: left;
+
+}
+.main{
+    
+    top: 20%;
+    left: 30%;
+    right: 10%;
+    position: absolute;
+    padding: 10px;
+
+    background-color: #0000ff;
+    color: #ffffff;
+    border-style: solid;
+    border: 5px outset #ffffff;
+    border-radius: 10px;
+}
+.opciones{
+    left: -5px;
+    bottom: -50px;
+
+    padding: 2px;
+    float: right;
+    position: relative;
+    text-align: right;
+}
