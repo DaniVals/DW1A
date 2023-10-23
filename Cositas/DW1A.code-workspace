@@ -49,6 +49,11 @@
 				"symbol": "💻"
 			},
 			
-		]
+		],
+		"material-icon-theme.hidesExplorerArrows": true,
+		"material-icon-theme.languages.associations": {
+			
+		},
+		"material-icon-theme.opacity": 1
 	}
 }
