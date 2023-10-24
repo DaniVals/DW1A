@@ -6,13 +6,15 @@ public class Pokemon{
     private int ataque;
     private int defensa;
     private int vida;
+    private int velocidad;
 
     //constructor
-    public Pokemon(char tipo, int ataque, int defensa, int vida) {
+    public Pokemon(char tipo, int ataque, int defensa, int vida, int velocidad) {
         this.tipo = tipo;
         this.ataque = ataque;
         this.defensa = defensa;
         this.vida = vida;
+        this.velocidad = velocidad;
     }
 
     //getters
@@ -28,6 +30,9 @@ public class Pokemon{
     public int getVida() {
         return vida;
     }
+    public int getVelocidad() {
+        return velocidad;
+    }
 
     //esto hay que llamarlo
     public void mostrarStats(){
@@ -35,11 +40,12 @@ public class Pokemon{
         System.out.println("Atk: "+ataque);
         System.out.println("Def: "+defensa);
         System.out.println("PVs: "+vida);
+        System.out.println("vel: "+velocidad);
     }
     //esto se puede llamar normal, pero se llama solo al hacer print
     @Override
     public String toString() {
-        return "Pokemon [tipo=" + tipo + ", ataque=" + ataque + ", defensa=" + defensa + ", vida=" + vida + "]";
+        return "Pokemon [tipo=" + tipo + ", ataque=" + ataque + ", defensa=" + defensa + ", vida=" + vida + ", velocidad=" + velocidad + "]";
     }
     
 
@@ -53,11 +59,17 @@ public class Pokemon{
         System.out.println("tu pokemon se ha hechado una siesta, ahora tiene "+defensa+" puntos de defensa");
     }
 
+    //al poner [NombreClase] seria como un nuevo tipo de variable ademas de int/string/bool...
     public int lucha(Pokemon pokemonCombatir){
         //this es el pokemon que empieza el combate y pokemonCombatir el recibe el primer golpe
         //ganador elije quien ha ganado la batalla
         //turno decide a que pokemon le toca atacar
         int ganador=0, turno=0, dañoTotal=0;
+        if(this.velocidad>=pokemonCombatir.velocidad){
+            turno=1;
+        }else{
+            turno=2;
+        }
         while(this.vida>0&&pokemonCombatir.vida>0){//rompe el bucle cuando uno llega a 0 de vida
             if (turno==1){
                 dañoTotal=(this.ataque-pokemonCombatir.defensa);

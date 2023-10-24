@@ -18,7 +18,7 @@ public class Bicycle {
     }
         
     // Metodos: sirve para cambiar un objeto aunque este privado
-    //lo de dentro del parentesis se llama argumento
+    //lo de dentro del parentesis se llama parametros
     public void setCadence(int newValue) {
         cadence = newValue;
     }
