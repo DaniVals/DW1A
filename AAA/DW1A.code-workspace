@@ -2,6 +2,10 @@
 	"folders": [
 		{
 			"path": ".."
+		},
+		{
+			"name": "danivals.github.io",
+			"path": "../../danivals.github.io"
 		}
 	],
 	"settings": {
@@ -113,6 +117,21 @@
 				"color": "grey", 
 				"symbol": "🕹️"
 			},
+
+
+			
+			//pagina inicial
+			{ 
+				"path": "index.html", 
+				"color": "red", 
+				"symbol": "👑"
+			},
+			//el readme
+			{ 
+				"path": "README.md", 
+				"color": "blue", 
+				"symbol": "📄"
+			},
 			
 		],
 		//plugin carpetas e iconos
@@ -122,6 +141,7 @@
 			"AAA": "config",
 			"Bases de datos": "database",
 			"Lenguajes de Marcas": "css",
+			"Entornos de desarrollo": "src",
 			"EjerciciosJava": "java",
 			"Proyectos personales": "admin",
 		}
