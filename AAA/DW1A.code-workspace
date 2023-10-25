@@ -2,6 +2,10 @@
 	"folders": [
 		{
 			"path": ".."
+		},
+		{
+			"name": "danivals.github.io",
+			"path": "../../danivals.github.io"
 		}
 	],
 	"settings": {
@@ -121,7 +125,7 @@
 		"material-icon-theme.folders.associations": {
 			"AAA": "config",
 			"Bases de datos": "database",
-			"Entornos de desarrollo": "admin",
+			"Entornos de desarrollo": "src",
 			"EjerciciosJava": "java",
 			"Proyectos personales": "admin",
 		}
