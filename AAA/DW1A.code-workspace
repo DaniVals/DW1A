@@ -144,7 +144,7 @@
 			"Entornos de desarrollo": "src",
 			"EjerciciosJava": "java",
 			"Proyectos personales": "admin",
-		}
-		
+		},
+		"liveServer.settings.multiRootWorkspaceName": "danivals.github.io",
 	}
 }
