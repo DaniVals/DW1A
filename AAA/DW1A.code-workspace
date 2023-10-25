@@ -87,7 +87,7 @@
 			},
 			//entornos
 			{ 
-				"path": "Entornos de desarrollo", 
+				"path": "Lenguajes de Marcas", 
 				"color": "magenta", 
 				"symbol": "📟"
 			},
@@ -121,7 +121,7 @@
 		"material-icon-theme.folders.associations": {
 			"AAA": "config",
 			"Bases de datos": "database",
-			"Entornos de desarrollo": "admin",
+			"Lenguajes de Marcas": "css",
 			"EjerciciosJava": "java",
 			"Proyectos personales": "admin",
 		}

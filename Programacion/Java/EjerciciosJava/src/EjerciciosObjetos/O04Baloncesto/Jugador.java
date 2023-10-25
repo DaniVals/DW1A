@@ -6,6 +6,7 @@ public class Jugador {
     private double porcentajeDoble;
     private double porcentajeTriple;
 
+    //constructores
     public Jugador() {
         this.altura = 1.85;
         this.porcentajeDoble = 0.4;
@@ -16,7 +17,21 @@ public class Jugador {
         this.porcentajeDoble = porcentajeDoble;
         this.porcentajeTriple = porcentajeTriple;
     }
-
+    
+    //setters
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+    public void setPorcentajeDoble(double porcentajeDoble) {
+        this.porcentajeDoble = porcentajeDoble;
+    }
+    public void setPorcentajeTriple(double porcentajeTriple) {
+        this.porcentajeTriple = porcentajeTriple;
+    }
+    //getters
+    public double getAltura() {
+        return altura;
+    }
     public double getPorcentajeDoble() {
         return porcentajeDoble;
     }
@@ -25,39 +40,49 @@ public class Jugador {
     }
 
     public void entrenarDobles() {
-        this.porcentajeDoble += 0.05;
+        if(Math.random()<0.5){
+            this.porcentajeDoble += 0.05;
+        }
         if(this.porcentajeDoble>1){
             this.porcentajeDoble = 1;
         }
     }
     public void entrenarTriples() {
-        this.porcentajeTriple += 0.05;
+        if(Math.random()<0.5){
+            this.porcentajeTriple += 0.05;
+        }
         if(this.porcentajeTriple>1){
             this.porcentajeTriple = 1;            
         }
     }
 
     public void entrenarDiasDobles(int dias) {
-        this.porcentajeDoble += 0.05*dias;
-        if(this.porcentajeDoble>1){
-            this.porcentajeDoble = 1;            
+        for(int i=0; i<dias; i++){
+            this.entrenarDobles();
         }
     }
     public void entrenarDiasTriples(int dias) {
-        this.porcentajeTriple += 0.05*dias;
-        if(this.porcentajeTriple>1){
-            this.porcentajeTriple = 1;
+        for(int i=0; i<dias; i++){
+            this.entrenarTriples();
         }
     }
 
     public int lanzarDobles() {
         int canasta;
-        this.porcentajeDoble += 0.005;
+        if(Math.random()<this.porcentajeDoble){//ver si falla
+            canasta=0;
+        }else{
+            canasta=1;
+        }
         return canasta;
     }
     public int lanzarTriples() {
         int canasta;
-        this.porcentajeTriple += 0.005;
+        if(Math.random()<this.porcentajeTriple){//ver si falla
+            canasta=0;
+        }else{
+            canasta=1;
+        }
         return canasta;
     }
 

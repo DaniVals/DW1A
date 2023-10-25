@@ -3,7 +3,7 @@ package EjerciciosObjetos.O03PuntosYTriangulos;
 public class Main {
     public static void main(String[] args) {
 
-        Punto p1, p2, p3;
+        Punto p1;
         Rectangulo r1, r2;
 
         p1 = new Punto(3, 6);
