@@ -117,6 +117,21 @@
 				"color": "grey", 
 				"symbol": "🕹️"
 			},
+
+
+			
+			//pagina inicial
+			{ 
+				"path": "index.html", 
+				"color": "red", 
+				"symbol": "👑"
+			},
+			//el readme
+			{ 
+				"path": "README.md", 
+				"color": "blue", 
+				"symbol": "📄"
+			},
 			
 		],
 		//plugin carpetas e iconos
