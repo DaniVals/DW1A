@@ -5,7 +5,6 @@
     top: 2%;
     left: 1%;
     right: 75%;
-    bottom: 2%;
     position: absolute;
     
     background-color: aqua;
@@ -18,11 +17,10 @@
 
 }
 .main{
-    
     top: 20%;
     left: 30%;
     right: 10%;
-    position: absolute;
+    position: fixed;
     padding: 10px;
 
     background-color: #0000ff;

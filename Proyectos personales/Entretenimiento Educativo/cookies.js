@@ -156,10 +156,6 @@ function onLoadMain(){
     username = getCookie("username");
     activeDialogue = "Default";
     puntuacionMatematicasI = getCookie("puntuacionMatematicasI")
-    
-    console.log("cargar pagina");
-    console.log(puntuacionMatematicasI)
-    console.log(activeDialogue)
 
     //mostrar stats 
     mostrarStats()
@@ -194,7 +190,6 @@ function mostrarStats(stat){
         textoMatesI.innerHTML = ("Matematicas I: "+ puntuacionMatematicasI)
     }
 }
-
 function resetCookie(){ //reiniciar cookies de forma manual
     console.log("reseteando cookies")
     setCookie("username", null, 0)

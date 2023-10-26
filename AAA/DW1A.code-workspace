@@ -145,6 +145,7 @@
 			"EjerciciosJava": "java",
 			"Proyectos personales": "admin",
 		},
-		"liveServer.settings.multiRootWorkspaceName": "danivals.github.io",
+		//"liveServer.settings.multiRootWorkspaceName": "danivals.github.io",
+		"liveServer.settings.multiRootWorkspaceName": "DW1A",
 	}
 }
