@@ -41,7 +41,7 @@ public class Jugador {
 
     public void entrenarDobles() {
         if(Math.random()<0.5){
-            this.porcentajeDoble += 0.05;
+            this.porcentajeDoble += 0.05f;
         }
         if(this.porcentajeDoble>1){
             this.porcentajeDoble = 1;
@@ -49,7 +49,7 @@ public class Jugador {
     }
     public void entrenarTriples() {
         if(Math.random()<0.5){
-            this.porcentajeTriple += 0.05;
+            this.porcentajeTriple += 0.05f;
         }
         if(this.porcentajeTriple>1){
             this.porcentajeTriple = 1;            

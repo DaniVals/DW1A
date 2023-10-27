@@ -13,21 +13,21 @@
     <div class="main">
         
         <h1 id="MostrarInput" style="float: right;"></h1>
-        <h2 id="MostrarSolucion"></h2>
+        <h2 id="MostrarSolucion">Pulsa cualquier boton para empezar</h2>
         
-        <button id="1" onclick="empezarMatesI(1)">1</button>
-        <button id="2" onclick="empezarMatesI(2)">2</button>
-        <button id="3" onclick="empezarMatesI(3)">3</button>
-        <button id="4" onclick="empezarMatesI(4)">4</button>
-        <button id="5" onclick="empezarMatesI(5)">5</button>
-        <button id="enviar" onclick="empezarMatesI('enviar')">✔️</button>
-        <button id="6" onclick="empezarMatesI(6)">6</button>
-        <button id="7" onclick="empezarMatesI(7)">7</button>
-        <button id="8" onclick="empezarMatesI(8)">8</button>
-        <button id="9" onclick="empezarMatesI(9)">9</button>
-        <button id="0" onclick="empezarMatesI(0)">0</button>
-        <button id="botonbug" onclick="empezarMatesI('bug')" style="display:none;">.</button>
-        <button id="signo" onclick="empezarMatesI('signo')">➖</button>
+        <button id="1" onclick="pulsarMates(1)">1</button>
+        <button id="2" onclick="pulsarMates(2)">2</button>
+        <button id="3" onclick="pulsarMates(3)">3</button>
+        <button id="4" onclick="pulsarMates(4)">4</button>
+        <button id="5" onclick="pulsarMates(5)">5</button>
+        <button id="enviar" onclick="pulsarMates('enviar')">✔️</button>
+        <button id="6" onclick="pulsarMates(6)">6</button>
+        <button id="7" onclick="pulsarMates(7)">7</button>
+        <button id="8" onclick="pulsarMates(8)">8</button>
+        <button id="9" onclick="pulsarMates(9)">9</button>
+        <button id="0" onclick="pulsarMates(0)">0</button>
+        <button id="botonbug" onclick="pulsarMates('bug')" style="display:none;">.</button>
+        <button id="signo" onclick="pulsarMates('signo')">➖</button>
     
     </div>
     <div class="tiempo">
@@ -38,6 +38,7 @@
     <div class="barraIzquierda">
         <!--estadisticas del jugador-->
         <h2 id="mostrarNombre" onclick="volverMain('Default')"></h2>
+        <h3 id="mostrarDificultad"></h3>
         <h3 id="mostrarPuntos"></h3>
         <h3 id="mostrarAciertos"></h3>
 

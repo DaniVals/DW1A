@@ -11,8 +11,8 @@ public class Main {
         System.out.println(j1);
         System.out.println(j2);
 
-        j1.entrenarDiasTriples(6);
-        j2.entrenarDiasDobles(6);
+        j1.entrenarDiasTriples(16);
+        j2.entrenarDobles();
         
         System.out.println(j1);
         System.out.println(j2);

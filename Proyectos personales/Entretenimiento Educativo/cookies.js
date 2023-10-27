@@ -149,9 +149,6 @@ function seleccionarMinijuego(juegoSelect){
 }
 
 function onLoadMain(){
-    //acortar texto
-    let textoNombre = document.getElementById("mostrarNombre");
-
     //cojer cookies
     username = getCookie("username");
     activeDialogue = "Default";
@@ -165,6 +162,8 @@ function onLoadMain(){
         activeDialogue="PrimeraVez01";  //cargar el dialogo de la primera vez al entrar el la pagina
         puntuacionMatematicasI = -1;    //establecer variables iniciales
         setCookie("puntuacionMatematicasI", puntuacionMatematicasI, 30)
+        setCookie("jugadoMatematicasI", 0, 30)
+        setCookie("MatematicasIBug", 0, 30)
     }else{ 
         if (puntuacionMatematicasI<=0) { //detecta si se han completado suficientes ejercicios matematicos
             
@@ -183,17 +182,18 @@ function mostrarStats(stat){
     username = getCookie("username");
     puntuacionMatematicasI = getCookie("puntuacionMatematicasI")
 
-    if (username != null){
-        textoNombre.innerHTML = ("Hola "+ username)
-    }
-    if (puntuacionMatematicasI <= 0){
+    textoNombre.innerHTML = ("Hola "+ username)
+    if (puntuacionMatematicasI >= 0){
         textoMatesI.innerHTML = ("Matematicas I: "+ puntuacionMatematicasI)
     }
 }
-function resetCookie(){ //reiniciar cookies de forma manual
+function resetCookie(){ //reiniciar cookies de forma manual 
     console.log("reseteando cookies")
-    setCookie("username", null, 0)
-    setCookie("puntuacionMatematicasI", -1, 30)
+    //listado de cookies y su valor defualt
+    //setCookie("username", null, 0) //el nombre del usuario
+    setCookie("puntuacionMatematicasI", -1, 30) //la puntuacion de matematicas I
+    setCookie("jugadoMatematicasI", 0, 30) //si ha jugado a matematicas I (0-> no 1-> primera vez por lo que toca dialogo 2-> ya lo ha jugado )
+    setCookie("MatematicasIBug", 0, 30) //si ha desbloqueado el menu de bug de matematicas
 }
 function setCookie(cname,cvalue,exdays) { //crear y establecer cookies
     const d = new Date();
