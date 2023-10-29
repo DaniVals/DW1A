@@ -1,11 +1,5 @@
 package EjerciciosObjetos.O05Automovil;
 
-/*
-Un método para calcular el tiempo estimado de llegada, utilizando
-como parámetro la distancia a recorrer en kilómetros. El tiempo
-estimado se calcula como el cociente entre la distancia a recorrer y
-la velocidad actual.
-*/
 public class Main {
     public static void main(String[] args) {
 

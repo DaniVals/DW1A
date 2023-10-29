@@ -19,6 +19,8 @@ function skipNextDialogue(opcion){ //saltar el dialogo
     let p4 = document.getElementById("p4MainBox");
     let p5 = document.getElementById("p5MainBox");
     
+    let sonidoS = document.getElementById("sonidoSelect");
+    
     p5.style.color = "#000000";
     
     //acortar texto opciones y "escoderlos"
@@ -48,6 +50,8 @@ function skipNextDialogue(opcion){ //saltar el dialogo
             //opciones
             skipButton.innerHTML = "Siguiente";
             activeDialogue = "PrimeraVez02"
+            sonidoS.load()
+            sonidoS.play()
         break; 
         case "PrimeraVez02":
             //texto
@@ -58,17 +62,20 @@ function skipNextDialogue(opcion){ //saltar el dialogo
             //opciones
             skipButton.innerHTML = "Siguiente";
             activeDialogue = "PrimeraVez03"
+            sonidoS.load()
+            sonidoS.play()
         break; 
         case "PrimeraVez03":
             //texto
             h1.innerHTML =  "Hola internauta"
             p1.innerHTML =  "Ahora vamos a elejir tu nombre de usuario, cuando pulses 'Elegir nombre', "+
                             "te saldra un panel en el que podras escribir, en este deberas escribir tu nombre de usuario."
-            p2.innerHTML =  "Ten en cuenta que no podras modificar tu nombre de usuario una vez elejido, "+
-                            "asi que presta atencion y elije con cuidado"
+            p2.innerHTML =  "Ten cuidado al escribir tu nombre de usuario, presta atencion y elije con cuidado"
             //opciones
             skipButton.innerHTML = "Escribir nombre";
             activeDialogue = "PrimeraVez04"
+            sonidoS.load()
+            sonidoS.play()
         break;
         case "PrimeraVez04":
             //variables
@@ -101,8 +108,9 @@ function skipNextDialogue(opcion){ //saltar el dialogo
                 button1.innerHTML = "Facil";
                 button2.innerHTML = "Normal";
                 button3.innerHTML = "Dificil";
+                sonidoS.load()
+                sonidoS.play()
             }else{
-                
                 //texto
                 h1.innerHTML =  "Matematicas I"
                 p1.innerHTML =  "Cargando modo facil..."
@@ -115,11 +123,38 @@ function skipNextDialogue(opcion){ //saltar el dialogo
                 dificultad = opcion;
                 setCookie("dificultad", dificultad, 30);
                 window.location.href="minijuegos/Mates.html"
+                
                 //abrir pestaña distinta
                 //window.open("minijuegosmatematicas/MatesI.html")
             }
         break;
-
+        //menu de opciones
+        case "Opciones":
+            h1.innerHTML =  "Ajustes"
+                p1.innerHTML =  "Ten cuidado por aqui "+ username + 
+                                ", esta zona es peligrosa"
+                p2.innerHTML =  "Por aqui encontraras varias opciones relacionadas con tu cuenta"
+            button1.innerHTML = "Cambiar Nombre";
+            
+            switch(opcion){
+                case 1:
+                    let usuarioTemporal
+                    usuarioTemporal = prompt("Cambiar nombre")
+                    switch(usuarioTemporal){
+                        case "":
+                            p1.innerHTML =  "Veo que  I "+ username + 
+                                            ", deberias  de lo que crees"
+                            p2.innerHTML =  "Para  el en el panel izquierdo "
+                        break;
+                        default:
+                            username = usuarioTemporal
+                            setCookie("username", username, 30)
+                            mostrarStats()
+                        break;
+                    }
+                break;
+            }
+        break;
         //caso por defecto, si no se ha hecho ningun progreso importante, para dar pistas o lore
         case "Default":
             h1.innerHTML =  "Hola de nuevo"
@@ -135,19 +170,22 @@ function skipNextDialogue(opcion){ //saltar el dialogo
     }
     setCookie("activeDialogue", activeDialogue, 30);
 }
-
 function seleccionarMinijuego(juegoSelect){
     switch (juegoSelect) {
         case "MatematicasI":                      
                 activeDialogue="MatesI"
         break;
+        case "Opciones":                      
+            activeDialogue="Opciones"
+        break;
         case "Default":                      
                 activeDialogue="Default"
         break;
     }
+    document.getElementById("sonidoSelect").load()
+    document.getElementById("sonidoSelect").play()
     skipNextDialogue();
 }
-
 function onLoadMain(){
     //cojer cookies
     username = getCookie("username");
@@ -173,11 +211,12 @@ function onLoadMain(){
     }
     skipNextDialogue();
 }
-
 function mostrarStats(stat){
     //acortar texto panel izquierdo
     let textoNombre = document.getElementById("mostrarNombre");
     let textoMatesI = document.getElementById("mostrarMatesI");
+
+    let textoOpciones = document.getElementById("mostrarOpciones");
 
     username = getCookie("username");
     puntuacionMatematicasI = getCookie("puntuacionMatematicasI")
@@ -185,12 +224,13 @@ function mostrarStats(stat){
     textoNombre.innerHTML = ("Hola "+ username)
     if (puntuacionMatematicasI >= 0){
         textoMatesI.innerHTML = ("Matematicas I: "+ puntuacionMatematicasI)
+        textoOpciones.innerHTML = "Opciones"
     }
 }
 function resetCookie(){ //reiniciar cookies de forma manual 
     console.log("reseteando cookies")
     //listado de cookies y su valor defualt
-    //setCookie("username", null, 0) //el nombre del usuario
+    setCookie("username", null, 0) //el nombre del usuario
     setCookie("puntuacionMatematicasI", -1, 30) //la puntuacion de matematicas I
     setCookie("jugadoMatematicasI", 0, 30) //si ha jugado a matematicas I (0-> no 1-> primera vez por lo que toca dialogo 2-> ya lo ha jugado )
     setCookie("MatematicasIBug", 0, 30) //si ha desbloqueado el menu de bug de matematicas

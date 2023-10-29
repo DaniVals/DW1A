@@ -47,7 +47,6 @@ function onLoadMates(){
         break;
     }
 }
-
 function pulsarMates(botonPulsado){
     //acortar texto
     let textoTeclado = document.getElementById("MostrarInput");
