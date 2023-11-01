@@ -90,4 +90,40 @@ public class Fecha {
         }
     }
     //calcular dias entre fechas (diferencias de dias entre dos fechas)
+    public int calcularDias(Fecha fechaComparar){
+        int contDias=0;
+        Fecha fechaTemporal;
+        fechaTemporal=new Fecha(this.dia, this.mes, this.año);
+
+        if (fechaTemporal.compararFechas(fechaComparar)=='-') {
+            while (!(fechaTemporal.compararFechas(fechaComparar)=='=')) {
+                fechaTemporal.siguiente();
+                contDias+=1;
+            }
+        }
+        if (fechaTemporal.compararFechas(fechaComparar)=='+') {
+            while (!(fechaTemporal.compararFechas(fechaComparar)=='=')) {
+                fechaTemporal.anterior();
+                contDias-=1;
+            }
+        }
+        return contDias;
+    }
+    private char compararFechas(Fecha fechaComparar){
+        if (this.dia==fechaComparar.dia&&
+            this.mes==fechaComparar.mes&&
+            this.año==fechaComparar.año) {
+            return '=';
+        }else if (this.dia<fechaComparar.dia&&
+                this.mes==fechaComparar.mes&&
+                this.año==fechaComparar.año) {
+            return '-';
+        }else if (this.mes<fechaComparar.mes&&
+                this.año==fechaComparar.año) {
+            return '-';
+        }else if (this.año<fechaComparar.año) {
+            return '-';
+        }
+        return '+';
+    }
 }
