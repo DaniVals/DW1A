@@ -4,15 +4,6 @@ import java.util.Scanner;
 
 public class MenuWhileSwitch {
     public static void main(String[] args){
-        
-        Mates mates;
-        mates=new Mates();
-
-        System.out.println(mates.factorial(5));
-        
-        
-
-
 
         Scanner teclado=new Scanner(System.in);
         int opcion = 1;
