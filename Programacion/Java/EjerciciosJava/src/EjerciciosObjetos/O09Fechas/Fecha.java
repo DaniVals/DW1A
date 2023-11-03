@@ -98,13 +98,13 @@ public class Fecha {
         if (fechaTemporal.compararFechas(fechaComparar)=='-') {
             while (!(fechaTemporal.compararFechas(fechaComparar)=='=')) {
                 fechaTemporal.siguiente();
-                contDias+=1;
+                contDias++;
             }
         }
         if (fechaTemporal.compararFechas(fechaComparar)=='+') {
             while (!(fechaTemporal.compararFechas(fechaComparar)=='=')) {
                 fechaTemporal.anterior();
-                contDias-=1;
+                contDias--;
             }
         }
         return contDias;
