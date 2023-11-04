@@ -10,7 +10,6 @@
 	],
 	"settings": {
 		"java.debug.settings.onBuildFailureProceed": true,
-		"workbench.activityBar.visible": true,
 		"workbench.colorCustomizations": {
 			"[Default Dark Modern]": {
 
