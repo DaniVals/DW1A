@@ -1,4 +1,4 @@
-package FuncionesCopias;
+package EjerciciosObjetos.O11Pokimon;
 //hecho por daniel vals
 //cosas que me faltan en math
 //para su uso, copie el archivo, cambie el nombre del packaje y use el constructor de abajo
