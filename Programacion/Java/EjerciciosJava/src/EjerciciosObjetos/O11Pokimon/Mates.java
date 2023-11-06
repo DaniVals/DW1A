@@ -15,9 +15,9 @@ public class Mates {
         }
         return true;
     }
-    public int randomInt(int nInicial, int nFinal){
+    public int rngInt(int nI, int nF){
         int aleatorio=0;
-        aleatorio=(int) (nInicial+(Math.random()*(nFinal-nInicial+1)));
+        aleatorio=(int) (nI+(Math.random()*(nF-nI+1)));
         return aleatorio;
     }
     public int factorial(int n){
