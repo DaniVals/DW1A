@@ -2,15 +2,19 @@ package EjerciciosObjetos.O11Pokimon;
 
 public class Pokimon {
 
-    private int ataque,velocidad,vida,id;
+    private int ataque,velocidad,vida,vidaMax, id;
 	private boolean capturado;
 	
 	//-----Constructores-----
-	public Pokimon (int ataque, int vida , int velocidad, int id) {
+	public Pokimon () {
+		this.capturado = false;
+	}
+	public Pokimon (int ataque, int vidaMax , int velocidad, int id) {
 		
 		this.ataque = ataque;
 		this.velocidad = velocidad;
-		this.vida = vida;
+		this.vidaMax = vidaMax;
+		this.vida = vidaMax;
 		this.id = id;
 		this.capturado = false;
 	}
@@ -33,6 +37,12 @@ public class Pokimon {
 	public void setVida (int vida) {
 		this.vida = vida;
 	}
+	public int getVidaMax() {
+		return vidaMax;
+	}
+	public void setVidaMax(int vidaMax) {
+		this.vidaMax = vidaMax;
+	}
 	public int getId() {
 		return id;
 	}
@@ -49,8 +59,7 @@ public class Pokimon {
 	@Override
 	public String toString() {
 		
-		return "Pokimon [ataque=" + ataque + ", velocidad=" + velocidad + ", vida=" + vida + ", id=" + id
-				+ ", capturado=" + capturado + "]";
+		return "atk= " + ataque + "\nvel= " + velocidad + "\nPV= " + vida+" / "+vidaMax + "\nid= " + id;
 	}
 
 	//-----Metodos-----
@@ -92,4 +101,7 @@ public class Pokimon {
         }
         return ganador; //devuelve el valor "ganador"
     }
+	public void curar(){
+		this.vida=this.vidaMax;
+	}
 }

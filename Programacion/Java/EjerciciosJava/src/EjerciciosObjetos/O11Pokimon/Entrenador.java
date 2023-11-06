@@ -18,24 +18,28 @@ public class Entrenador {
         this.y = (int) yM/2;
         this.xM = xM;
         this.yM = yM;
-        this.dinero = 0;
+        this.dinero = 20;
         this.victorias = 0;
         this.derrotas = 0;
-        this.casillasRecorridas = -1;
+        this.casillasRecorridas = 0;
     }
     public void moverse(int direccion){
         switch (direccion){ //1.ARRIBA 2.DERECHA 3.ABAJO 4.IZQUIERDA
             case 1:
                 this.y--;
+                this.casillasRecorridas++;
             break;
             case 2:
                 this.x++;
+                this.casillasRecorridas++;
             break;
             case 3:
                 this.y++;
+                this.casillasRecorridas++;
             break;
             case 4:
                 this.x--;
+                this.casillasRecorridas++;
             break;
         }
         if (this.x<0) {
@@ -56,15 +60,23 @@ public class Entrenador {
             }
             System.out.println("");
         }
-        this.casillasRecorridas++;
     }
     public void mostrarStats(){
 
     }
     @Override
     public String toString() {
-        return "Entrenador [x=" + x + ", y=" + y + ", xM=" + xM + ", yM=" + yM + ", dinero=" + dinero + ", victorias="
-                + victorias + ", derrotas=" + derrotas + ", casillasRecorridas=" + casillasRecorridas + "]";
+        return "Tus estadisticas\n  dinero=" + dinero + "\n  victorias="+ victorias + 
+                            "\n  derrotas=" + derrotas + "\n  casillasRecorridas=" + casillasRecorridas;
+    }
+    public void cambiarDinero(int dinero) {
+        this.dinero += dinero;
+    }
+    public void sumarVictorias() {
+        this.victorias++;
+    }
+    public void sumarDerrotas() {
+        this.derrotas++;
     }
     
 
