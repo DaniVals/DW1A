@@ -9,20 +9,17 @@ public class Main {
         int valorTeclado1=0, valorTeclado2=0, opcion = 1;
         boolean juegoActivo=true, combateActivo=false, opcionValida=false;
 
-        Mates m;
-        m=new Mates();
-
         Entrenador entrenador1;
         PokiMochila mochila1;
         Pokimon pokimon1, pokimon2, pokimon3, pokimon4, pokimon5, pokimon6, pokemonPelear;
 
         //intro
         pokimon1=new Pokimon(20, 50, 15, 1); //starter equilibrado
-        pokimon2=new Pokimon(m.rngInt(10,20), m.rngInt(70,80), m.rngInt(10,20), 2); //tanque
-        pokimon3=new Pokimon(m.rngInt(15,20), m.rngInt(20,30), m.rngInt(55,60), 3); //asesino
-        pokimon4=new Pokimon(m.rngInt(30,40), m.rngInt(70,80), m.rngInt(5,10), 4); //lento
-        pokimon5=new Pokimon(m.rngInt(50,60), m.rngInt(10,15), m.rngInt(55,60), 5); //instakill
-        pokimon6=new Pokimon(m.rngInt(55,60), m.rngInt(70,80), m.rngInt(55,60), 6); //chetado
+        pokimon2=new Pokimon(Mates.randomInt(10,20), Mates.randomInt(70,80), Mates.randomInt(10,20), 2); //tanque
+        pokimon3=new Pokimon(Mates.randomInt(15,20), Mates.randomInt(20,30), Mates.randomInt(55,60), 3); //asesino
+        pokimon4=new Pokimon(Mates.randomInt(30,40), Mates.randomInt(70,80), Mates.randomInt(5,10), 4); //lento
+        pokimon5=new Pokimon(Mates.randomInt(50,60), Mates.randomInt(10,15), Mates.randomInt(55,60), 5); //instakill
+        pokimon6=new Pokimon(Mates.randomInt(55,60), Mates.randomInt(70,80), Mates.randomInt(55,60), 6); //chetado
         pokemonPelear=new Pokimon();
 
         System.out.println("Hola jugador, de que tamaño quieres el mapa?");
@@ -46,7 +43,7 @@ public class Main {
                 //pokemon a combatir
                 opcionValida=false;
                 while (!opcionValida) {
-                    switch (m.rngInt(1, 6)) {
+                    switch (Mates.randomInt(1, 6)) {
                         case 1:
                             if (!pokimon1.isCapturado()) {
                                 pokemonPelear=pokimon1;
