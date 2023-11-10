@@ -20,7 +20,7 @@ public class Main {
         pokimon4=new Pokimon(Mates.randomInt(30,40), Mates.randomInt(70,80), Mates.randomInt(5,10), 4); //lento
         pokimon5=new Pokimon(Mates.randomInt(50,60), Mates.randomInt(10,15), Mates.randomInt(55,60), 5); //instakill
         pokimon6=new Pokimon(Mates.randomInt(55,60), Mates.randomInt(70,80), Mates.randomInt(55,60), 6); //chetado
-        pokemonPelear=new Pokimon();
+        pokemonPelear=new Pokimon();//placeholder
 
         System.out.println("Hola jugador, de que tamaño quieres el mapa?");
         while (valorTeclado1<=0) {

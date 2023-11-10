@@ -7,7 +7,8 @@ public class Main {
         Scanner teclado=new Scanner(System.in);
 
         String textoTeclado, textoAsist;
-        int contador=0;
+        int contador=0, textoEnInt=0;
+        char c1=' ', c2=' '; 
 
         textoTeclado=teclado.nextLine();
 
@@ -24,22 +25,46 @@ public class Main {
         }else{
             System.out.println("no hay suficiente longitud");
         }
+
         for (int i=0; i<textoTeclado.length();i++){//El número de ocurrencias en la cadena del último carácter
-            if (textoTeclado.substring(i, i+1)==textoTeclado.substring(textoTeclado.length()-1, textoTeclado.length())) {
+            c1=textoTeclado.charAt(i);
+            c2=textoTeclado.charAt(textoTeclado.length()-1); 
+            if (c1==c2) {
                 contador++;
             }
-            System.out.println("-");
-            System.out.println(textoTeclado.substring(i, i+1));
-            System.out.println(textoTeclado.substring(textoTeclado.length()-1, textoTeclado.length()));
-        }
-        System.out.println(contador);
-        System.out.println(textoTeclado);//La cadena con todas las ocurrencias del primer carácter en mayúsculas
-        System.out.println(textoTeclado);//La cadena con tres asteriscos por delante y por detrás
-        System.out.println(textoTeclado);//La cadena invertida
+        }System.out.println(contador); contador=0;
+        for (int i=0; i<textoTeclado.length();i++){//El número de ocurrencias en la cadena del primer carácter
+            c1=textoTeclado.charAt(i);
+            c2=textoTeclado.charAt(0);
+            if (c1==c2) {
+                contador++;
+            }
+        }System.out.println(contador);
+
+        textoAsist="***"+textoTeclado+"***"; //La cadena con tres asteriscos por delante y por detrás
+        System.out.println(textoAsist);
+
         
-/*
- * si la cadena SOLO son digitos, lo guardo como int
- */
+        textoAsist=""; //La cadena invertida
+        for (int i=textoTeclado.length()-1; i>-1;i--){
+            textoAsist+=textoTeclado.charAt(i);
+           
+        }
+        System.out.println(textoAsist);
+
+        contador=0;
+        for (int i=0; i<textoTeclado.length();i++){//si la cadena SOLO son digitos, lo guardo como int
+           c1=textoTeclado.charAt(i);
+           if ((int) c1==0) {
+            System.out.println("CP1");
+            break;
+           }
+           contador++;
+        }
+        System.out.println("CP2");
+        System.out.println(textoEnInt);
+        System.out.println(c1);
+        System.out.println(contador);
 
 
         teclado.close();
