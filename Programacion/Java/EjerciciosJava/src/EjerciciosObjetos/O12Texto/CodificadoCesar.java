@@ -2,7 +2,7 @@ package EjerciciosObjetos.O12Texto;
 
 import java.util.Scanner;
 
-public class das {
+public class CodificadoCesar {
         public static void main(String[] args){
         Scanner teclado=new Scanner(System.in);
 
