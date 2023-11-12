@@ -2,12 +2,12 @@ package EjerciciosObjetos.O12Texto;
 
 import java.util.Scanner;
 
-public class Main {
+public class Ejemplos {
     public static void main(String[] args){
         Scanner teclado=new Scanner(System.in);
 
         String textoTeclado, textoAsist;
-        int contador=0, textoEnInt=0;
+        int contador=0;
         char c1=' ', c2=' '; 
 
         textoTeclado=teclado.nextLine();
@@ -52,21 +52,8 @@ public class Main {
         }
         System.out.println(textoAsist);
 
-        contador=0;
-        for (int i=0; i<textoTeclado.length();i++){//si la cadena SOLO son digitos, lo guardo como int
-           c1=textoTeclado.charAt(i);
-           if ((int) c1==0) {
-            System.out.println("CP1");
-            break;
-           }
-           contador++;
-        }
-        System.out.println("CP2");
-        System.out.println(textoEnInt);
-        System.out.println(c1);
-        System.out.println(contador);
-
-
+        System.out.println(Integer.parseInt(textoTeclado)); //si la cadena SOLO son digitos, lo guardo como int
+        
         teclado.close();
     }
 }
