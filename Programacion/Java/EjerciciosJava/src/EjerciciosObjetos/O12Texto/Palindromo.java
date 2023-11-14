@@ -12,9 +12,7 @@ public class Palindromo {
         String textoAsist2="";
 
         for (int i=texto.length()-1; i>-1;i--){
-            if( texto.charAt(i)=='0'||texto.charAt(i)=='1'||texto.charAt(i)=='2'||texto.charAt(i)=='3'||texto.charAt(i)=='4'||
-                texto.charAt(i)=='5'||texto.charAt(i)=='6'||texto.charAt(i)=='7'||texto.charAt(i)=='8'||texto.charAt(i)=='9'){}
-            else{
+            if(64<=texto.charAt(i)&&texto.charAt(i)<=90 || 97<=texto.charAt(i)&&texto.charAt(i)<=122){
                 textoAsist+=texto.charAt(i);}
         }
         for (int i=textoAsist.length()-1; i>-1;i--){
@@ -23,7 +21,7 @@ public class Palindromo {
         System.out.println(texto);
         System.out.println(textoAsist);
         System.out.println(textoAsist2);
-        if (textoAsist.toString()==textoAsist2.toString()) {
+        if (textoAsist.compareTo(textoAsist2)==0) {
             return true;
         }
         return false;

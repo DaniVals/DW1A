@@ -7,7 +7,7 @@ public class CodificadoCesar {
         Scanner teclado=new Scanner(System.in);
 
         String textoTeclado, textoResultado="";
-        char charAssist=' ';
+        int charAssist=0;
         int numeroTeclado=0;
 
         /*  esto da error
@@ -20,14 +20,18 @@ public class CodificadoCesar {
         System.out.println("Numero:");
         numeroTeclado=Integer.parseInt(teclado.nextLine());
         System.out.println("Texto:");
-        textoTeclado=teclado.nextLine().toLowerCase();
+        textoTeclado=teclado.nextLine();
         
         for (int i=0; i<textoTeclado.length();i++){
-            charAssist=(char) (textoTeclado.charAt(i)+numeroTeclado%26);
-            if (charAssist>122) {
+            charAssist=(textoTeclado.charAt(i)+numeroTeclado%26);
+            System.out.println(textoTeclado.charAt(i)+1);
+            if (charAssist>122) { //122='z'
                 charAssist-=26;
             }
-            textoResultado+=charAssist;
+            if (textoTeclado.charAt(i)<97&&charAssist>90) { //90='Z'
+                charAssist-=26;
+            }
+            textoResultado+=(char) charAssist;
         }
         System.out.println(textoResultado);
         
