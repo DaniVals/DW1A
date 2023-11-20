@@ -6,6 +6,10 @@
 		{
 			"name": "pagina github",
 			"path": "../../danivals.github.io"
+		},
+		{
+			"name": "Organizacion",
+			"path": "../../Daniel_Vals"
 		}
 	],
 	"settings": {
