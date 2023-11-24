@@ -1,7 +1,7 @@
 CREATE TABLE pais(
     --tipos normales
     numero NUMBER(9,8),--nueve numeros y ocho de ellos decimal
-    texto VARCHAR(32), --un texto de 32 caracteres
+    texto VARCHAR(32), --un texto de 32 caracteres 
     fechas DATE,       --una fecha (aaaa--dd--mm) / DATE '2005-08-20'
     hora TIMESTAMP,    --una hora
     --FALTAN LOS DE ARCHIVOS QUE YA LOS DAREMOS

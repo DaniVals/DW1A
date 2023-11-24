@@ -41,4 +41,4 @@ SELECT * FROM Asignado;
 DROP TABLE Asignado;
 DROP TABLE Medico;
 DROP TABLE Especialidad;
-DROP TABLE Paciente;
+DROP TABLE Paciente; 
