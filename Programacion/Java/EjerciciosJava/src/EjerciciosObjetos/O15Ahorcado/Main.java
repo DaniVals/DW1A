@@ -14,7 +14,7 @@ public class Main {
         palabra=teclado.nextLine();
         if (palabra.charAt(0)=='P'||palabra.charAt(0)=='p') {
             System.out.println("Introduce la palabra que quieres que adivinen tus victimas (sin mayusculas)");
-            palabra=teclado.nextLine().toLowerCase();
+            palabra=teclado.nextLine();
         }else{
             switch (Mates.randomInt(1, 10)) {
                 default:
@@ -72,7 +72,7 @@ public class Main {
             palabraTemporal="";
             acierto=false;
             for(int i=0;i<palabra.length();i++){
-                if (palabra.charAt(i)==letra.charAt(0)) {
+                if (palabra.toLowerCase().charAt(i)==letra.toLowerCase().charAt(0)) {
                     palabraTemporal+=palabra.charAt(i);
                     acierto=true;
                 }else{
@@ -87,13 +87,15 @@ public class Main {
             //print
             letrasUsadas+=letra.charAt(0);
             Imprimir.muerte(golpes);
-            System.out.println(letrasUsadas);
-            System.out.println(palabraTemporal);
-
+            System.out.println("Letras usadas: "+letrasUsadas);
+            
             if (palabra.compareTo(letra)==0||//introducir palabra exacta
             palabra.compareTo(palabraEncriptada)==0) {//palabra descubierta entera
                 juegoActivo=false;
+                System.out.println(palabra);
                 System.out.println("HAS GANADO!!!");
+            }else{
+                System.out.println(palabraTemporal);
             }
             if (golpes==6) {//quedarte sin vidas
                 juegoActivo=false;

@@ -86,7 +86,6 @@ public class Main {
                 }
             }
             intentos++;
-            
             //print
             historial=historial+"\n"+palabraEncriptada;
             System.out.println(historial);
@@ -106,9 +105,6 @@ public class Main {
                 juegoActivo=false;
                 System.out.println("\nhas perdido...");                
             }
-            /* 
-            
-            */
         }
         teclado.close();
     }

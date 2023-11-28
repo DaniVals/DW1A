@@ -47,7 +47,7 @@ CREATE TABLE Imparte(
     nif VARCHAR(10),  
     cod_asignatura NUMBER(5) 
     );
---ejercicio 2
+--ejercicio 2 
 INSERT INTO Alumno(nombre,fecha_nac, telefono) VALUES('Rocio Sanz', DATE '2005-08-20', 600112233);
 INSERT INTO Alumno(nombre,fecha_nac, telefono) VALUES('Alicia Perez', DATE '2006-09-10', 611223344);
 SELECT * FROM Alumno;
