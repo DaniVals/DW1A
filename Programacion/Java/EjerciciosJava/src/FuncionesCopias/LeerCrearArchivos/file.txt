@@ -1,2 +1,17 @@
-cawdawd
-wdefefe
+DatosJugadores,
+1{
+    dinero:550
+    nombre:wwwwwwww
+},
+2{
+    dinero:10
+},
+3{
+    dinero:250
+},
+10{
+    dinero:343
+},
+11{
+    dinero:355
+}

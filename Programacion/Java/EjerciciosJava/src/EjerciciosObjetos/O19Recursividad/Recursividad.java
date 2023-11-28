@@ -3,8 +3,6 @@ package EjerciciosObjetos.O19Recursividad;
     //recursividad
     //llamar un metodo dentro de si mismo
 
-import java.util.regex.Pattern;
-
 public class Recursividad {
     public static void main(String[] args){
 
