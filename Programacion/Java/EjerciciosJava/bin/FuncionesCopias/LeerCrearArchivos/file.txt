@@ -1,6 +1,6 @@
 DatosJugadores,
 1{
-    dinero:550
+    dinero:100
     nombre:wwwwwwww
 },
 2{

@@ -9,8 +9,8 @@ public class Main {
         //System.out.println(archivo1.buscar(2,"dinero")+"hola");
 
 
-        System.out.println(archivo1.buscar(11, "dinero"));
-        archivo1.remplazar(2,"dinero","10");
+        System.out.println(archivo1.buscar(1, "dinero"));
+        archivo1.remplazar(1,"dinero","100");
         //System.out.println(archivo1);
     }
 }
