@@ -1,0 +1,90 @@
+1 Encabezamiento
+2 Pd. de liquidacion
+    r. mensual (GC. 1-7) -> todos los meses/30 dias
+    r. diaria  (GC. 8-11) ->28,30,31
+3 Devengos ->salario bruto (el salario base, 
+                            los pagos por horas extraordinarias, 
+                            las pagas extraordinarias y 
+                            el total de complementos salariales)
+4 Deducciones 
+
+paga navidad + paga verano
+--------------------------
+            12
+
+
+2 * (paga)
+----------
+    365
+
+Actividades tema 4. La nómina
+A. Devengos
+Calcula el total devengado (salario bruto) de los siguientes trabajadores suponiendo que es
+noviembre y que no tienen prorrateadas sus pagas extraordinarias (por lo que no se incluyen).
+1. Un trabajador A cobra los siguientes conceptos:
+• Salario base = 1350 €
+• Plus convenio = 100 €
+• 2 pagas extras de salario base.
+
+(S) 1350 + 100 = 1450
+
+
+2. Un trabajador B cobra los siguientes conceptos:
+• Salario base = 1.500 €
+• Plus de peligrosidad = 350 €
+• 2 pagas extras de salario base.
+
+(S) 1500 + 350 = 1850
+
+
+3. Un trabajador C cobra los siguientes concetos:
+• Salario base = 1.200 €
+• Plus de antigüedad = 100 €
+• 2 pagas extras de salario base y plus de antigüedad.
+
+(S) 1200 + 100 = 1300
+
+
+4. Un trabajador D cobra los siguientes conceptos:
+• Salario base = 1.100 €
+• Horas extras = 80 €
+• 2 pagas extras de salario base.
+
+(S) 1100 + 80 = 1180
+
+----------------------------------------------------------------------------------------
+
+Calcula el total devengado (salario bruto) de los siguientes trabajadores suponiendo que es
+noviembre y que tienen prorrateadas sus pagas extraordinarias.
+1. Un trabajador A cobra los siguientes conceptos:
+• Salario base = 1350 €
+• Plus convenio = 100 €
+• 2 pagas extras de salario base.
+
+(S) 1350*2 + 100 = 
+
+
+2. Un trabajador B cobra los siguientes conceptos:
+• Salario base = 1.500 €
+• Plus de peligrosidad = 350 €
+• 2 pagas extras de salario base.
+
+(S) 1500*2 + 350 = 
+
+
+
+3. Un trabajador C cobra los siguientes concetos:
+• Salario base = 1.200 €
+• Plus de antigüedad = 100 €
+• 2 pagas extras de salario base y plus de antigüedad.
+
+(S) 2(1200+100)/12 = 216,67
+
+
+4. Un trabajador D cobra los siguientes conceptos:
+• Salario base = 1.100 €
+• Horas extras = 80 €
+• 2 pagas extras de salario base.
+
+(S) 1100*2 + 80 = 
+
