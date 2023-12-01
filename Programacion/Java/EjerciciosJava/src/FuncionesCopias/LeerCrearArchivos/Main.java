@@ -18,7 +18,13 @@ public class Main {
         */
 
         archivo1.formatear();        
+        archivo1.añadirPersonaje("tierra");
+        archivo1.añadirPersonaje("normal");
+        archivo1.añadirPersonaje("aaaaaaaaaaaaaaa");
 
-        System.out.println( archivo1.detectarNumeroJugadores()*3);
+        //archivo1.cambiarConfig("numJugadores", "1");
+
+        System.out.println( archivo1.detectarConfig("numJugadores")*3);
+        System.out.println( archivo1.buscar(1, "lvl"));
     }
 }

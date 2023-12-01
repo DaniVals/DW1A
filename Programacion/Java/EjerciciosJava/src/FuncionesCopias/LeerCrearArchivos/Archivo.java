@@ -57,7 +57,7 @@ public class Archivo {
 
         arrayDatos[0]="numJugadores=0";
         arrayDatos[1]="dificultad=0";
-        arrayDatos[2]="arco=0";
+        arrayDatos[2]="lore=0";
 
         //pasarlo a un string
         for(String i: arrayDatos){
@@ -141,9 +141,9 @@ public class Archivo {
         return textoDevolver;
     }
     
-    public int detectarNumeroJugadores(){
+    public int detectarConfig(String config){
         String textoDatos="";
-        for(int i=this.texto.indexOf("numJugadores=")+("numJugadores=").length(); i!=0;i++){
+        for(int i=this.texto.indexOf(config+"=")+(config+"=").length(); i!=0;i++){
             if (this.texto.charAt(i)!=',') {
                 textoDatos+=this.texto.charAt(i);
             }else{
@@ -152,8 +152,58 @@ public class Archivo {
         }
         return Integer.parseInt(textoDatos);
     }
-    public void añadirJugador(){
+    public void cambiarConfig(String config, String nuevo){
+        String textoAssist="";
+        int contador=0, diferencia=0;
+            
+        
+        //sumar todo hasta los datos
+        for(int i=0;
+        i<this.texto.indexOf(config+"=")+(config+"=").length()
+        ;i++){
+            contador++;
+            textoAssist+=this.texto.charAt(i);
+        }    
+        //sumar el dato
+        textoAssist+=nuevo;
 
+        //calcular diferencia
+        diferencia=Integer.toString(detectarConfig(config)).length()-nuevo.length();
+
+        //sumar lo que queda
+        if (diferencia>=0) {
+            contador+=nuevo.length();
+            for(int i=contador+diferencia;i<this.texto.length();i++){
+                textoAssist+=this.texto.charAt(i);
+            }
+        }else{
+            //sumar espacios en caso de que sea menor
+            contador+=nuevo.length()+diferencia;
+            for(int i=contador;i<this.texto.length();i++){
+                textoAssist+=this.texto.charAt(i);
+            }
+        }
+        
+        this.reescribir(textoAssist);
+    }
+    public void añadirPersonaje(String tipo){
+        String[] arrayDatos=new String[3]; //meter aqui todas las opciones con su valor default
+        String stringDatos="";
+
+        arrayDatos[0]="lvl:1";
+        arrayDatos[1]="xp:500";
+        arrayDatos[2]="tipo:"+tipo;
+
+        //pasarlo a un string
+        stringDatos+=(this.detectarConfig("numJugadores")+1)+"{\n";
+        for(String i: arrayDatos){
+            stringDatos+="\t"+i+"\n";
+        }
+        stringDatos+="},\n";
+        cambiarConfig("numJugadores", Integer.toString(this.detectarConfig("numJugadores")+1));
+        reescribir(this.texto+"\n"+stringDatos);
+
+        ;
     }
 
 

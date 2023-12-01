@@ -1,3 +1,18 @@
-numJugadores=0,
+numJugadores=3,
 dificultad=0,
-arco=0,
+lore=0,
+1{
+	lvl:1
+	xp:500
+	tipo:tierra
+},
+2{
+	lvl:1
+	xp:500
+	tipo:normal
+},
+3{
+	lvl:1
+	xp:500
+	tipo:aaaaaaaaaaaaaaa
+},
