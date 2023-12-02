@@ -100,8 +100,8 @@ public class Plugin extends JavaPlugin
       //change 
       if (args[0].compareTo("change")==0) {
         if (sender.isOp()) {
-          if (Bukkit.getPlayerExact(args[1])!=null) {
-            if (100>=Integer.parseInt(args[2])&&Integer.parseInt(args[2])>=-100) {
+          if (args[1]!=null&&Bukkit.getPlayerExact(args[1])!=null) {
+            if (args[2]!=null&&100>=Integer.parseInt(args[2])&&Integer.parseInt(args[2])>=-100) {
               int numero = Integer.parseInt(args[2]);
               
               victima.setMaxHealth(victima.getMaxHealth()+numero);
@@ -121,7 +121,7 @@ public class Plugin extends JavaPlugin
       //reset 
       if (args[0].compareTo("reset")==0) {
         if (sender.isOp()) {
-          if (Bukkit.getPlayerExact(args[1])!=null) {
+          if (args[1]!=null&&Bukkit.getPlayerExact(args[1])!=null) {
             victima.setMaxHealth(20);
             sender.sendMessage(ChatColor.GREEN + "La vida maxima de "+victima.getName()+" ahora es "+victima.getMaxHealth());
             return true;
@@ -135,7 +135,7 @@ public class Plugin extends JavaPlugin
       
       //check 
       if (args[0].compareTo("check")==0) {
-        if (Bukkit.getPlayerExact(args[1])!=null) {
+        if (args[1]!=null&&Bukkit.getPlayerExact(args[1])!=null) {
           sender.sendMessage(ChatColor.GREEN + "La vida maxima de "+victima.getName()+" a aumentado a "+victima.getMaxHealth());
           return true;
         }
@@ -145,7 +145,7 @@ public class Plugin extends JavaPlugin
       
       //refresh 
       if (args[0].compareTo("refresh")==0) {
-        if (Bukkit.getPlayerExact(args[1])!=null) {
+        if (args[1]!=null&&Bukkit.getPlayerExact(args[1])!=null) {
           victima.setMaxHealth(victima.getMaxHealth());
           sender.sendMessage(ChatColor.GREEN + "Puto minecraft buggeado");
           return true;
