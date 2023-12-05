@@ -15,16 +15,16 @@ public class Main {
         archivo1.añadirLinea("null");
         System.out.println(archivo1);
         
-        */
-
+        
         archivo1.formatear();        
         archivo1.añadirPersonaje("tierra");
         archivo1.añadirPersonaje("normal");
         archivo1.añadirPersonaje("aaaaaaaaaaaaaaa");
+        
+        */
+        archivo1.cambiarConfig("numJugadores", "6");
 
-        //archivo1.cambiarConfig("numJugadores", "1");
-
-        System.out.println( archivo1.detectarConfig("numJugadores")*3);
+        System.out.println( archivo1.detectarConfig("numJugadores"));
         System.out.println( archivo1.buscar(1, "lvl"));
     }
 }

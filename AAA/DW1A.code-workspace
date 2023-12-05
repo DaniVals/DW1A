@@ -164,7 +164,6 @@
 						"Programacion/Java/EjerciciosJava/.settings/",
 						"Programacion/Java/EjerciciosJava/bin/",
 						"Programacion/Java/EjerciciosJava/src/module-info.java",
-						"ProyectosPersonales/pluginsMinecraft/hardmode/src/main/java/com/videosboy/hardmode/Plugin.java",
 						"ProyectosPersonales/pluginsMinecraft/server/bundler/",
 						"ProyectosPersonales/pluginsMinecraft/server/logs/",
 						"ProyectosPersonales/pluginsMinecraft/server/world/",
@@ -193,6 +192,14 @@
 						"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/java/com/videosboy/",
 						"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/java/com/",
 						"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/"
+					],
+					"peek": [
+						"ProyectosPersonales/pluginsMinecraft/hardmode/src/main/java/com/videosboy/hardmode/Plugin.java",
+						"ProyectosPersonales/pluginsMinecraft/hardmode/src/main/java/com/videosboy/hardmode/",
+						"ProyectosPersonales/pluginsMinecraft/hardmode/src/main/java/com/videosboy/",
+						"ProyectosPersonales/pluginsMinecraft/hardmode/src/main/java/com/",
+						"ProyectosPersonales/pluginsMinecraft/hardmode/src/main/java/",
+						"ProyectosPersonales/pluginsMinecraft/hardmode/src/main/"
 					]
 				}
 			]
@@ -209,7 +216,6 @@
 			"Programacion/Java/EjerciciosJava/.settings/": true,
 			"Programacion/Java/EjerciciosJava/bin/": true,
 			"Programacion/Java/EjerciciosJava/src/module-info.java": true,
-			"ProyectosPersonales/pluginsMinecraft/hardmode/src/main/java/com/videosboy/hardmode/Plugin.java": true,
 			"ProyectosPersonales/pluginsMinecraft/server/bundler/": true,
 			"ProyectosPersonales/pluginsMinecraft/server/logs/": true,
 			"ProyectosPersonales/pluginsMinecraft/server/world/": true,

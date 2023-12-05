@@ -7,9 +7,15 @@ public class Arrays {
         }
     }
     public static String stringMasLargo(String[] arrayAnalizar){
-        String devolver= arrayAnalizar[0];
+        String devolver="";
+    for (int i=0; i<arrayAnalizar.length;i++) {
+        if (arrayAnalizar[i]!=null) {
+            devolver= arrayAnalizar[i];
+            break;
+        }
+    }
     for (String txt : arrayAnalizar) {
-        if (devolver.length()<txt.length()) {
+        if (devolver.length()<txt.length()&&txt!=null) {
             devolver=txt;
         }
     }
