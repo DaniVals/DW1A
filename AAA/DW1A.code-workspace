@@ -164,7 +164,6 @@
 						"Programacion/Java/EjerciciosJava/.settings/",
 						"Programacion/Java/EjerciciosJava/bin/",
 						"Programacion/Java/EjerciciosJava/src/module-info.java",
-						"ProyectosPersonales/pluginsMinecraft/hardmode/src/main/java/com/videosboy/hardmode/Plugin.java",
 						"ProyectosPersonales/pluginsMinecraft/server/bundler/",
 						"ProyectosPersonales/pluginsMinecraft/server/logs/",
 						"ProyectosPersonales/pluginsMinecraft/server/world/",
@@ -192,8 +191,10 @@
 						"ProyectosPersonales/pluginsMinecraft/hardmode/pom.xml",
 						"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/java/com/videosboy/",
 						"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/java/com/",
-						"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/"
-					]
+						"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/",
+						"ProyectosPersonales/pluginsMinecraft/server/plugins/PluginMetrics/"
+					],
+					"peek": []
 				}
 			]
 		},
@@ -209,7 +210,6 @@
 			"Programacion/Java/EjerciciosJava/.settings/": true,
 			"Programacion/Java/EjerciciosJava/bin/": true,
 			"Programacion/Java/EjerciciosJava/src/module-info.java": true,
-			"ProyectosPersonales/pluginsMinecraft/hardmode/src/main/java/com/videosboy/hardmode/Plugin.java": true,
 			"ProyectosPersonales/pluginsMinecraft/server/bundler/": true,
 			"ProyectosPersonales/pluginsMinecraft/server/logs/": true,
 			"ProyectosPersonales/pluginsMinecraft/server/world/": true,
@@ -237,8 +237,10 @@
 			"ProyectosPersonales/pluginsMinecraft/hardmode/pom.xml": true,
 			"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/java/com/videosboy/": true,
 			"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/java/com/": true,
-			"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/": true
+			"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/": true,
+			"ProyectosPersonales/pluginsMinecraft/server/plugins/PluginMetrics/": true
 		},
 		"hidefiles.selectedProfile": "Default",
+		"maven.view": "flat",
 	}
 }

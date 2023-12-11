@@ -9,6 +9,13 @@ public class Archivo {
     private File archivo;
     private String texto;
     
+    //solo he creado esto para que no este en amarillo tbh
+    public String getDirectorioCarpeta() {
+        return directorioCarpeta;
+    }
+    public String getNombreArchivo() {
+        return nombreArchivo;
+    }
     public Archivo(String directorioCarpeta, String nombreArchivo) {
         this.directorioCarpeta = directorioCarpeta;
         this.nombreArchivo = nombreArchivo;

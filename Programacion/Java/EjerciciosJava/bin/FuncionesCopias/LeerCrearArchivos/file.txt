@@ -1,4 +1,4 @@
-numJugadores=3,
+numJugadores=4,
 dificultad=0,
 lore=0,
 1{
@@ -7,11 +7,16 @@ lore=0,
 	tipo:tierra
 },
 2{
-	lvl:1
+	lvl:2
 	xp:500
 	tipo:normal
 },
 3{
+	lvl:1
+	xp:500
+	tipo:pepene
+},
+4{
 	lvl:1
 	xp:500
 	tipo:aaaaaaaaaaaaaaa
