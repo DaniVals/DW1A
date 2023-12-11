@@ -10,6 +10,10 @@
 		{
 			"name": "Organizacion",
 			"path": "../../Daniel_Vals"
+		},
+		{
+			"name": "PEG",
+			"path": "../../ProyectEducationalGames/PEG"
 		}
 	],
 	"settings": {
@@ -161,7 +165,6 @@
 						".vscode/",
 						"Programacion/Java/EjerciciosJava/.classpath",
 						"Programacion/Java/EjerciciosJava/.project",
-						"Programacion/Java/EjerciciosJava/.settings/",
 						"Programacion/Java/EjerciciosJava/bin/",
 						"Programacion/Java/EjerciciosJava/src/module-info.java",
 						"ProyectosPersonales/pluginsMinecraft/server/bundler/",
@@ -192,7 +195,8 @@
 						"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/java/com/videosboy/",
 						"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/java/com/",
 						"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/",
-						"ProyectosPersonales/pluginsMinecraft/server/plugins/PluginMetrics/"
+						"ProyectosPersonales/pluginsMinecraft/server/plugins/PluginMetrics/",
+						"Programacion/Java/EjerciciosJava/.settings/"
 					],
 					"peek": []
 				}
@@ -207,7 +211,6 @@
 			".vscode/": true,
 			"Programacion/Java/EjerciciosJava/.classpath": true,
 			"Programacion/Java/EjerciciosJava/.project": true,
-			"Programacion/Java/EjerciciosJava/.settings/": true,
 			"Programacion/Java/EjerciciosJava/bin/": true,
 			"Programacion/Java/EjerciciosJava/src/module-info.java": true,
 			"ProyectosPersonales/pluginsMinecraft/server/bundler/": true,
@@ -238,9 +241,13 @@
 			"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/java/com/videosboy/": true,
 			"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/java/com/": true,
 			"ProyectosPersonales/pluginsMinecraft/hardmode/src/test/": true,
-			"ProyectosPersonales/pluginsMinecraft/server/plugins/PluginMetrics/": true
+			"ProyectosPersonales/pluginsMinecraft/server/plugins/PluginMetrics/": true,
+			"Programacion/Java/EjerciciosJava/.settings/": true
 		},
 		"hidefiles.selectedProfile": "Default",
 		"maven.view": "flat",
+		"java.project.sourcePaths": [
+			"prueba4/src"
+		],
 	}
 }
