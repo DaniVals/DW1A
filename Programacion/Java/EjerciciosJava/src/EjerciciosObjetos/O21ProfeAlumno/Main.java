@@ -18,11 +18,14 @@ public class Main {
 
         grupo1.addAlumno(alum4);
         grupo1.delAlumno();
+        grupo1.delAlumno();
+        grupo1.addAlumno(alum5);
         
         grupo1.calificarGrupo();
 
         System.out.println(grupo1);
         System.out.println(
+            "CP1 \n"+
             grupo1.calcularMedia()+"\n"+
             grupo1.calcularMediaAlta()+"\n"+
             grupo1.getAlumnoConNotaMasAlta()

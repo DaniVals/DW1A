@@ -15,6 +15,10 @@ public class Grupo {
         //se que se quedan valores en null, pero nunca accede a ellos al guardar la longitud como una variable aparte
         //y porque se salta los casos en los que la id de alumno es 0 (los placeholders)
         this.length=arrayAlumnos.length;
+        Alumno placeholder=new Alumno();
+        for(int i=this.length; i<29;i++){
+            this.arrayAlumnos[i]= placeholder;
+        }
     }
     public Grupo(Profesor profe) {
         this.profe = profe;
@@ -31,8 +35,8 @@ public class Grupo {
         length++;
     }
     public void delAlumno(){
-        arrayAlumnos[length]=new Alumno();
         length--;
+        arrayAlumnos[length]=new Alumno();
     }
 
     public Alumno[] getArrayAlumnos() {
@@ -47,7 +51,7 @@ public class Grupo {
 
     public void calificarGrupo(){
         for(int i=0; i<this.length;i++){
-            if (this.arrayAlumnos[i].getId()==0) {
+            if (this.arrayAlumnos[i].getId()!=0) {
                 this.profe.ponerNota(this.arrayAlumnos[i]);
             }
         }
@@ -56,7 +60,7 @@ public class Grupo {
         float media=0;
         int numMedia=0;
         for(int i=0; i<this.length;i++){
-            if (this.arrayAlumnos[i].getId()==0) {
+            if (this.arrayAlumnos[i].getId()!=0) {
                 numMedia++;
                 media+=this.profe.hacerMedia(this.arrayAlumnos[i]);
             }
@@ -67,7 +71,7 @@ public class Grupo {
     public Alumno calcularMediaAlta(){
         Alumno alumMasAlto=this.arrayAlumnos[0];
         for(int i=0; i<this.length;i++){
-            if (this.arrayAlumnos[i].getId()==0) {
+            if (this.arrayAlumnos[i].getId()!=0) {
                 if (this.profe.hacerMedia(arrayAlumnos[i])>this.profe.hacerMedia(alumMasAlto)) {
                     alumMasAlto=arrayAlumnos[i];
                 }
@@ -78,7 +82,7 @@ public class Grupo {
     public double getAlumnoConNotaMasAlta(){
         Alumno alumMasAlto=this.arrayAlumnos[0];
         for(int i=0; i<this.length;i++){
-            if (this.arrayAlumnos[i].getId()==0) {
+            if (this.arrayAlumnos[i].getId()!=0) {
                 if (arrayAlumnos[i].getAsigMasAlta().getNota()>alumMasAlto.getAsigMasAlta().getNota()) {
                     alumMasAlto=arrayAlumnos[i];
                 }

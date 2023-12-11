@@ -104,14 +104,14 @@
 			},
 			//programacion
 			{ 
-				"path": "Programacion/Java/EjerciciosJava/src/EjerciciosClass", 
-				"color": "green", 
-				"symbol": "🆑"
-			},
-			{ 
 				"path": "Programacion/Java/EjerciciosJava/src/EjerciciosObjetos", 
 				"color": "green", 
 				"symbol": "🅾"
+			},
+			{ 
+				"path": "Programacion/Java/EjerciciosJava/src/EjerciciosClass", 
+				"color": "green", 
+				"symbol": "🆑"
 			},
 			{ 
 				"path": "Programacion", 
