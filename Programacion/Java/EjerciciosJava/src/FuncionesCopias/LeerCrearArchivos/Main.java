@@ -15,13 +15,18 @@ public class Main {
         archivo1.añadirLinea("null");
         System.out.println(archivo1);
         
+<<<<<<< HEAD
         */
         /*
+=======
+        
+>>>>>>> 31734ae535420e8192ad09f5a190f215562252e8
         archivo1.formatear();        
 
         archivo1.añadirPersonaje("tierra");
         archivo1.añadirPersonaje("normal");
         archivo1.añadirPersonaje("aaaaaaaaaaaaaaa");
+<<<<<<< HEAD
         */
          
          //archivo1.cambiarConfig("numJugadores", "1");
@@ -30,5 +35,13 @@ public class Main {
          archivo1.remplazar(3, "tipo", "pepene");
          System.out.println( archivo1.buscar(3, "tipo"));
 
+=======
+        
+        */
+        archivo1.cambiarConfig("numJugadores", "6");
+
+        System.out.println( archivo1.detectarConfig("numJugadores"));
+        System.out.println( archivo1.buscar(1, "lvl"));
+>>>>>>> 31734ae535420e8192ad09f5a190f215562252e8
     }
 }

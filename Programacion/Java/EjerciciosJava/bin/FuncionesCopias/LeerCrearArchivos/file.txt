@@ -1,20 +1,28 @@
+<<<<<<< HEAD
 numJugadores=4,
+=======
+numJugadores=6,
+>>>>>>> 31734ae535420e8192ad09f5a190f215562252e8
 dificultad=0,
 lore=0,
 1{
-	lvl:1
+	lvl:5
 	xp:500
 	tipo:tierra
 },
 2{
 	lvl:2
 	xp:500
-	tipo:normal
+	tipo:tierra
 },
 3{
 	lvl:1
 	xp:500
+<<<<<<< HEAD
 	tipo:pepene
+=======
+	tipo:normal
+>>>>>>> 31734ae535420e8192ad09f5a190f215562252e8
 },
 4{
 	lvl:1
