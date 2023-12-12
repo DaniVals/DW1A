@@ -14,75 +14,9 @@
 		{
 			"name": "PEG",
 			"path": "../../ProyectEducationalGames/PEG"
-		}
+		},
 	],
 	"settings": {
-		"java.debug.settings.onBuildFailureProceed": true,
-		"workbench.colorCustomizations": {
-			"[Default Dark Modern]": {
-
-				//interfaz general
-				"sideBar.background": "#000000",		//panel izquierda (archivos)
-				"sideBar.foreground": "#ffffff",		//texto panel izquierda (changes commit)
-				
-				"tab.inactiveBackground": "#101010",	//pestañas inactivas
-				"tab.activeBackground": "#000000",		//pestaña activa
-
-				"titleBar.activeBackground": "#000000",//fondo barra superior (File/ Edit)
-				"titleBar.activeForeground": "#ffffff",//texto barra superior
-				
-				"activityBar.background": "#000000",	//panel izquierda (archivos/ buscador/ github)
-				"statusBar.background": "#000000",		//barrita abajo (go live/ main)
-				"badge.background": "#333333", 		//circulito en changes en comit 
-				"minimap.background": "#030303",		//scroll lateral
-
-				//buscador
-				"input.background": "#000000",			//cuadrados buscador
-
-				//boton
-				"button.background": "#00ffff",		//color botones
-				"button.foreground": "#000000",		//texto botones
-				"button.border": "#000000",			//borde botones
-				"button.hoverBackground": "#00aaaa",
-
-				//menu desplegable
-				"menu.background": "#000000",			//fondo principal
-				"menu.border": "#bbbbbb",				//borde principal
-				"menu.foreground": "#777777",			//texto principal
-				"menu.selectionBackground": "#000000",	//fondo cursor encima
-				"menu.selectionBorder": "#bbbbbb",		//borde cursor encima
-				"menu.selectionForeground": "#bbbbbb",	//texto cursor encima
-				"menu.separatorBackground": "#777777",	//separador entre texto
-
-				//editor de texto
-				"editor.background": "#000000",			//fondo editor texto
-				"editor.foreground": "#ffffff",			//color texto .txt
-				"editor.selectionBackground": "#004444",	//texto seleccionado
-				"editor.selectionForeground": "#9a159c",	
-				"editor.inactiveSelectionBackground": "#002222",	//texto seleccionado en segundo plano
-				"editor.selectionHighlightBackground": "#001111",	//fondo texto igual que seleccionado
-				"editor.selectionHighlightBorder": "#002222",		//borde texto igual que seleccionado
-				"editor.wordHighlightBackground": "#000000",		//fondo palabra con cursor encima
-				"editor.wordHighlightBorder": "#005555",			//borde palabra con cursor encima
-
-				//consola y terminal
-				"panel.background": "#000000",		//fondo terminal
-				"panelTitle.activeBorder": "#ffffff",			//subrayado terminal
-				"panelTitle.activeForeground": "#ffffff",		//opcion marcada en terminal
-				"panelTitle.inactiveForeground": "#555555",	//opciones no marcadas en terminal
-
-				/*//errorLens (errores y avisos) 
-				"errorLens.errorBackground": "#150000",	//fondo linea error
-				"errorLens.errorForeground": "#ff5555",	//texto explica error
-				"editorError.foreground": "#ff5555",		//subrayado error
-				
-				"errorLens.warningBackground": "#101000",	//fondo avisos
-				"errorLens.warningForeground": "#999900",	//texto explica avisos*/
-
-				
-				
-			}
-		} ,
 		"folder-path-color.folders": [
 			//cosas random
 			{ 
