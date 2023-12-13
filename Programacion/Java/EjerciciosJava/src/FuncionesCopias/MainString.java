@@ -6,14 +6,14 @@ public class MainString {
     public static void main(String[] args){
         Scanner teclado=new Scanner(System.in);
 
-        int[] a={6,5,3,4,2};
+        int[] a={4,4,7,4,2,2,7,8,9,11};
         int[] b;
         b=Arrays.ordenarArrayInt(a);
 
         System.out.println("sin ordenar");
-        Arrays.mostrarArrayString(a);
+        Arrays.printInt(a);
         System.out.println("ordenado");
-        Arrays.mostrarArrayString(b);
+        Arrays.printInt(b);
 
         teclado.close();
     }

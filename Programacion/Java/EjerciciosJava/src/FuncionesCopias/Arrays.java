@@ -16,28 +16,31 @@ public class Arrays {
                 menor=i;
             }
         }
-        arrayOrdenar[0]=menor;
-
-        //por cada numero del array introducido
+        //por cada posicion del nuevo array
         for(int i=0; i<arrayOrdenar.length;i++){
-            
-            //buscar por el proximo menor
-            for(int j=0; i<arrayOrdenar.length;i++){
-                
+            //buscar el menor del array introducido
+            for(int j=0; j<arrayOrdenar.length;j++){
                 //si el numero es menor al ultimo del array ordenado, guardar su posicion
-                if (arrayOrdenado[i]<menor) {
+                if (arrayOrdenar[j]<=menor) {
                     posMenor=j;
                 }
             }
-            //establecer en la posicion del menor el numero del mayor
-            arrayOrdenado[arrayOrdenado.length-1]=arrayOrdenar[posMenor];
+            //poner el menor numero en el array
+            arrayOrdenado[i]=arrayOrdenar[posMenor];
+            //establecer ese numero al mayor para que no se detecte de nuevo
             arrayOrdenar[posMenor]=mayor;
+            //cambiar el menor para el siguiente bucle
+            menor=mayor;
+            for(int k : arrayOrdenar){
+                if (k<menor) {
+                    menor=k;
+                }
+            }
         }
-
         return arrayOrdenado;
     }
     
-    public static void mostrarArrayString(int[] arrayAnalizar){
+    public static void printInt(int[] arrayAnalizar){
         for (int txt : arrayAnalizar) {
             System.out.println(txt);
         }
