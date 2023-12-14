@@ -1,7 +1,11 @@
 package FuncionesCopias;
 
-public class Arrays {
-    public static int[] ordenarArrayInt(int[] arrayOrdenar){
+import java.util.Arrays;
+
+public class CalcArrays {
+    //metodos de nacho xdd
+    public static int[] ordenarArrayInt(int[] arrayPasado){
+        int[] arrayOrdenar=arrayPasado;
         int[] arrayOrdenado=new int[arrayOrdenar.length];
         int mayor=arrayOrdenar[0];
         int menor=arrayOrdenar[0];
@@ -40,6 +44,35 @@ public class Arrays {
         return arrayOrdenado;
     }
     
+    public static boolean buscarInt(int[] arrayPasado, int numBuscar){
+        int i=(int)arrayPasado.length/2; //TRUNCA hay que poner -1 al llamarlo
+        int j=i; //valor de i anterior
+        while (0<=i) {
+
+            //comprobar si lo encuentra
+            if (arrayPasado[i-1]==numBuscar) {
+                return true;
+            }
+            
+            //disminuir i
+            if (numBuscar<arrayPasado[i-1]) {
+                j=i;
+                i=(int)(i/2);
+            }
+            //aumentar i
+            if (arrayPasado[i-1]<numBuscar) {
+                j=i;
+                i=((int)i/2)+j;
+            }
+
+            //comprobar que no se queda estancado
+            if (i==j) {
+                return false;
+            }
+        }
+        return false;
+    }
+    //metodos que si son utiles
     public static void printInt(int[] arrayAnalizar){
         for (int txt : arrayAnalizar) {
             System.out.println(txt);
