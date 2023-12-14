@@ -45,26 +45,28 @@ public class CalcArrays {
     }
     
     public static boolean buscarInt(int[] arrayPasado, int numBuscar){
-        int i=(int)arrayPasado.length/2; //TRUNCA hay que poner -1 al llamarlo
+        int i=(int)(arrayPasado.length/2+0.5); //TRUNCA hay que poner -1 al llamarlo
         int j=i; //valor de i anterior
         while (0<=i) {
 
             //comprobar si lo encuentra
-            if (arrayPasado[i-1]==numBuscar) {
+            if (arrayPasado[i]==numBuscar) {
                 return true;
             }
             
+            j=i;
             //disminuir i
-            if (numBuscar<arrayPasado[i-1]) {
-                j=i;
+            if (numBuscar<arrayPasado[i]) {
                 i=(int)(i/2);
             }
             //aumentar i
-            if (arrayPasado[i-1]<numBuscar) {
-                j=i;
+            if (arrayPasado[i]<numBuscar) {
                 i=((int)i/2)+j;
             }
-
+            //evitar que se pase de alto
+            if (i>=arrayPasado.length) {
+                i=arrayPasado.length-1;
+            }
             //comprobar que no se queda estancado
             if (i==j) {
                 return false;
