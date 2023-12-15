@@ -7,21 +7,10 @@ public class MainString {
     public static void main(String[] args){
         Scanner teclado=new Scanner(System.in);
 
-        int[] a={4,7,2,9,11,6};
-        
-        Arrays.sort(a);
-        
-        System.out.println("sin ordenar");
-        CalcArrays.printInt(a);
-
-        for(int i=2;i<13;i++){
-            System.out.print(i+" esta?");
-            if (CalcArrays.buscarInt(a, i)) {
-                System.out.println(" si");
-            }else{
-                System.out.println(" no");
-            }
-        }
+        int[][] a={{4,7,2,9,10,6},{1,2,3,4},{8,8,8}};
+        System.out.println("Array introducido \n"+ IntArray.string2D(a));
+        System.out.println("Suma array\n"+ IntArray.string1D(IntArray.suma1DInt2D(a)));
+        System.out.println("Suma total\n"+IntArray.suma0DInt1D(IntArray.suma1DInt2D(a)));
 
         teclado.close();
     }

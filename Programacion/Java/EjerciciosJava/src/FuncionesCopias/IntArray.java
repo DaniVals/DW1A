@@ -1,16 +1,15 @@
 package FuncionesCopias;
 
-import java.util.Arrays;
-
-public class CalcArrays {
+public class IntArray {
     //metodos de nacho xdd
+    /*
     public static int[] ordenarArrayInt(int[] arrayPasado){
         int[] arrayOrdenar=arrayPasado;
         int[] arrayOrdenado=new int[arrayOrdenar.length];
         int mayor=arrayOrdenar[0];
         int menor=arrayOrdenar[0];
         int posMenor=0;
-
+        
         //sacar el mayor y el menor
         for(int i : arrayOrdenar){
             if (mayor<i) {
@@ -45,7 +44,7 @@ public class CalcArrays {
     }
     
     public static boolean buscarInt(int[] arrayPasado, int numBuscar){
-        int i=(int)(arrayPasado.length/2+0.5); //TRUNCA hay que poner -1 al llamarlo
+        int i=(int)(arrayPasado.length/2); //TRUNCA hay que poner -1 al llamarlo
         int j=i; //valor de i anterior
         while (0<=i) {
 
@@ -58,10 +57,11 @@ public class CalcArrays {
             //disminuir i
             if (numBuscar<arrayPasado[i]) {
                 i=(int)(i/2);
-            }
-            //aumentar i
-            if (arrayPasado[i]<numBuscar) {
-                i=((int)i/2)+j;
+            }else{
+                //aumentar i
+                if (arrayPasado[i]<numBuscar) {
+                    i=((int)(i/2+0.5))+j;
+                }
             }
             //evitar que se pase de alto
             if (i>=arrayPasado.length) {
@@ -74,10 +74,58 @@ public class CalcArrays {
         }
         return false;
     }
+    */
+    
     //metodos que si son utiles
-    public static void printInt(int[] arrayAnalizar){
-        for (int txt : arrayAnalizar) {
-            System.out.println(txt);
+    public static int suma0DInt1D(int[] numeros){
+        int suma=0;
+        for(int i=0;i<numeros.length;i++){
+                suma+=numeros[i];
         }
+        return suma;
     }
+    public static int[] suma1DInt2D(int[][] numeros){
+        int[] suma;
+        suma=new int[numeros.length];
+        for(int i=0;i<numeros.length;i++){
+            suma[i]=0;
+            for(int j=0;j<numeros[i].length;j++){
+                suma[i]+=numeros[i][j];
+            }
+        }
+        return suma;
+    }
+
+    public static String string1D(int[] imprimir){
+        String devolver="";
+        for(int i=0;i<imprimir.length-1;i++){
+            devolver+=imprimir[i]+" ";
+        }
+        devolver+=imprimir[imprimir.length-1]+"";
+        return devolver;
+    }
+    public static String string2D(int[][] imprimir){
+        String devolver="";
+        for(int i=0;i<imprimir.length-1;i++){
+            devolver+=string1D(imprimir[i]);
+            devolver+="\n";
+        }
+        devolver+=string1D(imprimir[imprimir.length-1]);
+        return devolver;
+    }
+    
+    public static int[] media1DInt2D(int[][] numeros){
+        int[] media;
+        media=new int[numeros.length];
+        for(int i=0;i<numeros.length;i++){
+            media[i]=0;
+            for(int j=0;j<numeros[i].length;j++){
+                media[i]+=numeros[i][j];
+            }
+            media[i]=media[i]/numeros[i].length;
+        }
+        return media;
+    }
+    //traspuesta
+    //recibe un numero y una matriz y devuelve cuantas aparece
 }

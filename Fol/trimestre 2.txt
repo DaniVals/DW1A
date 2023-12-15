@@ -88,3 +88,84 @@ noviembre y que tienen prorrateadas sus pagas extraordinarias.
 
 (S) 1100*2 + 80 = 
 
+
+------------------------------------------------------------
+                        15/12/2023
+------------------------------------------------------------
+
+Total devengado = salario bruto;
+
+Seguridad Social
+    Base Cotizacion Contingencias Comunes (BCCC) =
+        Percepciones Salariales (SOLO CON LA PRRORATA)
+        
+    Base Cotizacion Contingencias Profesionales (BCCP) =
+        Percepciones Salariales + pluses
+
+    Base Cotizacion con Horas Extra (BCHE) =
+        Percepciones Salariales + horas extra
+
+Hacienda
+    Base IRPF = "S.bruto" (excepto lo excento)
+
+S.bruto = total devengado
+Liquido a percivir = Salario Neto = S.bruto - deducciones
+
+
+
+10/69
+Salario base = 1170
+plus convenio = 117
+plus transporte = 65
+horas extra fuerza no mayor = 50
+
+derecho a dos pagas extra de salario base 
+ + plus de convenio en junio y diciembre
+
+retencion 10.94%
+
+contrato indefinido
+ y de tipo IT en IMS es el 1.5%
+
+Nomina?
+---------------------------------
+
+Prorrata = 
+    S.Base
+    1170
+
+BCCP = 295.5
+    1170+117 = 1287
+    (1287*2)/12 = 295.5
+
+BCCP = 223.833
+    1170+117+65 = 1343
+    (1343*2)/12 = 223.833
+
+BCHE = 221.166
+    1170+117+50 = 1327
+    (1327*2)/12 = 221.166
+
+
+
+
+//tiene que dar 1.144.4
+//deberes 12/69
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
