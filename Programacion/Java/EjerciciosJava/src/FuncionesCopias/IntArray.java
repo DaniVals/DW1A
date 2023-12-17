@@ -126,6 +126,33 @@ public class IntArray {
         }
         return media;
     }
-    //traspuesta
-    //recibe un numero y una matriz y devuelve cuantas aparece
+
+    public static int[][] traspuesta2D(int[][] matriz){
+        int masLargo=matriz[0].length;
+        for(int i=0;i<matriz.length;i++){
+            if(masLargo<matriz[i].length){
+                masLargo = matriz[i].length;
+            }
+        }
+        int[][] traspuesta = new int[masLargo][matriz.length];
+
+        
+        for(int i=0;i<matriz.length;i++){
+            for(int j=0;j<matriz[i].length;j++){
+                traspuesta[j][i]=matriz[i][j];
+            }
+        }
+        return traspuesta;
+    }
+    public static int buscar2D(int[][] array, int busca){
+        int contador=0;
+        for(int i=0;i<array.length;i++){
+            for(int j=0;j<array[i].length;j++){
+                if (array[i][j]==busca) {
+                    contador++;
+                }
+            }
+        }
+        return contador;
+    }
 }
