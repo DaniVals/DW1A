@@ -95,6 +95,29 @@ public class IntArray {
         }
         return suma;
     }
+    public static int[][] sumaMatriz(int[][] a, int[][] b){
+        int filas=0;
+        int columnas=0;
+        
+        if (a.length<b.length) {
+            filas=a.length;
+        }else{
+            filas=b.length;
+        }
+        if (a[0].length<b[0].length) {
+            columnas=a[0].length;
+        }else{
+            columnas=b[0].length;
+        }
+
+        int[][] suma = new int[filas][columnas];
+        for(int i=0;i<suma.length;i++){
+            for(int j=0;j<suma[i].length;j++){
+                suma[i][j]=a[i][j]+b[i][j];
+            }
+        }
+        return suma;
+    }
 
     public static String string1D(int[] imprimir){
         String devolver="";
