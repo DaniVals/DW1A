@@ -155,4 +155,36 @@ public class IntArray {
         }
         return contador;
     }
+    //Crear un método que reciba dos matrices y devuelve la matriz producto
+    public static int[][] producto2Dx1D(int[][] A,int[] B){
+        
+        int[][] producto = new int[A.length][B.length];
+
+        for(int i=0;i<producto.length;i++){
+            for(int j=0;j<producto[0].length;j++){
+                System.out.println("posicion "+i+" "+j+" numero "+A[i][j]+"*"+B[j] );
+                producto[i][j]=(A[i][j]*B[j]);
+            }
+        }
+
+        return producto;
+    }
+    public static int[][] poner0en2D(int[][] A){
+        
+        int masLargo=A[0].length;
+        for(int i=0;i<A.length;i++){
+            if(masLargo<A[i].length){
+                masLargo = A[i].length;
+            }
+        }
+        int[][] A2 = new int[A.length][masLargo];
+
+        for(int i=0;i<A.length;i++){
+            for(int j=0;j<A[i].length;j++){
+                A2[i][j]=A[i][j];
+            }
+        }
+        return A2;
+    }
+    
 }
