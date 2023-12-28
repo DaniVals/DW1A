@@ -81,6 +81,7 @@ public class TresRaya {
         System.out.println("2-Normal (aleatorio)");
         System.out.println("3-Dificil (empieza la maquina)");
         rival = teclado.nextInt();
+        int contador=1;
         switch (rival) {
             case 2:
                 if (Math.random()<0.5) {
@@ -109,11 +110,16 @@ public class TresRaya {
                 }
                 if (TresRaya.sePuede(tablero, mov)) {
                     TresRaya.cambiar(tablero, mov, 1);
+                    contador++;
                     turno=false;
                 }else{
                     System.out.println("casilla ocupada");
                 }
-                ganador=TresRaya.ganador(tablero, 1);
+                if (9<contador) {
+                    ganador=3;
+                }else{
+                    ganador=TresRaya.ganador(tablero, 1);
+                }
             }else{
                 if (0<rival&&rival<4) {
                     do {
@@ -131,16 +137,25 @@ public class TresRaya {
                     }
                     if (TresRaya.sePuede(tablero, mov)) {
                         TresRaya.cambiar(tablero, mov, 2);
+                        contador++;
                         turno=true;
                     }else{
                         System.out.println("casilla ocupada");
                     }
                 }
-                ganador=TresRaya.ganador(tablero, 2);
+                if (9<contador) {
+                    ganador=3;
+                }else{
+                    ganador=TresRaya.ganador(tablero, 2);
+                }
             }
             TresRaya.print(tablero);
         }
-        System.out.println("ha ganado el jugador J"+ganador);
+        if (ganador==3) {
+            System.out.println("Empate");
+        }else{
+            System.out.println("ha ganado el jugador J"+ganador);
+        }
 
         teclado.close();
     }

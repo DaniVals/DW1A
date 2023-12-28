@@ -15,6 +15,10 @@
 			"name": "PEG",
 			"path": "../../ProyectEducationalGames/PEG"
 		},
+		{
+			"name": "URN",
+			"path": "../../URN"
+		}
 	],
 	"settings": {
 		"folder-path-color.folders": [
