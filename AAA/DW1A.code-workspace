@@ -14,10 +14,6 @@
 		{
 			"name": "PEG",
 			"path": "../../ProyectEducationalGames/PEG"
-		},
-		{
-			"name": "URN",
-			"path": "../../URN"
 		}
 	],
 	"settings": {
@@ -185,7 +181,7 @@
 		"hidefiles.selectedProfile": "Default",
 		"maven.view": "flat",
 		"java.project.sourcePaths": [
-			"prueba4/src"
+			"PEG/prueba4/src/Main"
 		],
 	}
 }
