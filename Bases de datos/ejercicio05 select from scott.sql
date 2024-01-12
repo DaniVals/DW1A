@@ -1,25 +1,25 @@
---Obtén la estructura de la tabla EMP.
-DESC scott.emp;
 SELECT * FROM scott.emp;
+SELECT * FROM scott.dept;
+--Obtén la estructura de la tabla EMP.
+--DESC scott.emp;
 
 --Obtén la estructura de la tabla DEPT.
-DESC scott.dept;
-SELECT * FROM scott.dept;
+--DESC scott.dept;
 
 --Mostrar el nombre de todos los departamentos.
-SELECT dname FROM scott.dept;
+--SELECT dname FROM scott.dept;
 
 --Mostrar el nombre y salario de todos los empleados.
-SELECT ename , sal FROM scott.emp;
+--SELECT ename , sal FROM scott.emp;
 
 --Mostrar el trabajo y número de empleado de todos los empleados.
-SELECT job , empno FROM scott.emp;
+--SELECT job , empno FROM scott.emp;
 
 --Obtén el nombre del presidente de la compañía (PRESIDENT). 
-SELECT ename AS presidente FROM scott.emp WHERE job='PRESIDENT';
+--SELECT ename AS presidente FROM scott.emp WHERE job='PRESIDENT';
 
 --Mostrar un listado de los diferentes trabajos que hay (sin repetirlos).
-SELECT DISTINCT job FROM scott.emp;
+--SELECT DISTINCT job FROM scott.emp;
 
 --Mostrar el nombre y el oficio de los empleados del departamento 20.
 --Obtén la ciudad donde se encuentra el departamento de ventas (SALES).
@@ -33,31 +33,41 @@ SELECT DISTINCT job FROM scott.emp;
 --Mostrar el nombre, trabajo y salario de los empleados del departamento 30. Ordenarlos por trabajo y salario en orden descendente.
 --Mostrar el nombre y salario mensual total (es decir, salario mensual más su comisión) de todos los empleados que cobren comisión y el mensual sea más de 1000$.
 --Mostrar nombre, salario y salario anual (asume 12 pagas en EE.UU.) de los empleados que pertenezcan al departamento 10. 
-SELECT ename, sal , sal*12 FROM scott.emp WHERE deptno=10;
+--SELECT ename, sal , sal*12 FROM scott.emp WHERE deptno=10;
 
 --Modifica el apartado anterior para que la columna se llame "salario_anual".
-SELECT ename, sal , sal*12 AS salario_anual FROM scott.emp WHERE deptno=10;
+--SELECT ename, sal , sal*12 AS salario_anual FROM scott.emp WHERE deptno=10;
 
 --Obtener el nombre y el trabajo de todos los empleados del departamento 30 que no sean vendedores.
-SELECT ename, job FROM scott.emp WHERE deptno=30 AND NOT job='SALESMAN';
+--SELECT ename, job FROM scott.emp WHERE deptno=30 AND NOT job='SALESMAN';
 
 --Obtén el nombre y trabajo de los empleados del departamento 10 que no sean ni managers (MANAGER) ni presidentes (PRESIDENT).
-SELECT ename, job FROM scott.emp WHERE deptno=30 AND (NOT job='MANAGER' AND NOT job='PRESIDENT');
+--SELECT ename, job FROM scott.emp WHERE deptno=30 AND (NOT job='MANAGER' AND NOT job='PRESIDENT');
 
 --Obtén cuál seria el salario anual de los analistas y los vendedores si se les subiera un 20% el sueldo. 
---Muéstralo junto a los nombres de los empleados y el salario anual actual sin modificar. 
---Están ordenador por sueldo.
-SELECT ename, sal*12 AS sal_actual , sal*12*1.2 AS sal_nuevo FROM scott.emp WHERE job='ANALYST' OR job='SALESMAN' ORDER BY sal;
+--	Muéstralo junto a los nombres de los empleados y el salario anual actual sin modificar. 
+--	Están ordenador por sueldo.
+--SELECT ename, sal*12 AS sal_actual , sal*12*1.2 AS sal_nuevo FROM scott.emp WHERE job='ANALYST' OR job='SALESMAN' ORDER BY sal;
 
 --Muestra el nombre y el trabajo de todos los empleados del departamento 30 
---que no sean oficinistas y hayan sido contratados antes de septiembre de 1981. Las columnas se deben llamar "nombre", "puesto" y "fecha_entrada".
-SELECT ename, sal*12 AS sal_actual , sal*12*1.2 AS sal_nuevo FROM scott.emp WHERE job='ANALYST' OR job='SALESMAN';
+--	que no sean oficinistas y hayan sido contratados antes de septiembre de 1981. Las columnas se deben llamar "nombre", "puesto" y "fecha_entrada".
+--SELECT ename, sal*12 AS sal_actual , sal*12*1.2 AS sal_nuevo FROM scott.emp WHERE job='ANALYST' OR job='SALESMAN';
 
 --Mostrar todos los empleados que entraron en la empresa durante el año 1982.
+--SELECT ename, hiredate FROM scott.emp WHERE hiredate>=DATE '1982-01-01' AND hiredate<=DATE '1982-12-31' ;
+
 --Mostrar el nombre de los empleados que alfabéticamente estén entre JAMES y SCOTT.
---Mostrar el número de empleado, nombre y fecha de entrada de todos los empleados que no fueron contratados durante 1981. Ordénalos por fecha de entrada.
+SELECT ename FROM scott.emp WHERE ename BETWEEN 'JAMES' AND 'SCOTT';
+
+--Mostrar el número de empleado, nombre y fecha de entrada de todos los empleados que no fueron contratados durante 1981. 
+--  Ordénalos por fecha de entrada.
+SELECT empno ,ename, hiredate FROM scott.emp WHERE NOT(hiredate BETWEEN DATE '1981-01-01' AND DATE '1981-12-31') ORDER BY hiredate ;
+
 --Mostrar todos los empleados que no trabajen en el departamento 20 o 30.
+SELECT ename, deptno FROM scott.emp WHERE deptno!=20 AND deptno!=30;
+
 --Mostrar nombre, oficio y comisión de todos los empleados del departamento 30 que cobran una comisión.
+
 --Mostrar el nombre y oficio de todos los empleados que tengan una E en su nombre.
 --Mostrar el nombre y número de departamento de los empleados cuyo nombre termine en N. Ordénalos por número de departamento.
 --Obtén la lista de ciudades donde la empresa tiene una sede y el nombre del departamento que alberga, quitando aquellas que empiecen por B o D.

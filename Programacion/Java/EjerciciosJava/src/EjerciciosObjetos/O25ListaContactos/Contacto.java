@@ -28,14 +28,16 @@ public class Contacto {
     @Override
     public String toString() {
         if (this.persona) {
-        return "Contacto [telefono=" + telefono + ", direccion=" + direccion + ", correo=" + correo + ", persona="
-                + persona + ", nombre=" + nombre + ", apellidos=" + apellidos + ", postal=" + postal + ", sector="
-                + sector + "]";
-            
+            return "Nombre: " + nombre + " " + apellidos +
+            "\n    nº tel: " + telefono +
+            "\n    dirrec: " + direccion +
+            "\n    correo: " + correo;
         }
-        return "Contacto [telefono=" + telefono + ", direccion=" + direccion + ", correo=" + correo + ", persona="
-                + persona + ", nombre=" + nombre + ", apellidos=" + apellidos + ", postal=" + postal + ", sector="
-                + sector + "]";
+        return "Empresa: " + sector +
+        "\n    nº tel: " + telefono +
+        "\n    dirrec: " + direccion +
+        "\n    correo: " + correo +
+        "\n    cd pos: " + postal;
     }
 
 }

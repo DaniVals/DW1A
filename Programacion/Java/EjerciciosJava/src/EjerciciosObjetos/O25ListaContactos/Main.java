@@ -24,6 +24,8 @@ public class Main {
         Scanner teclado=new Scanner(System.in);
         int opcion = 1;
         ArrayList<Contacto> contactos=new ArrayList<Contacto>();
+        contactos.add(new Contacto("615151515", "dir1", "correo1", true, "paco", "pepe", "NA", "NA"));
+        contactos.add(new Contacto("987878787", "dir2", "correo2", false, "NA", "NA", "28028", "pasta"));
         while (opcion!=0){
             System.out.println("Elije una opcion: "+
             "\n  1.Añadir"+
@@ -33,13 +35,14 @@ public class Main {
             "\n  5.Numero empresas en sector"+
             "\n  6.Emails ordenados alfabeticamente"+
             "\n  0.salir");
-            opcion= teclado.next().charAt(0)-48;
+            opcion= teclado.nextLine().charAt(0)-48;
             switch (opcion){
                 //añadir un contacto
                 case 1:
                     System.out.println("persona o empresa?");
                     String tel, dirr, correo, nombre, apellidos, postal, sector;
-                    if (teclado.next().charAt(0)=='p'||teclado.next().charAt(0)=='P') {
+                    char escribir=teclado.nextLine().charAt(0);
+                    if (escribir=='p'||escribir=='P') {
                         //persona
                         System.out.println("Nombre: ");     nombre=teclado.nextLine();
                         System.out.println("Apellidos: ");  apellidos=teclado.nextLine();
@@ -48,7 +51,7 @@ public class Main {
                         System.out.println("Correo: ");     correo=teclado.nextLine();
                         
                         contactos.add(new Contacto(tel, dirr, correo, true, nombre, apellidos,
-                         "NA", "NA"));
+                                                    "NA", "NA"));
                     }else{
                         //empresa
                         System.out.println("Sector: ");     sector=teclado.nextLine();
@@ -57,18 +60,29 @@ public class Main {
                         System.out.println("Dirreccion: "); dirr=teclado.nextLine();
                         System.out.println("Correo: ");     correo=teclado.nextLine();
                         
-                        contactos.add(new Contacto(tel, dirr, correo, false,"NA", "NA",
-                        sector, postal));
+                        contactos.add(new Contacto(tel, dirr, correo, false, "NA", "NA",
+                                                    sector, postal));
                     }
                 break;
+                //borrar contacto por index
                 case 2:
+                    System.out.println("Indique la id del contacto a borrar:");
+                    int index= Integer.parseInt(teclado.nextLine());
+                    if (-1<index&&index<contactos.size()) {
+                        
+                    }else{
+                        System.out.println("id fuera de rango (0-"+(contactos.size()-1)+")");
+                    }
+                    System.out.println();
                 break;
                 case 3:
                 break;
+                //mostrar contactos
                 case 4:
-                    for(Contacto c : contactos){
-                        System.out.println(c);
+                    for(int i=0;i<contactos.size();i++){
+                        System.out.println(i+" "+contactos.get(i));
                     }
+                    System.out.println();
                 break;
             }
         }
