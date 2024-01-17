@@ -21,8 +21,12 @@ siguientes operaciones mediante un menú:
 public class Main {
     public static void main(String[] args){
 
+        int opcion = 1; //opcion del menu
+        char escribir; //preguntas
+        int index=0; //caso 2 y 3
+        ArrayList<Contador> contadorSectores=new ArrayList<Contador>(); //caso 5
+        
         Scanner teclado=new Scanner(System.in);
-        int opcion = 1;
         ArrayList<Contacto> contactos=new ArrayList<Contacto>();
         contactos.add(new Contacto("615151515", "dir1", "correo1", true, "paco", "pepe", "NA", "NA"));
         contactos.add(new Contacto("987878787", "dir2", "correo2", false, "NA", "NA", "28028", "pasta"));
@@ -41,7 +45,7 @@ public class Main {
                 case 1:
                     System.out.println("persona o empresa?");
                     String tel, dirr, correo, nombre, apellidos, postal, sector;
-                    char escribir=teclado.nextLine().charAt(0);
+                    escribir=teclado.nextLine().charAt(0);
                     if (escribir=='p'||escribir=='P') {
                         //persona
                         System.out.println("Nombre: ");     nombre=teclado.nextLine();
@@ -61,21 +65,45 @@ public class Main {
                         System.out.println("Correo: ");     correo=teclado.nextLine();
                         
                         contactos.add(new Contacto(tel, dirr, correo, false, "NA", "NA",
-                                                    sector, postal));
+                                                    postal, sector));
                     }
                 break;
                 //borrar contacto por index
                 case 2:
                     System.out.println("Indique la id del contacto a borrar:");
-                    int index= Integer.parseInt(teclado.nextLine());
+                    index= Integer.parseInt(teclado.nextLine());
                     if (-1<index&&index<contactos.size()) {
-                        
+                        System.out.println(contactos.get(index));
+                        System.out.println("[S/N] Quiere borrar este?");
+                        escribir=teclado.nextLine().charAt(0);
+                        if (escribir=='s'||escribir=='S') {
+                            contactos.remove(index);
+                            System.out.println("Borrado con exito");
+                        }else{
+                            System.out.println("Cancelando...");
+                        }
                     }else{
                         System.out.println("id fuera de rango (0-"+(contactos.size()-1)+")");
                     }
-                    System.out.println();
                 break;
+                //cambiar numero
                 case 3:
+                System.out.println("Indique la id del contacto que quiere actualizar:");
+                index= Integer.parseInt(teclado.nextLine());
+                if (-1<index&&index<contactos.size()) {
+                    System.out.println(contactos.get(index));
+                    System.out.println("[S/N] Quiere cambiar este?");
+                    escribir=teclado.nextLine().charAt(0);
+                    if (escribir=='s'||escribir=='S') {
+                        System.out.println("Nuevo numero:");
+                        contactos.get(index).setTelefono(teclado.nextLine());
+                        System.out.println("Cambiado con exito");
+                    }else{
+                        System.out.println("Cancelando...");
+                    }
+                }else{
+                    System.out.println("id fuera de rango (0-"+(contactos.size()-1)+")");
+                }
                 break;
                 //mostrar contactos
                 case 4:
@@ -84,6 +112,36 @@ public class Main {
                     }
                     System.out.println();
                 break;
+                //contar empresas
+                case 5:
+                    //reiniciar lista
+                    contadorSectores.clear();
+                    for(int i=0;i<contactos.size();i++){
+                        if (Contador.existe(contadorSectores, contactos.get(i).getSector())) {
+
+                            //si existe buscar cual es y sumar
+                            for(int j=0;j<contadorSectores.size();j++){
+                                if (contadorSectores.get(j).getNombre().compareTo(contactos.get(j).getSector())==0) {
+                                    contadorSectores.get(j).setCantidad(contadorSectores.get(j).getCantidad()+1);
+                                }
+                            }
+                        }else{
+                            //si no añadir
+                            contadorSectores.add(new Contador(contactos.get(i).getSector(), 1));
+                        }
+                            
+                    }
+                break;
+                //mostrar lista por correo
+                case 6:
+                break;
+
+            }
+            //sustituir por una pausa
+            if (opcion!=0) {   
+                System.out.println();
+                System.out.println("pulse para continuar");
+                teclado.nextLine();
             }
         }
         System.out.println("Saliendo...");
