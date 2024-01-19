@@ -30,6 +30,8 @@ public class Main {
         ArrayList<Contacto> contactos=new ArrayList<Contacto>();
         contactos.add(new Contacto("615151515", "dir1", "correo1", true, "paco", "pepe", "NA", "NA"));
         contactos.add(new Contacto("987878787", "dir2", "correo2", false, "NA", "NA", "28028", "pasta"));
+        contactos.add(new Contacto("111111", "dir3", "correo3", false, "NA", "NA", "11111", "pasta"));
+        contactos.add(new Contacto("666", "dir4", "correo4", false, "NA", "NA", "1234", "pesto"));
         while (opcion!=0){
             System.out.println("Elije una opcion: "+
             "\n  1.Añadir"+
@@ -116,20 +118,29 @@ public class Main {
                 case 5:
                     //reiniciar lista
                     contadorSectores.clear();
-                    for(int i=0;i<contactos.size();i++){
-                        if (Contador.existe(contadorSectores, contactos.get(i).getSector())) {
-
-                            //si existe buscar cual es y sumar
-                            for(int j=0;j<contadorSectores.size();j++){
-                                if (contadorSectores.get(j).getNombre().compareTo(contactos.get(j).getSector())==0) {
-                                    contadorSectores.get(j).setCantidad(contadorSectores.get(j).getCantidad()+1);
-                                }
+                    for(int j, i=0;i<contactos.size();i++){
+                        if (!contactos.get(i).isPersona()) {
+                            System.out.println("sector "+contactos.get(i).getSector());
+                            j=Contador.existe(contadorSectores, contactos.get(i).getSector());
+                            if (-1<j) {
+                                //si existe sumar
+                                contadorSectores.get(j).setCantidad(contadorSectores.get(j).getCantidad()+1);
+                                System.out.println("CP1");
+                            }else{
+                                //si no (-1) añadir
+                                contadorSectores.add(new Contador(contactos.get(i).getSector(), 1));
+                                System.out.println("CP2");
                             }
+                            System.out.println("CP0"+j);
                         }else{
-                            //si no añadir
-                            contadorSectores.add(new Contador(contactos.get(i).getSector(), 1));
+                            //debug
+                            System.out.println("persona ");
                         }
                             
+                    }
+                    //imprimir
+                    for(int j=0;j<contadorSectores.size();j++){
+                        System.out.println(contadorSectores.get(j));
                     }
                 break;
                 //mostrar lista por correo

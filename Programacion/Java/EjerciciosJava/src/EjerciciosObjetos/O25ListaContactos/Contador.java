@@ -12,14 +12,14 @@ public class Contador {
         this.cantidad = cantidad;
     }
 
-    public static boolean existe(ArrayList<Contador> lista,String buscado){
+    public static int existe(ArrayList<Contador> lista,String buscado){
         
         for(int i=0;i<lista.size();i++){
-            if (lista.get(i).getNombre().compareTo(buscado)!=0) {
-                return false;
+            if (lista.get(i).getNombre().compareTo(buscado)==0) {
+                return i;
             }
         }
-        return true;
+        return -1;
     }
 
     public String getNombre() {
@@ -40,7 +40,7 @@ public class Contador {
 
     @Override
     public String toString() {
-        return "  Sector:" + nombre + " numero:" + cantidad + "]";
+        return "  Sector:" + nombre + " numero:" + cantidad;
     }
 
     

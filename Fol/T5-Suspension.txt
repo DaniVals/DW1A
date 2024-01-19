@@ -1,0 +1,45 @@
+2.suspension (interrupcion temporal del contrato)
+
+    ======  causas  ======
+    nacimiento y cuidado del menor 
+        16 semanas, 6 obligatorias
+        suspension de empleo y saldo
+
+    IT
+    huelga
+        no retribuido
+        reserva puesto trabajo
+    suspension de empleo
+    cierre patronal
+        no retribuido
+
+
+
+
+
+
+    excedencias 
+      una suspension generalmente mas larga de lo comun
+      no hay prestacion de la seguridad social
+        1. Voluntaria
+            4-60 meses
+            - antiguedad
+            necesitas 1 año de antiguedad
+            cooldown 4 años
+            hay reingreso preferente pero no reserva
+
+        2. Forzosa
+            cargos publicos
+            + antiguedad
+            reserva puesto
+
+        3. Cuidado de hijos
+            hasta 3 años
+            + antiguedad
+            reserva puesto solo primer año, despues grupo profesional
+
+        4. Cuidado de un familiar
+            hasta 2 años
+            + antiguedad
+            reserva puesto solo primer año, despues grupo profesional
+            2º grado, dependiente
