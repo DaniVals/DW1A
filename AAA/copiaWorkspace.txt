@@ -1,0 +1,92 @@
+{
+	"folders": [
+		{
+			"name": "Clase",
+			"path": "DW1A"
+		},
+		{
+			"name": "GachaBot",
+			"path": "GachaBot"
+		}
+	],
+	"settings": {
+		
+		"folder-path-color.folders": [
+			{ 
+				"path": "AAA", 
+				"color": "blue"
+			},
+			{ 
+				"path": "Bases de datos", 
+				"color": "yellow"
+			},
+			{ 
+				"path": "Lenguajes de Marcas", 
+				"color": "magenta"
+			},
+			{ 
+				"path": "Programacion", 
+				"color": "green"
+			},
+			{ 
+				"path": "Fol", 
+				"color": "grey"
+			},
+			{ 
+				"path": "index.html", 
+				"color": "red"
+			},
+			{ 
+				"path": "Sistemas", 
+				"color": "blue"
+			},
+			
+		],
+		//plugin carpetas e iconos
+		"material-icon-theme.hidesExplorerArrows": true,
+		"material-icon-theme.opacity": 1,
+		"material-icon-theme.folders.associations": {
+			"AAA": "config",
+			"Bases de datos": "database",
+			"Lenguajes de Marcas": "css",
+			"Entornos de desarrollo": "src",
+			"src": "java",
+			"Fol": "admin",
+			"Sistemas": "Vm",
+		},
+		//"liveServer.settings.multiRootWorkspaceName": "danivals.github.io",
+		"liveServer.settings.multiRootWorkspaceName": "DW1A",
+		"hidefiles.configurationType": "local",
+		"hidefiles.globalConfig": {
+			"profiles": [
+				{
+					"name": "Default",
+					"detail": "",
+					"description": "Test",
+					"hidden": [
+						"Programacion/Java/EjerciciosJava/.classpath",
+						"Programacion/Java/EjerciciosJava/.project",
+						"Programacion/Java/EjerciciosJava/bin/",
+						"Programacion/Java/EjerciciosJava/src/module-info.java",
+						"Programacion/Java/EjerciciosJava/.settings/"
+					],
+					"peek": []
+				}
+			]
+		},
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"Programacion/Java/EjerciciosJava/.classpath": true,
+			"Programacion/Java/EjerciciosJava/.project": true,
+			"Programacion/Java/EjerciciosJava/bin/": true,
+			"Programacion/Java/EjerciciosJava/src/module-info.java": true,
+			"Programacion/Java/EjerciciosJava/.settings/": true
+		},
+		"hidefiles.selectedProfile": "Default",
+		"maven.view": "flat",
+	}
+}
