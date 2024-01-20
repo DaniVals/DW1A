@@ -1,8 +1,0 @@
-SpecialZombieSpawnPercent: 0.5
-SpeedZombieSpawnWheight: 1
-SpeedZombieDropPercent: 0.5
-SpeedZombieSpawnLevel: 5
-DamageVidaMaxLost: false
-DeathVidaMaxReset: true
-SpeedZombieUpPercent: 0.0
-SpeedZombieDownPercent: 0.0
