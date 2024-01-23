@@ -47,6 +47,27 @@ public class Lista {
         System.out.println("Añadiendo piloto en la posicion "+listado.size());
         listado.add(new Piloto(licencia, nombre, apellido, nacionalidad, new ArrayList<Integer>()));
     }
+    //-------------CASE 2---------
+    public void addHistorial(){
+        //crear datos
+        int puntos, indexPiloto;
+
+        //pedir y verificar datos
+        indexPiloto=nextPiloto();
+        if (indexPiloto==-1) {
+            return;
+        }
+        //añadir carreras hasta que ponga -1
+        System.out.println("Cuantos puntos quiere añadirle?");
+        puntos=nextNum();
+        while (0<puntos) {
+            System.out.println("Añadiendo carrera numero "+listado.get(indexPiloto).getPuntos().size()+" con "+puntos+" puntos");
+            listado.get(indexPiloto).getPuntos().add(puntos);
+
+            System.out.println("Cuantos puntos quiere añadirle? (negativos para salir)");
+            puntos=nextNum();
+        }
+    }
     //-------------CASE 3---------
     public void addCarrera(){
         //crear datos
@@ -54,15 +75,37 @@ public class Lista {
 
         //pedir y verificar datos
         indexPiloto=nextPiloto();
-        
-        //añadir piloto
-        System.out.println("Añadiendo piloto en la posicion "+listado.size());
+        if (indexPiloto==-1) {
+            return;
+        }
+        System.out.println("Cuantos puntos quiere añadirle?");
+        puntos=nextNum();
+
+        //añadir carrera
+        System.out.println("Añadiendo carrera numero "+listado.get(indexPiloto).getPuntos().size()+" con "+puntos+" puntos");
+        listado.get(indexPiloto).getPuntos().add(puntos);
     }
     //-------------CASE 4---------
     public void imprimir(int minimo){
         for(Piloto p : listado){
-            if (p.mediaPuntos()<=0) {
+            if (minimo<=p.mediaPuntos()) {
                 System.out.println(p);
+            }
+        }
+    }
+    //-------------CASE 5---------
+    public void buscarMayor(){
+        //buscar el valor mas alto
+        double mayor=listado.get(0).mediaPuntos();
+        for(int i=1;i<listado.size();i++){
+            if (mayor<listado.get(i).mediaPuntos()) {
+                mayor=listado.get(i).mediaPuntos();
+            }
+        }
+        //imprimir los que tengan dicho valor
+        for(int i=0;i<listado.size();i++){
+            if (mayor==listado.get(i).mediaPuntos()) {
+                System.out.println(listado.get(i));
             }
         }
     }
@@ -86,13 +129,18 @@ public class Lista {
     }
     private int nextPiloto(){
         int index;
-        System.out.println("Index del piloto:");
+        System.out.println("Index del piloto ("+0+"-"+(listado.size()-1)+")");
         index=nextNum();
-        while (0<index&&index<listado.size()) {
-            System.out.println("Index no valido, proporcione otro:");
+        while (!(0<=index&&index<listado.size())) {
+            System.out.println("Index no valido("+0+"-"+(listado.size()-1)+"), proporcione otro:");
             index=nextNum();
         }
-        return index;
+        System.out.println(this.getListado().get(index));
+        System.out.println("Este es el piloto que desea? [S/N]");
+        if (nextBool()) {
+            return index;
+        }
+        return (-1);
     }
     private boolean licenciaRepetida(int comprobado){
         for(int i=0;i<listado.size();i++){
@@ -105,5 +153,8 @@ public class Lista {
     //-----------debug--------------
     public void debugAddPiloto(int licencia, String nombre, String apellido, String nacionalidad){
         listado.add(new Piloto(licencia, nombre, apellido, nacionalidad, new ArrayList<Integer>()));
+    }
+    public void debugAddCarrera(int index, int puntos){
+        listado.get(index).getPuntos().add(puntos);
     }
 }
