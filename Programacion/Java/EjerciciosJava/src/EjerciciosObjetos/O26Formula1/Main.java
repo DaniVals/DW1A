@@ -19,13 +19,16 @@ mostrar un valor)
 6. Mostrar los datos ordenados por orden alfabético de apellidos y nombre
 7. Salir
 
- */
+*/
 public class Main {
     public static void main(String[] args){
 
         int opcion = 1;
         Scanner teclado=new Scanner(System.in);
         Lista lista1 = new Lista(new ArrayList<Piloto>(),teclado);
+        lista1.debugAddPiloto(999, "Franchesco", "Virgolini", "Italiano");
+        lista1.debugAddCarrera(0, 4);
+        lista1.debugAddPiloto(313, "Raul", "Seleccion", "ESPAÑA");
         
         while (opcion!=0){
             System.out.println("Elije una opcion: "+
@@ -33,7 +36,7 @@ public class Main {
             "\n  2.Añadir puntos "+
             "\n  3.Añadir ultima puntuacion"+
             "\n  4.Listado pilotos con puntuacion menor que 5"+
-            "\n  5.Numero de licencia de piloto mas alto"+
+            "\n  5.Numero de licencia de piloto con mas puntuacion"+
             "\n  6.Nombre y apellidos ordenados alfabeticamente"+
             "\n  0.salir");
             opcion= teclado.nextLine().charAt(0)-48;
@@ -42,6 +45,10 @@ public class Main {
                 case 1:
                     lista1.pedirPiloto();
                 break;
+                //añadir carreras
+                case 2:
+                    lista1.addHistorial();
+                break;
                 //añadir ultima carrera
                 case 3:
                     lista1.addCarrera();
@@ -49,6 +56,10 @@ public class Main {
                 //listado 
                 case 4:
                     lista1.imprimir(0);
+                break;
+                //mayor media 
+                case 5:
+                    lista1.buscarMayor();
                 break;
             }
             //sustituir por una pausa
