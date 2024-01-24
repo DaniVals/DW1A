@@ -1,12 +1,14 @@
-Definiciones
-    ETOP = Economicas Tecnicas Organizativas Produccion (con una vale)
+1. Modificacion
 
-1.1 Movilidad funcional
-    Dentro del grupo profesional [ordinaria]
+Definiciones
+    ETOP = economicas tecnicas organizativas produccion (con una vale)
+
+1.1 Movilidad Funcional
+    dentro del grupo profesional [ordinaria]
         cambio de tareas dentro de tu grupo profesional
         no hace falta justificacion
 
-    Fuera del grupo profesional [extraordinaria]
+    fuera del grupo profesional [extraordinaria]
         justificada con causas 
         tiempo imprescindible
         informar a los representantes de los trabajadores
@@ -14,7 +16,7 @@ Definiciones
         en caso mayor, puedes reclamar el ascenso si 6/12 meses || 8/24 meses
 
 
-1.2 Geografica (SOLO cambiar domicilio)
+1.2 Geografica (solo cambiar domicilio)
     causas -> ETOP
 
     desplazamiento [temporal]
