@@ -1,9 +1,14 @@
-2.suspension (interrupcion temporal del contrato)
+2. Suspension 
 
-    ======  causas  ======
+    ====  Definicion  ====
+    interrupcion temporal del contrato acordado por ambas partes
+
+
+    2.1  Causas  Comunes
     nacimiento y cuidado del menor 
         16 semanas, 6 obligatorias
         suspension de empleo y saldo
+        prestacion seguridad social
 
     IT
     huelga
@@ -15,30 +20,27 @@
 
 
 
-
-
-
-    excedencias 
-      una suspension generalmente mas larga de lo comun
-      no hay prestacion de la seguridad social
-        1. Voluntaria
+    2.2 Excedencias 
+    una suspension generalmente mas larga de lo comun
+    no hay prestacion de la seguridad social
+        Voluntaria
             4-60 meses
             - antiguedad
             necesitas 1 año de antiguedad
             cooldown 4 años
             hay reingreso preferente pero no reserva
 
-        2. Forzosa
+        Forzosa
             cargos publicos
             + antiguedad
             reserva puesto
 
-        3. Cuidado de hijos
+        Cuidado De Hijos
             hasta 3 años
             + antiguedad
             reserva puesto solo primer año, despues grupo profesional
 
-        4. Cuidado de un familiar
+        Cuidado De Un Familiar
             hasta 2 años
             + antiguedad
             reserva puesto solo primer año, despues grupo profesional

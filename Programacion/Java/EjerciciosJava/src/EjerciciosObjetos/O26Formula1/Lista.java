@@ -86,9 +86,9 @@ public class Lista {
         listado.get(indexPiloto).getPuntos().add(puntos);
     }
     //-------------CASE 4---------
-    public void imprimir(int minimo){
+    public void buscarMenores(int minimo){
         for(Piloto p : listado){
-            if (minimo<=p.mediaPuntos()) {
+            if (minimo==p.minCarrera()) {
                 System.out.println(p);
             }
         }
@@ -106,6 +106,33 @@ public class Lista {
         for(int i=0;i<listado.size();i++){
             if (mayor==listado.get(i).mediaPuntos()) {
                 System.out.println(listado.get(i));
+            }
+        }
+    }
+    //-------------CASE 6---------
+    public void ordenarPorNombre(){
+        ArrayList<Piloto> ordenadoApNo = new ArrayList<Piloto>(listado);
+        for(Piloto p : listado){
+            ordenadoApNo.set(calcularPosicionOrdenada(p), p);
+        }
+        for(Piloto p2 : ordenadoApNo){
+            System.out.println(p2);
+        }
+    }
+    public int calcularPosicionOrdenada(Piloto p){
+        int contador=0;
+        for(int j=0;j<listado.size();j++){
+            if (0<p.getNyA().compareTo(listado.get(j).getNyA())) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+    //-------------CASE 7---------
+    public void imprimir(int minimo){
+        for(Piloto p : listado){
+            if (minimo<=p.mediaPuntos()) {
+                System.out.println(p);
             }
         }
     }

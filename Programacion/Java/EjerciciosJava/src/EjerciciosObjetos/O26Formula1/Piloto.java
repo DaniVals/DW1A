@@ -18,6 +18,10 @@ public class Piloto {
         this.puntos = puntos;
     }
 
+    public String getNyA(){
+        return apellido+" "+nombre;
+    }
+
     public int getLicencia() {
         return licencia;
     }
@@ -61,9 +65,9 @@ public class Piloto {
     @Override
     public String toString() {
         return  "Piloto " + licencia + 
-                "\n  nombre:" + nombre + " " + apellido + 
-                "\n  nacionalidad:" + nacionalidad + 
-                "\n  media:" + mediaPuntos();
+                "\n  nombre: " + nombre + " " + apellido + 
+                "\n  nacionalidad: " + nacionalidad + 
+                "\n  media: " + mediaPuntos()+" "+puntos.toString();
     }
     public double mediaPuntos(){
         double media=0;
@@ -74,6 +78,15 @@ public class Piloto {
             return media/puntos.size();
         }
         return 0;
+    }
+    public int minCarrera(){
+        int menor=this.puntos.get(0);
+        for(int i=1;i<this.puntos.size();i++){
+            if (this.puntos.get(i)<menor) {
+                menor=this.puntos.get(i);
+            }
+        }
+        return menor;
     }
     
 }

@@ -29,15 +29,20 @@ public class Main {
         lista1.debugAddPiloto(999, "Franchesco", "Virgolini", "Italiano");
         lista1.debugAddCarrera(0, 4);
         lista1.debugAddPiloto(313, "Raul", "Seleccion", "ESPAÑA");
+        lista1.debugAddPiloto(111, "Triple", "Siete", "ESPAÑA");
+        lista1.debugAddPiloto(111, "Armando", "Siete", "ESPAÑA");
+        lista1.debugAddPiloto(45, "Super", "ZZZ", "ESPAÑA");
+        lista1.debugAddPiloto(45, "Alberto", "Alvarez", "ESPAÑA");
         
         while (opcion!=0){
             System.out.println("Elije una opcion: "+
             "\n  1.Añadir piloto"+
             "\n  2.Añadir puntos "+
             "\n  3.Añadir ultima puntuacion"+
-            "\n  4.Listado pilotos con puntuacion menor que 5"+
+            "\n  4.Listado pilotos con puntuacion menor igual a 5"+
             "\n  5.Numero de licencia de piloto con mas puntuacion"+
             "\n  6.Nombre y apellidos ordenados alfabeticamente"+
+            "\n  7.Imprimir (debug)"+
             "\n  0.salir");
             opcion= teclado.nextLine().charAt(0)-48;
             switch (opcion){
@@ -55,11 +60,19 @@ public class Main {
                 break;
                 //listado 
                 case 4:
-                    lista1.imprimir(0);
+                    lista1.buscarMenores(5);
                 break;
                 //mayor media 
                 case 5:
                     lista1.buscarMayor();
+                break;
+                //mayor media 
+                case 6:
+                    lista1.ordenarPorNombre();
+                break;
+                //imprimir debug
+                case 7:
+                    lista1.imprimir(0);
                 break;
             }
             //sustituir por una pausa
