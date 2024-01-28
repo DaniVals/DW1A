@@ -1,7 +1,7 @@
 3. Extincion
 anular el contrato de trabajo
 
-Definiciones
+== Definiciones ==
     Finiquito    -> lo que se debera pagar de los dias ya trabajados (si solo trabajas 15 dias y te pagan mensual te lo pagan)
     Indemnizacion-> una paga extra 
 
@@ -27,7 +27,10 @@ Fallecimiento
     indemnizacion
 Dimision
     finiquito
-Fin Contrato Temporal 
+Jubilacion
+    finiquito
+    indemnizacion
+Fin Contrato Temporal
 
 3.4 Despidos
 tipo (causa de despido) != calificacion (juez social, es procedente/inprocedente/nulo)
@@ -35,9 +38,9 @@ tipo (causa de despido) != calificacion (juez social, es procedente/inprocedente
 Tipos
     Disciplinario
         falta grave y culpable
-    D.Objetivo
-    D.Colectivo (ETOP)
-    D.Fuerza Mayor (Definitiva)
+    Objetivo
+    Colectivo (ETOP)
+    Fuerza Mayor (Definitiva)
 
 Falta Grave Y Culpable
     faltas repetidas y continuadas
@@ -51,7 +54,7 @@ Falta Grave Y Culpable
 Pasos
 
     Vas Al SMAC (servicio mediacion arbitrable condicion)
-    si no se resuelve el conflicto
+    si no se resuelve el conflicto (por ejemplo mediante un acuerdo)
 
     Juzgado De Lo Social 
     demanda, tres casos
@@ -59,5 +62,8 @@ Pasos
     -procendente (te lo aceptan)
 
     -improcedente (no te lo aceptan)
+        -readmision + S.tramitacion
+        -indemnizacion 33dias/
 
     -nulo (vulneracion derechos fundamentales)
+        -readmision + S.tramitacion

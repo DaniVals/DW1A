@@ -1,0 +1,42 @@
+=============Compensacion y absorcion==============
+
+Compensacion: complementos no salariales compensan un gasto que el trabajador tiene a causa del trabajo
+si te endeudas te embargan el salario
+    no puede pasar del SMI
+
+S. base=900€/mes ------------> 1080€ (objetivo)
+
+-Mejora voluntaria = 300
+-Plus trnasporte = 60 (no compensable)
+-Plus maternidad = 360 (no compensable)
+-2 pagas S.base
+
+1) Calculo S.base anual actual
+(900*14)+(300*12)=[16200€]
+
+
+2) 1080-900€ = 180€ -> necesitamos añadir al S. base
+(300-180-120) de mejora voluntaria
+
+3) Calculo S. anual despues de la compensacion
+(1080*14)+(120*12)=[16560]
+como [16200<16560] pues SI es rentable la subida salarial
+
+-------------------------------------------------
+
+S. base=900€/mes ------------> 1080€ (objetivo)
+
+- Mejora voluntaria = 300
+- Plus antiguedad = 200 
+- 2 pagas S.base y plus antiguedad
+
+1) Calculo S.base anual actual
+(900+200)*14=[15400]
+
+
+2) 1080-900€ = 180€ -> necesitamos añadir al S. base
+(200-180=20) de mejora voluntaria
+
+3) Calculo S. anual despues de la compensacion
+(1080+20)*14=[15400]
+[son iguales]

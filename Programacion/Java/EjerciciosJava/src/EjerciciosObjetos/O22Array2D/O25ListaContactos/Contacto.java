@@ -1,4 +1,4 @@
-package EjerciciosObjetos.O25ListaContactos;
+package EjerciciosObjetos.O22Array2D.O25ListaContactos;
 
 public class Contacto {
     private String telefono;
