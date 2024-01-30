@@ -1,4 +1,4 @@
-package EjerciciosObjetos.O30Cuentas;
+package EjerciciosObjetos2.O02Cuentas;
 
 /*
 Desarrollar una clase llamada CuentaCorriente que:

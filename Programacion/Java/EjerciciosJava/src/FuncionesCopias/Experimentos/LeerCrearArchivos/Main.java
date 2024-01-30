@@ -1,5 +1,4 @@
-package FuncionesCopias.LeerCrearArchivos;
-
+package FuncionesCopias.Experimentos.LeerCrearArchivos;
 
 public class Main {
     public static void main(String[] args){

@@ -1,6 +1,6 @@
-package EjerciciosObjetos.O29RelacionEntrePackages.paketeDos;
+package EjerciciosObjetos2.O01RelacionEntrePackages.paketeDos;
 
-import EjerciciosObjetos.O29RelacionEntrePackages.paketeUno.Publica;
+import EjerciciosObjetos2.O01RelacionEntrePackages.paketeUno.Publica;
 
 public class NoHaceNada extends Publica {
     private int callaCagada;

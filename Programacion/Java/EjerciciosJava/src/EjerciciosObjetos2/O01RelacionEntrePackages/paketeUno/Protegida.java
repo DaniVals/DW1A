@@ -1,4 +1,4 @@
-package EjerciciosObjetos.O29RelacionEntrePackages.paketeUno;
+package EjerciciosObjetos2.O01RelacionEntrePackages.paketeUno;
 
 public class Protegida extends Publica{
     private int callaCagada;

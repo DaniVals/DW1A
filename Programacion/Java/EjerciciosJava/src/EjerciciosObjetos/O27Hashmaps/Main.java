@@ -1,6 +1,6 @@
 package EjerciciosObjetos.O27Hashmaps;
 
-import java.util.HashMap;
+//import java.util.HashMap;
 
 /*
 3. Investiga:
@@ -10,6 +10,6 @@ import java.util.HashMap;
 */
 public class Main {
     public static void main(String[] args){
-        HashMap<String, String> prueba1 = new HashMap<String, String>();
+        //HashMap<String, String> prueba1 = new HashMap<String, String>();
     }
 }

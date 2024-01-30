@@ -1,4 +1,4 @@
-package FuncionesCopias.LeerCrearArchivos;
+package FuncionesCopias.Experimentos.LeerCrearArchivos;
 
 import java.io.*;
 import java.util.Scanner;

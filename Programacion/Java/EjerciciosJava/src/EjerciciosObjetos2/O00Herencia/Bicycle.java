@@ -1,4 +1,4 @@
-package EjerciciosObjetos.O28Herencia;
+package EjerciciosObjetos2.O00Herencia;
 
 public class Bicycle {
 

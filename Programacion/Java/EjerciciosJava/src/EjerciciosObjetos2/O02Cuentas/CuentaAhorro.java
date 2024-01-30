@@ -1,4 +1,4 @@
-package EjerciciosObjetos.O30Cuentas;
+package EjerciciosObjetos2.O02Cuentas;
 
 
 /*
@@ -37,6 +37,6 @@ public class CuentaAhorro extends Cuenta {
         return interes;
     }
     public double calcularInteres(){
-        return interes+(interes*this.getSaldo());
+        return interes*(1+this.getSaldo()/100);
     }
 }
