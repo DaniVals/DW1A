@@ -11,6 +11,7 @@ public class Producto {
     
     private String nombre;
     private int codigo, precio, existencias;
+
     public Producto(String nombre, int codigo, int precio, int existencias) {
         this.nombre = nombre;
         this.codigo = codigo;
@@ -28,6 +29,19 @@ public class Producto {
     }
     public int getExistencias() {
         return existencias;
+    }
+    
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+    public void setExistencias(int existencias) {
+        this.existencias = existencias;
     }
     @Override
     public String toString() {
