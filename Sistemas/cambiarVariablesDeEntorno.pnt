@@ -1,0 +1,8 @@
+1. Localizar
+entrar en el directorio etc en el fichero environment
+2. Modificar
+añadir la informacion deseada con ':'
+
+
+== $PATH ==
+(juntado con echo) devuelve el archivo /etc/environment

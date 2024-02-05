@@ -1,3 +1,5 @@
+--usar esquema scott
+
 --El sueldo medio de cada departamento.
 SELECT deptno, AVG(sal) FROM scott.emp GROUP BY deptno;
 

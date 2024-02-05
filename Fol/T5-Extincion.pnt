@@ -31,6 +31,8 @@ Jubilacion
     finiquito
     indemnizacion
 Fin Contrato Temporal
+    finiquito
+    indemnizacion
 
 3.4 Despidos
 tipo (causa de despido) != calificacion (juez social, es procedente/inprocedente/nulo)
@@ -42,7 +44,7 @@ Tipos
     Colectivo (ETOP)
     Fuerza Mayor (Definitiva)
 
-Falta Grave Y Culpable
+==  Falta Grave Y Culpable  ==
     faltas repetidas y continuadas
     indisciplina
     ofensas
@@ -51,7 +53,7 @@ Falta Grave Y Culpable
     alcoholico o toxicomano que afecte negativamente al rendimiento
     acoso
 
-Pasos
+3.4.1 Disciplinario
 
     Vas Al SMAC (servicio mediacion arbitrable condicion)
     si no se resuelve el conflicto (por ejemplo mediante un acuerdo)
@@ -61,9 +63,32 @@ Pasos
 
     -procendente (te lo aceptan)
 
-    -improcedente (no te lo aceptan)
-        -readmision + S.tramitacion
-        -indemnizacion 33dias/
+    -improcedente (no te lo aceptan, por no estar justificado por la empresa)
+        Empleado
+        se declara como desempleado en el SEPE
+        cobras el desempleo
+        Empresa
+        -Readmision + S.tramitacion
+            tienes que devolver lo que te pago el SEPE
+            te pagan los salarios devidos
+        -Indemnizacion 33 dias/año trabajado
+            te quedas con la prestacion
 
     -nulo (vulneracion derechos fundamentales)
         -readmision + S.tramitacion
+
+3.4.2 Objetivo
+
+    == causas ==
+    E.T.O.P.
+    Ineptitud Sobrevenida (no poder trabajar anymore, partirse una pierna,)
+    Falta De Adaptacion
+        (tiene que haber un intento de formacion y un tiempo de adaptacion)
+    Insufuciencia Presupuestaria
+
+    == resultado? ==
+    Procedente 
+        -indemnizacion = {20dias/año trabajado} (capeado a 12 meses)
+    Improcedente 
+        -indemnizacion = {30dias/año trabajado} (capeado a 12 meses)
+    
