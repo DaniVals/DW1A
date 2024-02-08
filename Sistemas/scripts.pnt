@@ -1,0 +1,13 @@
+1. Variables
+(si empieza por '$' es una variable)
+== echo ==
+sirve para imprimir por pantalla
+
+==  $#  ==
+el numero de argumentos
+
+==  $0  ==
+el path del script
+
+==  $1,2,3,4,etc  ==
+el argumento de esa posicion (empieza por 1 pq el 0 es el path del script)
