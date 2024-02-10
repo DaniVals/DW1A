@@ -32,3 +32,52 @@ Extincion
 
 K. Cierre temporal de la empresa por fuerza mayor.
 Extincion
+
+
+2. Libro 7/90
+
+Determina el importe del finiquito de una trabajadora (G.C. 4) contratada el día 1 de enero de hace 5 años, que es des-
+pedida el 30 de septiembre de este año, alegando que ha faltado injustificadamente al trabajo durante varios días.
+Ha disfrutado de los días que le corresponden de vacaciones por el tiempo trabajado. 
+Tras el acto de conciliación celebrado el 31 de octubre se aviene que el despido es improcedente. 
+Las retribuciones recibidas por la trabajadora son las siguientes:
+- Salario base:   { 2450 €/mes }
+- Antigüedad:     {  300 €/mes }
+- Incentivos:     {  200 €/mes }
+- Pagas extraordinarias:
+    {2 750 € (junio) y 2 950 € (diciembre)   devengo anual}
+
+= SOLUCION =
+
+A. Salario del mes 
+(hasta el dia trabajado)
+Trabaja todo el mes = total devengado = 2950€
+
+B. Pagas extra
+- Paga navidad
+(dias del año       ) 365 - 2950
+(dias de vacacionesN) 273 -  x
+x=2206.44
+- Paga verano
+(dias del año       ) 365 - 2750
+(dias de vacacionesV) 92 -  x
+x=693.15
+C. Vacaciones no disputadas
+(( si pagas no salarial)
+D. Indemnizacion
+- despido disciplinario recibido como improcedente
+    (33 dias de salario por año trabajado por año trabajado, con un tope de 24 meses)
+- antiguedad de 5 años y 9 meses 
+    {5.75 años}
+- salario diario
+    (se incluyen las pagas extra, se excluye las percepciones NO salariales)
+    {
+        S.anual/365 = ((2450 + 300 + 200)*12 + 2750 + 2950)/365
+        = 112.60 
+    }
+
+{
+    33*5.75*112.60 = 21365.85
+}
+
+2. Libro 9/90
