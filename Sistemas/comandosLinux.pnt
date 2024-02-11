@@ -1,3 +1,7 @@
 1. Permisos
-== chmod ==
+== chmod =
 ()
+2. Mostrar filtrado
+ls -l (los lista) | (para concatenar)
+    cut -f2 (para que mueste los usuarios) -d " " (pone de delimitador un espacio, por defecto es el tabulador)
+    more +/Escritorio (muestra a partir de escritorio)
