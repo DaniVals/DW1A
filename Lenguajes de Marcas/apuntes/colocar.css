@@ -1,0 +1,36 @@
+.clase
+{
+    /* MODIFICADORES "display: flex;" para alinear objetos dentro de un div */
+    display: flex;
+
+    /* el MODO en el que se colocan los objetos interiores */
+    flex-wrap: nowrap; 
+
+    /* alinear HORIZONTAL los objetos interiores */
+    justify-content: stretch; /* start , end , center / 
+    space-between: Las líneas se muestran con la misma distancia entre ellas.
+    space-around: Las líneas se muestran con la misma separación alrededor de ellas.
+    stretch: Las líneas se estiran para ajustarse al contenedor.
+    */
+
+    /* alinear VERTICAL los objetos interiores */
+    align-items: start; /* start , end , center / baseline , stretch */
+
+    /* FORMATO para alinear los objetos interiores*/
+    flex-direction: row; /*row , row-reverse , column , column—reverse*/
+}
+.clase #objeto1
+{
+    /* establece un suborden a los objetos interiores, 
+    para que se coloquen entre ellos con ordenes similares 
+    (si pones varios con -1 se ordenaran entre ellos Y se pondran antes que el resto)*/
+    order: +1; /* ESTABLECE (si no pones nada cuenta como un +) */
+}
+
+/*
+
+== ANOTACIONES PAGINA RANA https://flexboxfroggy.com/#es
+
+Esto puede ser confuso, pero align-content determina el espacio entre las líneas, 
+mientras que align-items determina como los elementos en su conjunto están alineados 
+dentro del contenedor. Cuando hay solo una línea, align-content no tiene efecto.

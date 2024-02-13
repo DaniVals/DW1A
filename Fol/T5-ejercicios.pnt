@@ -64,6 +64,10 @@ x=2206.44
 x=693.15
 C. Vacaciones no disputadas
 (( si pagas no salarial)
+enero-septiembre (273)
+365 - 30
+273 - x
+x = 22.43
 D. Indemnizacion
 - despido disciplinario recibido como improcedente
     (33 dias de salario por año trabajado por año trabajado, con un tope de 24 meses)
@@ -75,9 +79,9 @@ D. Indemnizacion
         S.anual/365 = ((2450 + 300 + 200)*12 + 2750 + 2950)/365
         = 112.60 
     }
-
-{
-    33*5.75*112.60 = 21365.85
-}
+- total devengado
+    {
+        33*5.75*112.60 = 21365.85
+    }
 
 2. Libro 9/90

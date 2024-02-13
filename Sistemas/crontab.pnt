@@ -1,0 +1,5 @@
+poner crontab -e para editar
+
+(minuto) (hora) (dia del mes) (mes del año) (dia de la semana) (comando a ejecutar)
+se pueden establecer varios con ',' o '-'
+30 10 * * 1 rm -rf /tmp/*
