@@ -23,8 +23,8 @@ public class ListadoEmpleados {
     }
     
     public void addEmp(){
-        String nombre, apellidos, dni, estadoCivil, fecha;
-        int nDespacho;
+        //String nombre, apellidos, dni, estadoCivil, fecha;
+        //int nDespacho;
         switch (teclado.nextLine().charAt(0)) {
             case 'P':
                 

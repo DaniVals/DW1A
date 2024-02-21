@@ -1,6 +1,7 @@
 package EjerciciosObjetos2.O09Comparadores;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Lista {
@@ -17,37 +18,32 @@ public class Lista {
         return listado;}
     public void setListado(ArrayList<Contacto> listado) {
         this.listado = listado;}
+    public Scanner getTeclado() {
+        return teclado;}
     @Override
     public String toString() {
         imprimir();
         return "";
-    }
-
-//-------------CASE 4---------
+    } 
+//-------------CASE 1---------
     public void imprimir(){
         for(Contacto c : listado){
             System.out.println(c);
         }
     }
-    //------------helpers---------
-    private int nextNum(){
-        int numero;
-        numero=Integer.parseInt(teclado.nextLine());
-        return numero;
+//-------------CASE 3---------
+    public void ordenarTel(){
+        System.out.println("ordenando...");
+        Collections.sort(listado, new ComparadorTel());
+        System.out.println("ordenado correctamente");
     }
-    private char nextChar(){
-        char caracter;
-        caracter=teclado.nextLine().charAt(0);
-        return caracter;
-    }
-    private boolean nextBool(){
-        char opcion=nextChar();
-        if (opcion=='s'||opcion=='S') {
-            return true;
-        }
-        return false;
-    }
-    //-----------debug--------------
+//-------------CASE 4---------
+public void ordenarAlfa(){
+    System.out.println("ordenando...");
+    Collections.sort(listado, new ComparadorTel());
+    System.out.println("ordenado correctamente");
+}
+//-----------debug--------------
     public void debugAddCP(String correo, int telefono, String nombre, String apellido){
         listado.add(new ContactoPersona(correo, telefono, nombre, apellido));
     }

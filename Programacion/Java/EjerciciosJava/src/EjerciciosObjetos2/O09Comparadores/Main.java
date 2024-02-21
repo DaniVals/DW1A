@@ -32,39 +32,41 @@ public class Main {
         Scanner teclado=new Scanner(System.in);
         Lista lista1 = new Lista(new ArrayList<Contacto>(),teclado);
 
-        lista1.debugAddCP("null1", 66778899, "nombrado", "apellidado");
-        lista1.debugAddCE("null2", 12345, "pasta", 19019);
+        lista1.debugAddCP("Persona 1", 66778899, "nombrado", "apellidado");
+        lista1.debugAddCP("Persona 2", 66778899, "nombrado", "apellidado");
+        lista1.debugAddCP("Persona 3", 66778899, "nombrado", "apellidado");
+        lista1.debugAddCP("Persona 4", 66778899, "nombrado", "apellidado");
+        lista1.debugAddCE("Empresa 1", 12345, "pasta", 19019);
+        lista1.debugAddCE("Empresa 2", 111333, "pasta", 19019);
+        lista1.debugAddCE("Empresa 3", 99, "pasta", 19019);
+        lista1.debugAddCE("Empresa 4", 1234567890, "pasta", 19019);
         
         while (opcion!=0){
             System.out.println("Elije una opcion: "+
-            "\n  1.Añadir contacto"+
-            "\n  2.Borrar contacto "+
-            "\n  3.Modificar teléfono"+
-            "\n  4.Listado"+
-            "\n  5.Mostrar cuántas empresas hay de cada sector"+
-            "\n  6.Mostrar los datos ordenados por orden alfabético de email"+
+            "\n  1.Listado"+
+            "\n  2.Ordenar por correo"+
+            "\n  3.Ordenar por teléfono"+
+            "\n  4.Ordenar por apellidos y nombre"+
+            "\n  5.Ordenar por sector"+
+            "\n  6.Ordenar por codigo postal"+
             "\n  0.salir");
             opcion= teclado.nextLine().charAt(0)-48;
             switch (opcion){
                 case 1:
+                    lista1.imprimir();
                 break;
                 case 2:
                 break;
                 case 3:
+                    lista1.ordenarTel();
                 break;
                 case 4:
-                    lista1.imprimir();
+                    lista1.ordenarAlfa();
                 break;
                 case 5:
                 break;
                 case 6:
                 break;
-            }
-            //sustituir por una pausa
-            if (opcion!=0) {   
-                System.out.println();
-                System.out.println("pulse para continuar");
-                teclado.nextLine();
             }
         }
         System.out.println("Saliendo...");

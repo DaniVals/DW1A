@@ -1,7 +1,29 @@
-1. Permisos
-== chmod =
-()
+1. Rutas
+. actual
+.. anterior / padre
+/home/{usuario} absoluta
+
 2. Mostrar filtrado
-ls -l (los lista) | (para concatenar)
-    cut -f2 (para que mueste los usuarios) -d " " (pone de delimitador un espacio, por defecto es el tabulador)
-    more +/Escritorio (muestra a partir de escritorio)
+{comando inicial}(ls/cat) | (para concatenar) {comando filtrado} (cut / wc / more)
+== cut =
+    -f1 (para que mueste los primeros)
+    -d " " (pone de delimitador un espacio, por defecto es el tabulador)
+    
+== more =
+    +/Escritorio (muestra a partir de escritorio)
+
+
+3. Textos
+== cat = 
+cat {nombre.fichero}
+    ver el contenido de un fichero de texto
+
+
+== nano = 
+nano {nombre.fichero} (el nombre se puede poner al acabar)
+    editar y crear nuevos archivos
+
+4. Permisos
+== chmod =
+chmod {ug+rwx} {nombre.fichero}
+    hay que darle permisos de ejecucion a los scripts

@@ -1,13 +1,73 @@
-1. Variables
-(si empieza por '$' es una variable)
-== echo ==
-sirve para imprimir por pantalla
+1. Basics
+    - cambiar las variables del sistema (subApunte) / indicar la ruta absoluta (/home) [./Subapuntes/contrab.pnt]
+    - dar permisos de ejecucion al archivo (o usar source/sh antes del nombre)
 
-==  $#  ==
-el numero de argumentos
+==== #
+    comentarios
 
-==  $0  ==
-el path del script
+==== #!
+    primera linea SIEMPRE, indica la shell (/bin/bash)
 
-==  $1,2,3,4,etc  ==
-el argumento de esa posicion (empieza por 1 pq el 0 es el path del script)
+==== echo
+    sirve para imprimir por pantalla
+
+2. Variables
+    > si empieza por '$' es para sacar el valor de una variable
+    > para guardar una variable [incluso si la estamos sustituyendo] no es necesario poner un $
+    > no hace falta inicializarla
+
+    - texto con "" si interpreta las variables
+    - texto con '' no interpreta las variables
+
+====  $#
+    el numero de argumentos
+
+====  $0
+    el path del script
+
+====  $1,2,3,4...
+    el argumento de esa posicion 
+    (empieza por 1 pq el 0 es el path del script)
+
+2.1 Calcular
+(antes se ponia 'expr' en vez de 'echo' de expresion y lo calculaba)
+
+echo $(({ calculo })) (doble parentesis todo junto)
+
+2.2 Guardar resultados de comandos en una variable
+(antes se ponia var_n_fich=`ls -l | wc -l`)
+{variable}=$({comando})
+
+3. Controladores de flujo
+==== if
+if {condicion} then
+    (contenido)
+(else / elseif)
+fi
+
+    = condicion
+    - "$variable" (entre comillas y corchetes)
+==== while 
+(recomendado cuando NO sabes las repeticiones que vas a hacer)
+(until es un while inverso)
+
+while / until {[ condicion ];} (se pone corchetes con espacio y luego ;)
+do 
+    (contenido)
+done
+
+    = condiciones
+    -l  (less:    menor que)
+    -e  (equals:  igual que)
+    -gt (greater: mayor que)
+
+==== for
+(recomendado cuando SI sabes cuantas vas a hacer, como los archivos del directorio)
+
+for x in {valor}
+do 
+    (contenido)
+done
+    = valores
+    {valor inicial}..{valor final} (con esos numeros)
+    s* (con los archivos que empiecen por 's')

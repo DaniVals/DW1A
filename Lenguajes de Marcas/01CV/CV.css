@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --header-background: #007777;
+    --header-text: #000000;
+    --header-border: #004d4d;
+
+
+    --body: #bbdddd;
+    --list: #88aaaa;
+    --scroller: #558888;
+    --scroller-border: #000000;
+    --content: #aadddd;
+
+
+
+
+
+
+
+
+
+    --border-show: 10px solid #777777;
+}
+html{
+    background-color: var(--body);
+}
+/* cabecera */
+header{
+    background-color: var(--header-background);
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+header .izquierda{
+    background-color: var(--header-background);
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+}
+header .izquierda img{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    
+    width: 200px;
+    height: 200px;
+    object-fit: none;
+
+    border-radius: 100px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--header-border);
+}
+header .izquierda img:hover{border-radius: 50px;}
+header #nombre{
+    color: var(--header-text);
+    font-size: 100px;
+    font-weight: bolder;
+
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+header > #enlaces{
+    color: var(--header-text);
+    font-weight: bolder;
+
+    align-items: end;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+header > #enlaces > .foto.texto,
+header > #enlaces > .foto.texto a{
+    color: var(--header-text);
+    font-weight: bolder;
+    font-size: x-large;
+    
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+header > #enlaces > .foto.texto img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+/* lista de tarjetas */
+
+li{
+    background-color: var(--list);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+li .footer.lista{
+    height: 1px;
+}
+li::marker{
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    color: var(--list);
+}
+.tarjeta{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid var(--scroller-border);
+    background-color: var(--scroller);
+}
+.tarjeta .titulo{
+    color: var(--header-text);
+    text-align: center;
+    margin: 10px;    
+}
+.tarjeta .scroll.lateral{
+    border-top: 1px dashed var(--scroller-border);
+    
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+    display: flex;
+}
+.tarjeta .scroll.lateral .contenido{
+    min-width: 400px;
+    height: auto;
+    margin: 10px;
+    background-color:var(--content);
+    border: 10px solid var(--content);
+    
+    display: flex;
+    flex-direction: column;
+}
+.contenido .foot{
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    flex-direction: row;
+
+}
+.contenido .foot > div{
+    display: flex;
+    align-items: start;
+    margin-left: 10px;
+    flex-direction: column;
+}
+.contenido h2{
+    text-align: center;
+}
+.contenido > p{
+    text-align: center;
+    font-size: larger;
+}
+.contenido .foot img {
+    width: 20%;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.contenido .foot img:hover { border-radius: 10%;}
