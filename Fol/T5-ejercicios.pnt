@@ -34,7 +34,7 @@ K. Cierre temporal de la empresa por fuerza mayor.
 Extincion
 
 
-2. Libro 7/90
+2.1 Libro 7/90
 
 Determina el importe del finiquito de una trabajadora (G.C. 4) contratada el día 1 de enero de hace 5 años, que es des-
 pedida el 30 de septiembre de este año, alegando que ha faltado injustificadamente al trabajo durante varios días.
@@ -59,11 +59,11 @@ B. Pagas extra
 (dias de vacacionesN) 273 -  x
 x=2206.44
 - Paga verano
-(dias del año       ) 365 - 2750
-(dias de vacacionesV) 92 -  x
+(dias del año      ) 365 - 2750
+(dias de vacaciones) 92 -  x
 x=693.15
 C. Vacaciones no disputadas
-(( si pagas no salarial)
+(si pagas no salarial)
 enero-septiembre (273)
 365 - 30
 273 - x
@@ -84,4 +84,58 @@ D. Indemnizacion
         33*5.75*112.60 = 21365.85
     }
 
-2. Libro 9/90
+2.2 Libro 9/90
+
+A. Salario del mes 
+(hasta el dia trabajado)
+Trabaja todo el mes = total devengado = 2477€
+
+B. Pagas extra
+- Paga verano
+(dias del año      ) 365 - 2477
+(dias de vacaciones) 140 -  x
+x=950.08
+
+D. Indemnizacion
+- despido disciplinario recibido como improcedente
+    (33 dias de salario por año trabajado por año trabajado, con un tope de 24 meses)
+- antiguedad de 12 años, 4 meses y 17 dias 
+    {12.38 años}
+- salario diario
+    (se incluyen las pagas extra, se excluye las percepciones NO salariales)
+    {
+        S.anual/365 = ((2477)*12+950.08)/365
+        = 84.03
+    }
+- total devengado
+    {
+        33*12.38*84.03 = 34329.61
+    }
+
+2.3 Libro 11/90
+
+A. Salario del mes 
+(hasta el dia trabajado)
+Trabaja todo el mes = total devengado = 1700€
+
+B. Pagas extra
+- Paga verano
+(dias del año      ) 365 - 1700
+(dias de vacaciones) 246 -  x
+x=1145.75
+
+D. Indemnizacion
+- despido disciplinario recibido como improcedente
+    (33 dias de salario por año trabajado por año trabajado, con un tope de 24 meses)
+- antiguedad de 3 años y 9 meses 
+    {3.75 años}
+- salario diario
+    (se incluyen las pagas extra, se excluye las percepciones NO salariales)
+    {
+        S.anual/365 = ((2477)*13+1145.75)/365
+        = 91.36
+    }
+- total devengado
+    {
+        33*3.75*91.36 = 11305.8€
+    }

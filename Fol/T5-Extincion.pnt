@@ -21,7 +21,7 @@ Mecanismo RED
     voluntad empresa
     otras causas
 
-3.3
+3.3 Extincion
 Fallecimiento
     finiquito
     indemnizacion
@@ -39,11 +39,13 @@ tipo (causa de despido) != calificacion (juez social, es procedente/inprocedente
 
 Tipos
     Disciplinario
-        falta grave y culpable
+        (falta grave y culpable)
     Objetivo
-    Colectivo (ETOP)
-    Fuerza Mayor (Definitiva)
-
+        (ETOP de la trabajadora)
+    Colectivo 
+        (ETOP de la empresa)
+    Fuerza Mayor 
+        (impresibles e inevitables,   "Definitiva")
 ==  Falta Grave Y Culpable  ==
     faltas repetidas y continuadas
     indisciplina
