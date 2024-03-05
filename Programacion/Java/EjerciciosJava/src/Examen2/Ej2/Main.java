@@ -27,5 +27,6 @@ public class Main {
         // apartado B
         l.ordenar();
         System.out.println(l);
+        teclado.close();
     }
 }
