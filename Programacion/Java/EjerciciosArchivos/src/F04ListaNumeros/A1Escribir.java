@@ -35,6 +35,13 @@ public class A1Escribir {
     }
 
 
+/*
+
+DEBERES
+
+usando el metodo has next int
+
+*/
 
 
 
