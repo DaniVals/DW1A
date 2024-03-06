@@ -11,9 +11,11 @@ asistencia sanitaria, pensiones
     Sistema publico que protege a todos los ciudadanos en situaciones de necesidad
 
 = Financiacion = 
-    A traves de 
+    A traves de las cotizaciones
 
 2. Pensiones
+(Hay prestaciones contributivas y no contributivas)
+
 > Jubilacion
 > Desempleo
 
@@ -29,6 +31,55 @@ asistencia sanitaria, pensiones
     - Viuedaz   (pareja)
 
 
-2.2 Calcular Prestaciones
+2.2 Calcular Prestaciones Contributivas
+    
+    === Jubilacion =
+    Depende de los años trabajados
+
+    === Maternidad =
+    Depende de los hijos
+
     === Desempleo =
     Depende de los años trabajados
+
+
+    === Incapacidad temporal =
+        Suspende el contrato de trabajo
+
+        Contigencia [Comun / profesional]
+
+        > Una operacion
+        > Un resfriado  (EC     enfermedad comun)
+        > Un brazo roto (AC     accidente comun)
+
+        (ejercicio buscar contingencias profesionales)
+            [tiene que estar admitida https://www.boe.es/buscar/act.php?id=BOE-A-2006-22169] 
+            (se actualiza por situaciones problematicas o por mandato de la union europea)
+
+        > Tunel carpiano (EP   enfermedad profesional)
+        > Accidente automovilistico [de camino al trabajo] (AT   accidente de Trabajo)
+
+    
+    A. Requisitos
+        > Hecho causante
+        > Afiliado y dado de alta SS
+        > NO hay pol de catencia
+        > no se requiere cotizacion previa
+    
+    B. Calculo
+    {
+        Base cotizacion diaria =
+            BCCP del mes anterior a la baja restando horas extra
+        ------------------------------------------------------------
+                            dias
+        +  
+            Horas extra realizadas en el año anterior
+        ----------------------------------------------         (base reguladora €/año)
+            365
+
+
+        Dia del accidente pagado
+        A partir del dia siguiente cobras el 75% (Base cotizacion diaria * 0.75 * dias de baja)
+    }
+    (ej 6/117)
+
