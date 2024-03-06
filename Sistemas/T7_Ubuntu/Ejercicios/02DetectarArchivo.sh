@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Crea un script que determine si existe un fichero y además si es ejecutable.
+
 # archivo existe
 if [ -f "$1" ]; then
     echo "El archivo $1 existe."
