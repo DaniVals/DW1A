@@ -1,0 +1,153 @@
+1. Contingencias profesionales
+    una pulmonia por culpa de la fabrica
+
+    [TIENE QUE ESTAR EN EL CUADRO DE ENFERMEDADES PROFESIONALES] (RD 1299/2006)
+
+    un accidente de coche de camino al trabajo
+        si paras a hacer una compra sigue valiendo [SI]
+            usas la misma ruta aprox
+            tardas lo mismo aprox
+            
+2. Libro 6/117
+
+Un oficial de primera sufre un accidente de trabajo el 2 de agosto y permanece de baja hasta el 29 de ese mes. Su BCCC y BCCP
+de julio son de 1953 €. El año anterior percibió 1689,63 € por horas extraordinarias. ¿Qué subsidio de incapacidad temporal le
+corresponde?
+
+
+[para comprobar si tiene cotizacion diaria o mensual, buscar empleo en la tabla de "gupos de cotizacion"]
+{
+    1953/31 + 1689.63/365 = 67.62
+
+    0.75 * 67.62 = 50,72 €/dia
+
+    50.72 * 27 = 1369.44 €
+}
+
+2. Libro 5/117
+
+Un oficial administrativo (G.C. 5) sufre un accidente laboral el 15 de noviembre y es dado de alta médica el 18 de diciembre. La base
+de cotización por contingencias profesionales de octubre es de 1545 €, de los cuales 200 € son por horas extraordinarias, El año
+anterior a la baja había cotizado 2 000 € más por horas extraordinarias. ¿Qué cuantía tiene la prestación de incapacidad temporal?
+
+[G.C. indica el grupo de cotizacion, del 1 al 7 es mensual, por lo que siempre cuentan el mes como 30 dias]
+{
+    (1545-200)/30 + 2000/365 = 50.31278539
+
+    0.75 * 50.31 = 37.7325 €/dia
+
+    37.73 * 33 = 1245.09 €
+
+
+    Noviembre (15/33) 1245.09*15/33 = 565.95 €
+    Diciembre (18/33) 1245.09*18/33 = 679.14 €
+}
+
+3. Libro 2/117
+Las siguientes actividades se asocian al ODS 8, al promover el empleo y el trabajo decente para todo. Lucía ha comenzado a
+trabajar en marzo como educadora (G.C. 2) en la ESCUELA INFANTIL COLORETES. Es su primer empleo. El 13 de mayo la operan de
+apendicitis, y permanece de baja hasta el 3 de julio. Tiene una BCCC de 1208,40 €. Calcula la cuantía de la prestación de incapaci-
+dad temporal, si tuviera derecho a ella.
+
+{
+    No va a recibir prestacion porque no llega al periodo de carencia
+}
+
+4. Libro 3/117
+Ruth es diseñadora gráfica (G.C, 2) en una agencia publicitaria desde hace 5 años, Del 12 de noviembre al 10 de diciembre ha causado
+baja médica por una contractura muscular no relacionada con su trabajo. La BCCC de octubre es de 1456,20 €. Si tiene derecho a
+la prestación de incapacidad temporal, calcula el importe del subsidio,
+{
+    
+    BR = 1456,20 / 30 = 48.54
+    
+    12-14 (3)  - 0€
+    15-1  (17) - 48.54 * 0.6  * 17 = 495.05
+    2-10  (9)  - 48.54 * 0.75 * 9  = 327.645
+
+    327.645 + 495.05 = 822.69 €
+
+}
+
+= Ejercicios de incapacidad temporal =
+Indica en cada caso si se cumple los requisitos para cobrar la prestación de incapacidad
+temporal y la cuantía que corresponde. 
+
+5. AV 1/Ejercicios de incapacidad temporal
+Un trabajador afiliado y en alta desde febrero del año pasado, y encuadrado en
+el GC 4 del Régimen General, causa baja por enfermedad común el 27 de marzo
+de 2024, siendo dado de alta el 3 de mayo. Desde enero del presente año su BC
+por contingencias comunes y profesionales es de 1.915,16 €.
+
+{
+    cumple afiliado y en alta
+    cotizacion mensual
+    EC
+
+    27 mar - 3 may
+    BCCC = BCCP = 1915,16
+
+    BR = 1915,16/30 = 63.839
+    
+    27-29 (3)  - 0€
+    30-10 (12) - 63.839 * 0.6  * 12 = 459.6408
+    11-15 (5)  - 63.839 * 0.6  * 5  = 191.517
+    16-3  (18) - 63.839 * 0.75 * 18 = 861.8265
+
+    459.6408 + 191.517 + 861.8265 = 1512.98 €
+
+}
+
+6. AV 2/Ejercicios de incapacidad temporal
+Una trabajadora con contrato indefinido, afiliada y en alta en la Seguridad Social
+desde 2011, cotiza dentro del grupo de cotización de oficiales de primera. El 9 de
+marzo sufrió un accidente de trabajo que la ha mantenido de baja médica,
+recibiendo asistencia sanitaria, hasta el día 30 de septiembre de 2023. El mes
+anterior a la baja cotizó por contingencias profesionales sobre una base de 2.590
+€, y de 330 € por horas extras. En el año anterior a la baja el total de horas extras
+cotizadas fue de 2.890 €.
+
+{
+    cumple afiliado y en alta
+    cotizacion diaria
+    AP
+
+    9 mar - 30 sep
+    BCCP = 2590
+    hr extra = 330
+    hr extra año anterior = 2890
+    
+    BCD = (2590 - 330)/28 + 2890/365 = 88.63209393
+
+    10 mar - 30 sep (205)
+    88.63209393 * 0.75 * 205 = 13627.18 €
+
+}
+
+7. AV 3/Ejercicios de incapacidad temporal
+Un trabajador afiliado desde el año 2005, ha sido contratado el día 1 de marzo
+de 2024, siendo encuadrado en el GC 25. El salario pactado en su contrato es
+de 1.303,8 € (incluidas ya las pagas extraordinarias prorrateadas). Debido a un
+accidente doméstico que sufre el 22 de marzo causa baja médica y es dado de
+alta por curación el 28 de abril. La base de cotización de febrero por todas las
+contingencias fue de 1815 € (en febrero trabajaba en otra empresa).
+
+{
+    cumple afiliado y en alta
+    cotizacion mensual 
+    AC
+    BISIESTO
+
+    22 mar - 28 abril
+    BCCC = BCCP = ¿? -------> usamos el salario
+
+    BR = 1303,8/30 = 43.46
+    
+    22-24 (3)   - 0€
+    25-6 (12)   - 43.46 * 0.6  * 12 = 312.912
+    7-12  (5)   - 43.46 * 0.6  * 5  = 130.38
+    13-28  (18) - 43.46 * 0.75 * 18 = 586.71
+
+    312.912 + 130.38 + 586.71 = 1030 €
+
+}

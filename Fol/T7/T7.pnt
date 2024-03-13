@@ -1,0 +1,134 @@
+[Seguridad Social]
+1. Bases
+asistencia sanitaria, pensiones
+
+= art 41 CE =
+    Los poderes públicos mantendrán un régimen público de Seguridad Social para todos los ciudadanos,
+    que garantice la asistencia y prestaciones sociales suficientes ante situaciones de necesidad,
+    especialmente en caso de desempleo. La asistencia y prestaciones complementarias serán libres.
+
+= Definicion = 
+    Sistema publico que protege a todos los ciudadanos en situaciones de necesidad
+
+= Financiacion = 
+    A traves de las cotizaciones
+
+2. Pensiones
+(Hay prestaciones contributivas y no contributivas)
+
+> Jubilacion
+> Desempleo
+
+> Baja maternidad
+> Baja por enfermedad 
+    - Enfermedad Comun (no es causa del trabajo)
+    - Enfermedad Profesional [SI es causa del trabajo] (cambia la prestacion, si se de muestra que es por el trabajo, como cancer de pulmon por gases de la fabrica, puede cambiar de categoria)
+    - Accidente Comun (partirte una pierna jugando al futbol)
+    - Accidente de Trabajo (tambien cuenta si es de camino a este, accidente initinere)
+
+> Muerte de un familiar (no existe generalmente)
+    - Orfandad  (padre)
+    - Viuedaz   (pareja)
+
+
+2.2 Calcular Prestaciones Contributivas
+    
+    === Jubilacion =
+    Depende de los años trabajados
+
+    === Maternidad =
+    Depende de los hijos
+
+    === Desempleo =
+    Depende de los años trabajados
+
+
+    === Incapacidad temporal comun =
+        Suspende el contrato de trabajo
+
+        Contigencia [Comun]
+
+            > Una operacion
+            > Un resfriado  (EC     enfermedad comun)
+            > Un brazo roto (AC     accidente comun)
+
+        (ejercicio buscar contingencias profesionales)
+            [tiene que estar admitida https://www.boe.es/buscar/act.php?id=BOE-A-2006-22169]
+            (se actualiza por situaciones problematicas o por mandato de la union europea)
+
+    
+        A. Requisitos y atributos
+            > Hecho causante (AC/EC)
+            > Afiliado y dado de alta SS
+            > [AC] NO hay periodo de carencia (tiempo de cotizacion minimo)
+            > [EC] 180 dias en los 5 años
+            
+            > no se requiere cotizacion previa
+            > Percepcion no salarial (no retribuye tu trabajo directamente, pero si cotiza y tributa)
+        
+        B. Calculo
+
+            {
+            Base regulacion diaria =
+
+                BCCC del mes anterior a la baja
+            ---------------------------------------
+                        dias del mes
+
+            (base reguladora €/dia)
+            
+            Dias:
+            1-3  : 0€
+            4-15 : 60% BR - a cargo de la empresa
+            16-20: 60% BR - a cargo de la entidad aseguradora (mutua/inss)
+            21+  : 75% BR - a cargo de la entidad aseguradora
+            }
+            (ej 2/117 y 3/117 , Ejercicios de incapacidad temporal)
+
+
+    === Incapacidad temporal profesional =
+        Suspende el contrato de trabajo
+
+        Contigencia [profesional]
+
+        > Tunel carpiano (EP   enfermedad profesional)
+        > Accidente automovilistico [de camino al trabajo] (AT   accidente de Trabajo)
+
+        A. Requisitos y atributos
+            > Hecho causante (AC/EC)
+            > Afiliado y dado de alta SS
+            > [AP/EP] NO hay periodo de carencia (tiempo de cotizacion minimo)
+            
+            > no se requiere cotizacion previa
+            > Percepcion no salarial (no retribuye tu trabajo directamente, pero si cotiza y tributa)
+                
+        B. Calculo
+
+            {
+            Base cotizacion diaria =
+
+                BCCP del mes anterior a la baja restando horas extra
+            ------------------------------------------------------------
+                        dias del mes anterior
+            +  
+                Horas extra realizadas en el año anterior
+            ----------------------------------------------         (base reguladora €/año)
+                365
+
+
+            Dia del accidente pagado por la empresa
+            A partir del dia siguiente cobras el 75% (Base cotizacion diaria * 0.75 * dias de baja)
+            }
+            (ej 6/117 y 5/117)
+
+    == Incapacidad permanente =
+        > parcial (indemnizacion)
+            no ha ¿dormido? tu capacidad de trabajo mas del 33%
+        > total (pension)
+            no ha perdido profesion habitual / puedes seguir en otro sector
+        > absoluta (pension)
+            no puedes trabajar
+        > gran invalidez (pension)
+            impedimento cualquier profesion + ayuda para realizar tareas comunes
+
+    

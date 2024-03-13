@@ -31,15 +31,22 @@ SELECT employee_id, FIRST_NAME||' '||LAST_NAME, DEPARTMENT_ID FROM hr.employees 
 
 
 --Indica el nombre, apellido y salario de todos los empleados que ganan más que la media de la empresa y que trabajan en un departamento donde hay hay personas que tienen una "J" en su apellido.
+SELECT FIRST_NAME, LAST_NAME, salary FROM hr.employees WHERE (SELECT AVG(salary) FROM hr.employees)<salary AND DEPARTMENT_ID = ANY (SELECT DEPARTMENT_ID FROM hr.employees WHERE last_name LIKE '%J%');
 
 --Muestra nombre completo de todos los empleados que trabajan el departamento que tiene por nombre "Marketing". 
+SELECT FIRST_NAME||' '||LAST_NAME FROM hr.employees WHERE DEPARTMENT_ID = ANY (SELECT DEPARTMENT_ID FROM hr.DEPARTMENTS WHERE DEPARTMENT_name LIKE 'Marketing');
 
 --Saca los datos de los trabajadores que tienen un sueldo menor que lo que gana cualquiera de los programadores (tienen por ID de trabajo el código "IT_PROG").
+SELECT * FROM hr.employees WHERE salary < ANY (SELECT AVG(salary) FROM hr.employees WHERE JOB_ID LIKE 'IT_PROG');
 
 --Saca los datos de los trabajadores que tienen un sueldo menor que lo que gana cualquiera de los programadores (tienen por ID de trabajo el código "IT_PROG"). Excluye a los programadores.
+SELECT * FROM hr.employees WHERE salary < ANY (SELECT AVG(salary) FROM hr.employees WHERE JOB_ID LIKE 'IT_PROG') AND JOB_ID NOT LIKE 'IT_PROG';
 
 --Muestra los datos de los empleados que tienen un sueldo superior a cualquiera de las medias salariales de cada departamento.
+SELECT * FROM hr.employees WHERE salary > ANY (SELECT AVG(salary) FROM hr.employees GROUP BY DEPARTMENT_ID);
 
 --Obtener toda la información de los empleados que trabajan en un departamento donde el manager no tiene un ID comprendido entre 100 y 200.
+SELECT * FROM hr.employees WHERE DEPARTMENT_ID = ANY (SELECT DEPARTMENT_ID FROM hr.DEPARTMENTS WHERE manager_id BETWEEN 100 AND 200);
 
 --Sacar los nombres de los departamentos que tienen empleados trabajando en ellos.
+SELECT * FROM hr.DEPARTMENTS WHERE DEPARTMENT_ID = ANY (SELECT DEPARTMENT_ID FROM hr.employees);
