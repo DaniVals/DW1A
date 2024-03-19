@@ -1,0 +1,270 @@
+1. Ejercicio Repaso Identificar Entre Suspension O Extincion 
+
+A. Cierre de la empresa por fallecimiento del empresario.
+Extincion
+
+B. Trabajadora elegida diputada.
+Excedencias Forzosa
+
+C. Trabajador que dimite de su puesto de trabajo.
+Extincion
+
+D. Trabajadora enferma con incapacidad temporal.
+Suspension
+
+E. Trabajador privado de libertad sin sentencia condenatoria.
+Suspension
+
+F. Abandono del puesto de trabajo.
+Extincion
+
+G. Despido disciplinario procedente.
+Extincion
+
+H. Trabajador en huelga.
+Suspension
+
+I. Trabajadora que acaba de adoptar un niño.
+Excedencias Cuidado De Hijos
+
+J. Trabajador sancionado de empleo y sueldo.
+Extincion
+
+K. Cierre temporal de la empresa por fuerza mayor.
+Extincion
+
+
+2.1 Libro 7/90
+
+Determina el importe del finiquito de una trabajadora (G.C. 4) contratada el día 1 de enero de hace 5 años, que es des-
+pedida el 30 de septiembre de este año, alegando que ha faltado injustificadamente al trabajo durante varios días.
+Ha disfrutado de los días que le corresponden de vacaciones por el tiempo trabajado. 
+Tras el acto de conciliación celebrado el 31 de octubre se aviene que el despido es improcedente. 
+Las retribuciones recibidas por la trabajadora son las siguientes:
+- Salario base:   { 2450 €/mes }
+- Antigüedad:     {  300 €/mes }
+- Incentivos:     {  200 €/mes }
+- Pagas extraordinarias:
+    {2 750 € (junio) y 2 950 € (diciembre)   devengo anual}
+
+= SOLUCION =
+
+A. Salario del mes 
+(hasta el dia trabajado)
+Trabaja todo el mes = total devengado = 2950€
+
+B. Pagas extra
+- Paga navidad
+(dias del año       ) 365 - 2950
+(dias de vacacionesN) 273 -  x
+x=2206.44
+- Paga verano
+(dias del año      ) 365 - 2750
+(dias de vacaciones) 92 -  x
+x=693.15
+C. Vacaciones no disputadas
+(si pagas no salarial)
+enero-septiembre (273)
+365 - 30
+273 - x
+x = 22.43
+D. Indemnizacion
+- despido disciplinario recibido como improcedente
+    (33 dias de salario por año trabajado por año trabajado, con un tope de 24 meses)
+- antiguedad de 5 años y 9 meses 
+    {5.75 años}
+- salario diario
+    (se incluyen las pagas extra, se excluye las percepciones NO salariales)
+    {
+        S.anual/365 = ((2450 + 300 + 200)*12 + 2750 + 2950)/365
+        = 112.60 
+    }
+- total devengado
+    {
+        33*5.75*112.60 = 21365.85
+    }
+
+2.2 Libro 9/90
+
+A. Salario del mes 
+(hasta el dia trabajado)
+Trabaja todo el mes = total devengado = 2477€
+
+B. Pagas extra
+- Paga verano
+(dias del año      ) 365 - 2477
+(dias de vacaciones) 140 -  x
+x=950.08
+
+D. Indemnizacion
+- despido disciplinario recibido como improcedente
+    (33 dias de salario por año trabajado por año trabajado, con un tope de 24 meses)
+- antiguedad de 12 años, 4 meses y 17 dias 
+    {12.38 años}
+- salario diario
+    (se incluyen las pagas extra, se excluye las percepciones NO salariales)
+    {
+        S.anual/365 = ((2477)*12+950.08)/365
+        = 84.03
+    }
+- total devengado
+    {
+        33*12.38*84.03 = 34329.61
+    }
+
+2.3 Libro 11/90
+
+A. Salario del mes 
+(hasta el dia trabajado)
+Trabaja todo el mes = total devengado = 1700€
+
+B. Pagas extra
+- Paga verano
+(dias del año      ) 365 - 1700
+(dias de vacaciones) 246 -  x
+x=1145.75
+
+D. Indemnizacion
+- despido disciplinario recibido como improcedente
+    (33 dias de salario por año trabajado por año trabajado, con un tope de 24 meses)
+- antiguedad de 3 años y 9 meses 
+    {3.75 años}
+- salario diario
+    (se incluyen las pagas extra, se excluye las percepciones NO salariales)
+    {
+        S.anual/365 = ((2477)*13+1145.75)/365
+        = 91.36
+    }
+- total devengado
+    {
+        33*3.75*91.36 = 11305.8€
+    }
+
+
+
+= De clase =
+
+
+1. Teresa 
+ha dimitido después de trabajar en la misma empresa 21 años 3 meses y 12 días.
+Teniendo en cuenta el preaviso correspondiente, el contrato de Teresa se ha extinguido 
+el 21 de noviembre de 2023, habiendo disfrutado de todas las vacaciones de ese año. Teresa
+recibe las siguientes percepciones:
+
+• Salario base: 1.300 €/mes
+• Plus de antigüedad: 500 €/mes
+• Plus de turnicidad: 700 €/mes
+• Plus de transporte: 30 €/mes
+• 2 pagas extraordinarias de salario base y plus de antigüedad de devengo
+semestral que percibe en junio y en diciembre.
+
+= SOLUCION =
+
+{
+    1.1. Salario del mes de diciembre
+        Salario debido hasta el 21 de diciembre = 
+        Salario del mes/Dias del mes
+        (1300+500+700+30) /30 *21
+        = 1.771 €
+
+    1.2. Parte proporcional de pagas extraordinarias: devengo semestral
+        Calculamos la parte proporcional debida de la paga extra del segundo semestre (paga de
+        navidad) (1 de julio a 31 de diciembre).
+        Si trabaja 184 días ----------- cobra 1.800 € (1.300 € + 500 €)
+        Si trabaja 144 días ----------- cobra x €
+        X = 1.408,7 €
+
+    1.3. Vacaciones no disfrutadas
+        No procede porque el trabajador ha disfrutado de todas las vacaciones generadas.
+
+    1.4. Indemnización
+        No procede de acuerdo con la causa de extinción, la dimisión (además, tampoco genera
+        derecho a cobrar la prestación por desempleo).
+
+    1.5. Total bruto 
+        = 1.771 € + 1.408,7 € = 3.179,7 €
+}
+
+
+
+2. José 
+ha sido despedido por causas ETOP, tiene una antigüedad de 12 años 5 meses y 6 días.
+El despido ha sido efectivo el día 17 de abril y ha disfrutado de 3 días de vacaciones. 
+José percibe las siguientes percepciones:
+• Salario base: 1.500 €/mes
+• Plus de puesto de trabajo: 600 €/mes
+• Dietas: 200 €/mes
+• 2 pagas extraordinarias de salario base de devengo anual que cobra en junio y en
+diciembre.
+
+= SOLUCION =
+
+{
+    1.1. Salario del mes de abril
+        Salario del mes/Dias del mes
+        (1500+600+200) /30 *17
+        = 1303.33€
+
+    1.2. Parte proporcional de pagas extraordinarias
+
+        Paga de navidad
+        Si trabaja 365 días ----------- cobra 1500 €
+        Si trabaja 107 días ----------- cobra x €
+        X = 439,73 €
+
+        Paga de verano
+        Si trabaja 365 días ------- cobra 1.500 €
+        Si trabaja 291 días ------- cobra x €
+        X = 1.195, 89 €
+
+        ¿pq hay dos?
+
+    1.3. Vacaciones no disfrutadas
+        Si trabaja 365 días -------- disfruta de 30 días de vacaciones
+        Si trabaja 107 días -------- disfruta x días de vacaciones
+        X = 8,79 días de vacaciones generados
+
+        8,79 días de vacaciones generados - 3 días de vacaciones disfrutados 
+        = 5,79 días de vacaciones no disfrutados. 
+
+        (14*1300 + 12*600) /365
+        = 69,58 €/dia
+        ¿de donde salen estos numeros?
+
+        5,79 * 69,58 = 402,86 €
+
+    1.4. Indemnización
+        El tipo de despido es objetivo por causas ETOP. Entendemos que es procedente, por tanto, la
+        indemnización que corresponde es 20 días de salario por año trabajado (tope 12 meses).
+
+        12 años 5 meses y 6 días -> 12,5 dias
+
+        Comprobación de tope = días a indemnizar x antiguedad
+        20 x 12,5 = 250 días indemnizados < 365 días. 
+
+        (dias por año por salario diario)
+        20 * 12,5 * 69,58 =  17395 €
+
+
+    1.5. Total bruto = 
+        1303,33 € (salario del mes de abril) 
+        + 439,73 € (paga de navidad)
+        + 1195, 89 € (paga de verano)
+        + 402,86 € (vacaciones no disfrutadas)
+        + 17395 € (indemnizacion)
+        = 20736,81 €
+}
+
+
+
+3. Carmen 
+tiene una antigüedad de 8 años 7 meses y 15 días, y ha sido despedida por ofensas
+verbales a sus compañeros. Su despido, posteriormente, ha sido declarado improcedente
+y la empresa ha decidido no readmitirla. El despido se hizo efectivo el 18 de julio sin haber
+disfrutado de ningún día de vacaciones en el año. Carmen percibe las siguientes
+percepciones:
+• Salario base: 2.000 €/mes
+• Plus de nocturnidad: 500 €/mes
+• Plus de productividad: 200 €/mes
+• 2 pagas extras de salario base y plus de productividad de devengo anual. 
+

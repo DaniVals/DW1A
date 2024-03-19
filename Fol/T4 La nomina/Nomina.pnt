@@ -55,10 +55,10 @@
 
         (estos dos por si acaso)
         > Anticipos (si has pagado algo por andelantado te lo restan)
-            {se suma al total de lo anterior y ya}
+            {se suma directamente al total de lo anterior y ya}
 
         > Valor porductos en especie
-            {se suma al total de lo anterior y ya}
+            {se suma directamente al total de lo anterior y ya}
 
 
     == Liquido total a percibir = (Total devengado / salario neto / Base sujeta a IRPF)
@@ -68,16 +68,4 @@
         Acrotado a CG
         Del 1 al 7, es remuneracion mensual, por lo que todos los meses se cuentan como 30 dias
         Del 8 al 11, es remuneracion diaria, por lo que se cuentan los dias del mes (cuidado con los bisiestos)
-
-
-
-
-
-
-
-
-
-
-
-
 
