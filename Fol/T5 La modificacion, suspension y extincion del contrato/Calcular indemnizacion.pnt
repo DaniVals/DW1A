@@ -1,0 +1,34 @@
+1. Salario del mes de la extincion
+    Finiquito = ¿?
+        Salario supuesto de ese mes (€)
+        / Dias de ese mes ¿grupos de cotizacion? (dias)
+        * Dias trabajados ese mes (dias)
+
+
+2. Pagas extra
+    regla de tres con los dias trabajados y los dias de la paga
+
+3. Vacaciones no disfrutadas
+
+4. Indemnizacion
+
+5. Total bruto
+    Sumamos todo lo anterior
+    + Finiquito
+    + Pagas extra
+    + Vacaciones no disfrutadas
+    + Indemnizacion
+
+1.2. Parte proporcional de pagas extraordinarias: devengo semestral
+    Calculamos la parte proporcional debida de la paga extra del segundo semestre (paga de
+    navidad) (1 de julio a 31 de diciembre).
+    Si trabaja 184 días ----------- cobra 1.800 € (1.300 € + 500 €)
+    Si trabaja 144 días ----------- cobra x €
+    X = 1.408,7 €
+1.3. Vacaciones no disfrutadas
+    No procede porque el trabajador ha disfrutado de todas las vacaciones generadas.
+1.4. Indemnización
+    No procede de acuerdo con la causa de extinción, la dimisión (además, tampoco genera
+    derecho a cobrar la prestación por desempleo).
+1.5. Total bruto 
+    = 1.771 € + 1.408,7 € = 3.179,7 €
