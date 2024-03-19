@@ -1,4 +1,4 @@
-package src.F08ReemplazarDoubleFloat;
+package src.F08ReemplazarDoubleToFloat;
 
 public class FicheroCambiado {
     public static void main(String[] args) {

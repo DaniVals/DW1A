@@ -1,4 +1,4 @@
-package src.F08ReemplazarDoubleFloat;
+package src.F08ReemplazarDoubleToFloat;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

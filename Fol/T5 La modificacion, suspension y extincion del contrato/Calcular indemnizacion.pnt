@@ -1,5 +1,5 @@
 1. Salario del mes de la extincion
-    Finiquito = ¿?
+    Finiquito =
         Salario supuesto de ese mes (€)
         / Dias de ese mes ¿grupos de cotizacion? (dias)
         * Dias trabajados ese mes (dias)
@@ -7,8 +7,24 @@
 
 2. Pagas extra
     regla de tres con los dias trabajados y los dias de la paga
+    dias de la paga ---- cantidad de la paga
+    dias trabajados ---- cantidad de paga devida (x)
+
+    x =
+        dias trabajados (dia)
+        * cantidad de la paga (€)
+        / dias de la paga (dia)
 
 3. Vacaciones no disfrutadas
+    [si se han gastado todos suma 0]
+
+    regla de tres con los dias trabajados y las vacaciones anuales
+    dias de vacaciones gastados                      ---- dias debidos (x)
+    dias para gastar vacaciones (normalmente un año) ---- dias de vacaciones
+
+    x =
+        
+
 
 4. Indemnizacion
 
@@ -19,16 +35,30 @@
     + Vacaciones no disfrutadas
     + Indemnizacion
 
-1.2. Parte proporcional de pagas extraordinarias: devengo semestral
-    Calculamos la parte proporcional debida de la paga extra del segundo semestre (paga de
-    navidad) (1 de julio a 31 de diciembre).
-    Si trabaja 184 días ----------- cobra 1.800 € (1.300 € + 500 €)
-    Si trabaja 144 días ----------- cobra x €
-    X = 1.408,7 €
-1.3. Vacaciones no disfrutadas
-    No procede porque el trabajador ha disfrutado de todas las vacaciones generadas.
-1.4. Indemnización
-    No procede de acuerdo con la causa de extinción, la dimisión (además, tampoco genera
-    derecho a cobrar la prestación por desempleo).
-1.5. Total bruto 
-    = 1.771 € + 1.408,7 € = 3.179,7 €
+.
+
+        Si trabaja 365 días -------- disfruta de 30 días de vacaciones
+        Si trabaja 107 días -------- disfruta x días de vacaciones
+        X = 8,79 días de vacaciones generados
+
+        8,79 días de vacaciones generados - 3 días de vacaciones disfrutados 
+        = 5,79 días de vacaciones no disfrutados. 
+
+        (14*1300 + 12*600) /365
+        = 69,58 €/dia
+        ¿de donde salen estos numeros?
+
+        5,79 * 69,58 = 402,86 €
+
+
+
+        El tipo de despido es objetivo por causas ETOP. Entendemos que es procedente, por tanto, la
+        indemnización que corresponde es 20 días de salario por año trabajado (tope 12 meses).
+
+        12 años 5 meses y 6 días -> 12,5 dias ¿?
+
+        Comprobación de tope = días a indemnizar x antiguedad
+        20 x 12,5 = 250 días indemnizados < 365 días. 
+
+        (dias por año por salario diario)
+        20 * 12,5 * 69,58 =  17395 €
