@@ -31,7 +31,7 @@
             antelacion minima de 30 dias
             Respuestas [individual/colectiva]:
                 aceptar (te pagan los gastos de mudanza)
-                rescindir (Dejar sin efecto) el contrato (indemnizacion de 20 dias por año trabajado con tope de 12 meses)
+                rescindir (Dejar sin efecto) el contrato (indemnizacion)
                 acotar orden + impugnacion juzgado social ¿?
 
 
@@ -43,10 +43,10 @@
             jornada
             horario
             retribucion
-            regimen de trabajo ¿?
+            regimen de trabajo (por ejemplo las instrucciones)
 
         Antelacion De 15 Dias
-        (si es colectiva hay que dejar un periodo de consulta) ¿duración?
+        (si es colectiva hay que dejar un periodo de consulta) (dura 30 dias o 15 si hay menos de 50 trabajadores)
 
         Respuestas [individual/colectiva]:
             aceptar (te pagan los gastos de mudanza)
@@ -54,7 +54,7 @@
             acotar orden + impugnacion juzgado social ¿?
 
 2. Suspension 
-    interrupcion temporal del contrato acordado por ambas partes
+    interrupcion temporal del contrato [acordado por ambas partes]
 
 
     2.1  Causas  Comunes
@@ -68,7 +68,7 @@
             no retribuido
             reserva puesto trabajo
         > suspension de empleo
-        > cierre patronal ¿cuando la empresa cierra?
+        > cierre patronal (como una huelga por parte de la empresa)
             no retribuido
 
         ¿completar?
@@ -78,7 +78,7 @@
         no hay prestacion de la seguridad social
 
         > Voluntaria
-            4-60 meses
+            de 4 a 60 meses
             no suma antiguedad
             necesitas 1 año de antiguedad
             cooldown 4 años
@@ -109,8 +109,8 @@
         Indemnizacion-> una paga extra 
 
     3.1 Esta Cosa Que No Copie ¿?
+    (Expedientes de Regulación Temporal de Empleo)
     ERTE ETOP
-
     ERTE Fuerza Mayor
 
     Mecanismo RED
@@ -118,52 +118,58 @@
             clinica
             sectorial
 
-    3.2 Classroom
+    3.2 Classroom ¿?
         voluntad conjunta
         voluntad persona trabajadora
         voluntad empresa
         otras causas
 
     3.3 Extincion
-    Fallecimiento
-        finiquito
-        indemnizacion
-    Dimision
-        finiquito
-    Jubilacion
-        finiquito
-        indemnizacion
-    Fin Contrato Temporal
-        finiquito
-        indemnizacion
+        Dimision
+            finiquito
+
+        Fallecimiento
+            finiquito
+            indemnizacion
+        
+        Jubilacion
+            finiquito
+            indemnizacion
+        
+        Fin Contrato Temporal
+            finiquito
+            indemnizacion
 
     3.4 Despidos
-    tipo (causa de despido) != calificacion (juez social, es procedente/inprocedente/nulo)
+        tipo (causa de despido) != calificacion (juez social, es procedente/inprocedente/nulo)
 
-    Tipos
-        Disciplinario
-            (falta grave y culpable)
-        Objetivo
-            (ETOP de la trabajadora)
-        Colectivo 
-            (ETOP de la empresa)
-            Suelen ser grupales
-        Fuerza Mayor 
-            (impresibles e inevitables,   "Definitiva")
+        Tipos
+            Disciplinario
+                (falta grave y culpable)
+            
+            Objetivo
+                (ETOP de la trabajadora)
+                
+            Colectivo 
+                (ETOP de la empresa)
+                Suelen ser grupales
 
-    ==  Falta Grave Y Culpable  =
-        faltas repetidas y continuadas
-        indisciplina
-        ofensas
-        transgresion buena fe + abuso confianza
-        disminucion continuada voluntaria del rendimiento
-        alcoholico o toxicomano que afecte negativamente al rendimiento
-        acoso
+            Fuerza Mayor 
+                (impresibles e inevitables,   "Definitiva")
+
+        ==  Falta Grave Y Culpable  =
+            - faltas repetidas y continuadas
+            - indisciplina
+            - ofensas
+            - transgresion buena fe + abuso confianza
+            - disminucion continuada voluntaria del rendimiento
+            - alcoholico o toxicomano que afecte negativamente al rendimiento
+            - acoso
 
     3.4.1 Disciplinario
 
 
-        (explicado mejor en ./Despido disciplinario)
+        (explicado mejor en ./Despido disciplinario.drawio)
         Vas Al SMAC (servicio mediacion arbitrable condicion)
         a declararte como desempleado
 
@@ -172,6 +178,7 @@
         demanda, tres casos
 
         > procendente (te lo aceptan)
+            [SOLO] finiquito
 
         > improcedente (no te lo aceptan, por no estar justificado por la empresa)
             Empleado
@@ -191,21 +198,20 @@
     3.4.2 Objetivo
 
         == causas =
-        E.T.O.P.
-        Ineptitud Sobrevenida (no poder trabajar anymore, partirse una pierna,)
-        Falta De Adaptacion
-            (tiene que haber un intento de formacion y un tiempo de adaptacion)
-        Insufuciencia Presupuestaria
+        - ETOP
+        - Ineptitud Sobrevenida (no poder trabajar anymore, partirse una pierna,)
+        - Falta De Adaptacion    (tiene que haber un intento de formacion y un tiempo de adaptacion)
+        - Insufuciencia Presupuestaria
 
-        == resultado? =
+        == resultado =
         Procedente 
-            -indemnizacion = {20 dias/año trabajado} (capeado a 12 meses)
+            -indemnizacion = {20 dias/año trabajado}
         Improcedente 
-            -indemnizacion = {30 dias/año trabajado} (capeado a 12 meses)
+            -indemnizacion = {30 dias/año trabajado}
         
     3.5 Resumen indemnizaciones
-        Rescindir un traslado permanente {20 dias/año}
+        Rescindir un traslado permanente {20 dias/año -- max 365 dias}
 
-        Disciplinario improcedente {33 dias/año}
-        Objetivo procedente {20 dias/año}
-        Objetivo improcedente {30 dias/año}
+        Disciplinario improcedente       {33 dias/año -- max 730 dias} 
+        Objetivo procedente              {20 dias/año -- max 365 dias}
+        Objetivo improcedente            {30 dias/año -- max 365 dias}

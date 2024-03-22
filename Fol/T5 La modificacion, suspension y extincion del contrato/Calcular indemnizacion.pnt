@@ -19,14 +19,34 @@
     [si se han gastado todos suma 0]
 
     regla de tres con los dias trabajados y las vacaciones anuales
-    dias de vacaciones gastados                      ---- dias debidos (x)
     dias para gastar vacaciones (normalmente un año) ---- dias de vacaciones
+    dias de vacaciones gastados                      ---- dias debidos (x)
 
     x =
+        dias de vacaciones gastados
+        * dias de vacaciones
+        / dias para gastar vacaciones
         
+    Multiplicamos los dias por el salario de esos dias
+    x * salario diario
+
+    = Salario diario =
+        Lo que gana en un año entre 365
+        se incluyen las pagas extra
 
 
 4. Indemnizacion
+
+    > años = dias de antiguedad en la empresa
+    > dias = los dias de indemnizacion por año dependiendo del tipo de despido
+
+
+    [hay que comprobar si se supera el limite de un año]
+
+    dias de indemnizacion = dias * años (maximo 365)
+
+    Indemnizacion total   = dias * años * salario diario
+
 
 5. Total bruto
     Sumamos todo lo anterior
@@ -34,31 +54,3 @@
     + Pagas extra
     + Vacaciones no disfrutadas
     + Indemnizacion
-
-.
-
-        Si trabaja 365 días -------- disfruta de 30 días de vacaciones
-        Si trabaja 107 días -------- disfruta x días de vacaciones
-        X = 8,79 días de vacaciones generados
-
-        8,79 días de vacaciones generados - 3 días de vacaciones disfrutados 
-        = 5,79 días de vacaciones no disfrutados. 
-
-        (14*1300 + 12*600) /365
-        = 69,58 €/dia
-        ¿de donde salen estos numeros?
-
-        5,79 * 69,58 = 402,86 €
-
-
-
-        El tipo de despido es objetivo por causas ETOP. Entendemos que es procedente, por tanto, la
-        indemnización que corresponde es 20 días de salario por año trabajado (tope 12 meses).
-
-        12 años 5 meses y 6 días -> 12,5 dias ¿?
-
-        Comprobación de tope = días a indemnizar x antiguedad
-        20 x 12,5 = 250 días indemnizados < 365 días. 
-
-        (dias por año por salario diario)
-        20 * 12,5 * 69,58 =  17395 €

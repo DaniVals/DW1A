@@ -1,80 +1,89 @@
 <mxfile host="65bd71144e">
     <diagram id="bDDkX-Q1g9hhVsvH_oXu" name="Page-1">
-        <mxGraphModel dx="666" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1117" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="5" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="4">
+                <mxCell id="5" style="edgeStyle=none;html=1;" parent="1" source="2" target="4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="Vas al SMAC a declararte como desempleado" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="2" value="Vas al SMAC a declararte como desempleado" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry y="320" width="130" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="4" target="7">
+                <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="4" target="7" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="4" target="6">
+                <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="4" target="6" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="Se resuelve el conflicto?" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                <mxCell id="4" value="Se resuelve el conflicto?" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
                     <mxGeometry x="160" y="320" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="Si&lt;br&gt;Mediante un acuerdo por ejemplo" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="6" value="Si&lt;br&gt;Mediante un acuerdo por ejemplo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="320" y="400" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="7" target="10">
+                <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="7" target="10" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="NO&lt;br&gt;se demanda en el juzgado de lo social" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="7" value="NO&lt;br&gt;se demanda en el juzgado de lo social" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="320" y="240" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;" edge="1" parent="1" source="10" target="12">
+                <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;" parent="1" source="10" target="12" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=13;" edge="1" parent="1" source="10" target="13">
+                <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=13;" parent="1" source="10" target="13" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;" edge="1" parent="1" source="10" target="14">
+                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;" parent="1" source="10" target="14" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="Resultado de &lt;br&gt;la denuncia" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;" vertex="1" parent="1">
+                <mxCell id="10" value="Resultado de &lt;br&gt;la denuncia" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;" parent="1" vertex="1">
                     <mxGeometry x="480" y="240" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="Procedente&lt;br&gt;Te lo aceptan y ¿?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="33" style="edgeStyle=none;html=1;" edge="1" parent="1" source="12" target="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Procedente&lt;br&gt;Te lo aceptan y ¿?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="640" y="120" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=13;" edge="1" parent="1" source="13" target="22">
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=13;" parent="1" source="13" target="22" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;" edge="1" parent="1" source="13" target="24">
+                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;" parent="1" source="13" target="24" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="Improcedente&lt;br&gt;el despido no es aceptado" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="13" value="Improcedente&lt;br&gt;el despido no es aceptado" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="640" y="240" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="nulo&lt;br&gt;(por vulnerar los derechos fundamentales)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="31" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="14" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="nulo&lt;br&gt;(por vulnerar los derechos fundamentales)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="640" y="360" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="readmision&lt;br&gt;Salario tramitacion" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="20" value="readmision&lt;br&gt;Salario tramitacion" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="800" y="360" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="Empleado cobra prestacion del SEPE" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="22" value="Empleado cobra prestacion del SEPE" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="800" y="240" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=13;" edge="1" parent="1" source="24" target="27">
+                <mxCell id="29" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=13;" parent="1" source="24" target="27" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=13;" edge="1" parent="1" source="24" target="28">
+                <mxCell id="30" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=13;" parent="1" source="24" target="28" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="Empresa elige" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;" vertex="1" parent="1">
+                <mxCell id="24" value="Empresa elige" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;" parent="1" vertex="1">
                     <mxGeometry x="800" y="280" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="27" value="Readmision&lt;br&gt;Le devuelves al sepe la prestacion&lt;br&gt;Te devuelven los salarios devidos" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="27" value="Readmision&lt;br&gt;Le devuelves al sepe la prestacion&lt;br&gt;Te devuelven los salarios devidos" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="1000" y="200" width="160" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" value="Indemnizacion&lt;br&gt;sigues con tu prestacion de desempleo&lt;br&gt;33 dias por año trabajado" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="28" value="Indemnizacion&lt;br&gt;sigues con tu prestacion de desempleo&lt;br&gt;33 dias por año trabajado" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="1000" y="280" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="finiquito&lt;br&gt;NO indemnizacion" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="800" y="120" width="120" height="80" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
