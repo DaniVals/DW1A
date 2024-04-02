@@ -35,15 +35,18 @@
     == Total a deducir = (lo que te quitan; seguridad social, hacienda...)
 
         > Contingencias Comunes
-            (hay que fijarse el el grupo de cotizacion para saber si se prorratea entre 12 o 365)
             {BCCC * %CC = SBruto + prorrateo pagas extra  *  4.7%}
+            (hay que fijarse el el grupo de cotizacion para saber si se prorratea entre 12 o 365)
+
         > Desempleo
-            (esta parte va para cuando te quedes sin trabajo)
             {BCCP * %Desempleo = SBruto + horas extra + prorrateo pagas extra  *  1.55%}
+            (esta parte va para cuando te quedes sin trabajo)
+
         > Formacion Profesional
             {BCCP * %CP = SBruto + horas extra + prorrateo pagas extra  *  0.10%}
+
         > Horas extraordinarias
-            {BCHE * %HE = SBruto + prorrateo pagas extra  *  2%} (4.7%) ¿fuerza mayor?
+            {BCHE * %HE = SBruto + prorrateo pagas extra  *  4.7%} (2% por fuerza mayor)
             ¿si no tiene las pagas prorrateadas se incluye en el BCC?
 
         (porcentajes sacados de la tabla de './% contingencias' ejemplos usando los de trabajador)
@@ -55,29 +58,16 @@
 
         (estos dos por si acaso)
         > Anticipos (si has pagado algo por andelantado te lo restan)
-            {se suma al total de lo anterior y ya}
+            {se suma directamente al total de lo anterior y ya}
 
         > Valor porductos en especie
-            {se suma al total de lo anterior y ya}
+            {se suma directamente al total de lo anterior y ya}
 
 
-    == Liquido total a percibir = (Total devengado / salario neto / Base sujeta a IRPF)
-        Total devengado - Total a deducir
+== Liquido total a percibir = (Total devengado / salario neto / Base sujeta a IRPF)
+    Total devengado - Total a deducir
 
-    == Grupos cotizacion =
-        Acrotado a CG
-        Del 1 al 7, es remuneracion mensual, por lo que todos los meses se cuentan como 30 dias
-        Del 8 al 11, es remuneracion diaria, por lo que se cuentan los dias del mes (cuidado con los bisiestos)
-
-
-
-
-
-
-
-
-
-
-
-
-
+== Grupos cotizacion =
+    Acrotado a CG
+    Del 1 al 7, es remuneracion mensual, por lo que todos los meses se cuentan como 30 dias
+    Del 8 al 11, es remuneracion diaria, por lo que se cuentan los dias del mes (cuidado con los bisiestos)

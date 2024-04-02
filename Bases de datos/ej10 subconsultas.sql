@@ -27,11 +27,11 @@ SELECT FIRST_NAME,SALARY,DEPARTMENT_ID FROM hr.employees WHERE SALARY = ANY (SEL
 
 
 --Muestra el ID y nombre completo de todos los empleados que trabajan en departamentos donde hay personas con nombres que contienen una "T".
-SELECT employee_id, FIRST_NAME||' '||LAST_NAME, DEPARTMENT_ID FROM hr.employees WHERE DEPARTMENT_ID = ANY (SELECT DEPARTMENT_ID FROM hr.employees WHERE first_name LIKE '%T%');
+SELECT employee_id, FIRST_NAME||' '||LAST_NAME, DEPARTMENT_ID FROM hr.employees WHERE DEPARTMENT_ID = ANY (SELECT DEPARTMENT_ID FROM hr.employees WHERE LOWER(first_name) LIKE '%t%');
 
 
 --Indica el nombre, apellido y salario de todos los empleados que ganan más que la media de la empresa y que trabajan en un departamento donde hay hay personas que tienen una "J" en su apellido.
-SELECT FIRST_NAME, LAST_NAME, salary FROM hr.employees WHERE (SELECT AVG(salary) FROM hr.employees)<salary AND DEPARTMENT_ID = ANY (SELECT DEPARTMENT_ID FROM hr.employees WHERE last_name LIKE '%J%');
+SELECT FIRST_NAME, LAST_NAME, salary FROM hr.employees WHERE (SELECT AVG(salary) FROM hr.employees)<salary AND DEPARTMENT_ID = ANY (SELECT DEPARTMENT_ID FROM hr.employees WHERE LOWER(last_name) LIKE '%j%');
 
 --Muestra nombre completo de todos los empleados que trabajan el departamento que tiene por nombre "Marketing". 
 SELECT FIRST_NAME||' '||LAST_NAME FROM hr.employees WHERE DEPARTMENT_ID = ANY (SELECT DEPARTMENT_ID FROM hr.DEPARTMENTS WHERE DEPARTMENT_name LIKE 'Marketing');
@@ -50,3 +50,32 @@ SELECT * FROM hr.employees WHERE DEPARTMENT_ID = ANY (SELECT DEPARTMENT_ID FROM 
 
 --Sacar los nombres de los departamentos que tienen empleados trabajando en ellos.
 SELECT * FROM hr.DEPARTMENTS WHERE DEPARTMENT_ID = ANY (SELECT DEPARTMENT_ID FROM hr.employees);
+
+--16. Indica qué empleados ganan menos que todos los empleados del departamento de Sales.
+SELECT * FROM hr.employees WHERE salary < ANY (SELECT AVG(salary) FROM hr.employees WHERE DEPARTMENT_ID = (SELECT DEPARTMENT_ID FROM hr.departments WHERE DEPARTMENT_NAME LIKE 'Sales'));
+
+--17. Muestra el nombre completo, email (terminado en @compuserv.com) y fecha de entrada en la empresa de todos los empleados que entraron en la empresa después de David Lee (nombre apellido).
+SELECT first_name||' '||last_name, email||'@compuserv.com',hire_date FROM hr.employees WHERE hire_date > (SELECT hire_date FROM hr.employees WHERE first_name LIKE 'David' AND last_name LIKE 'Lee');
+
+--18. Saca la información de los empleados que son manager de algún otro empleado, ordenador por nombre.
+SELECT * FROM hr.employees WHERE employee_id = ANY (SELECT MANAGER_ID FROM hr.employees);
+
+--19. Obtén una query que muestre el nombre completo de los managers que supervisan a más de 3 empleados.
+SELECT * FROM hr.employees WHERE employee_id = ANY (SELECT MANAGER_ID FROM hr.employees GROUP BY MANAGER_ID HAVING 3 < COUNT(MANAGER_ID) );
+
+--20. Muestra el ID de cada departamento junto al dinero que destina a salarios, pero solo en aquellos donde haya al menos un empleado.
+SELECT department_id, SUM(salary) FROM hr.employees GROUP BY department_id HAVING 1 < COUNT(employee_id);
+SELECT department_id, SUM(salary) FROM hr.employees GROUP BY department_id HAVING department_id = ANY (SELECT department_id FROM hr.employees GROUP BY department_id HAVING 1 < COUNT(employee_id) );
+
+--21. Obtén todos los empleados que trabajan en el departamento que Marketing.
+
+--22. Lista todos los empleados que trabajan en la ciudad de Toronto.
+
+--23. Obtén el sueldo más bajo de los empleados que trabajan en San Francisco. 
+
+--24. Muestra la ciudad en la que trabaja el empleado con ID 134.
+
+--25. Saca los empleados que entraron a trabajar después que cualquiera de los empleados del departamento de Marketing.
+
+--26. Muestra toda la información de aquel empleado que es el segundo que más gana de la empresa.
+

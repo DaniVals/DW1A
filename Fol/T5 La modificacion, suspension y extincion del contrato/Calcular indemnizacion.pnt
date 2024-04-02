@@ -1,0 +1,56 @@
+1. Salario del mes de la extincion
+    Finiquito =
+        Salario supuesto de ese mes (€)
+        / Dias de ese mes ¿grupos de cotizacion? (dias)
+        * Dias trabajados ese mes (dias)
+
+
+2. Pagas extra
+    regla de tres con los dias trabajados y los dias de la paga
+    dias de la paga ---- cantidad de la paga
+    dias trabajados ---- cantidad de paga devida (x)
+
+    x =
+        dias trabajados (dia)
+        * cantidad de la paga (€)
+        / dias de la paga (dia)
+
+3. Vacaciones no disfrutadas
+    [si se han gastado todos suma 0]
+
+    regla de tres con los dias trabajados y las vacaciones anuales
+    dias para gastar vacaciones (normalmente un año) ---- dias de vacaciones
+    dias de vacaciones gastados                      ---- dias debidos (x)
+
+    x =
+        dias de vacaciones gastados
+        * dias de vacaciones
+        / dias para gastar vacaciones
+        
+    Multiplicamos los dias por el salario de esos dias
+    x * salario diario
+
+    = Salario diario =
+        Lo que gana en un año entre 365
+        se incluyen las pagas extra
+
+
+4. Indemnizacion
+
+    > años = dias de antiguedad en la empresa
+    > dias = los dias de indemnizacion por año dependiendo del tipo de despido
+
+
+    [hay que comprobar si se supera el limite de un año]
+
+    dias de indemnizacion = dias * años (maximo 365)
+
+    Indemnizacion total   = dias * años * salario diario
+
+
+5. Total bruto
+    Sumamos todo lo anterior
+    + Finiquito
+    + Pagas extra
+    + Vacaciones no disfrutadas
+    + Indemnizacion
