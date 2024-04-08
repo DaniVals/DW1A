@@ -7,6 +7,8 @@ import java.io.ObjectOutputStream;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import src.F16AlumnosRAF.Alumno;
+
 /*
 
 Pedir  los  datos  de  10  alumnos  por  teclado.  Los  datos  son:  número  de  expediente, 

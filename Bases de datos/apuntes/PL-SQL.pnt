@@ -1,0 +1,38 @@
+DECLARE
+    v_iterator NUMBER := 1;
+BEGIN
+
+    IF (condicion 1) [AND] (condicion 2) [OR] (condicion 3) THEN
+
+    ELSIF
+
+    ELSE
+
+    END IF;
+
+
+
+    WHILE (condicion) LOOP
+
+    END LOOP;
+
+
+
+    (si no quieres que el valor original se modifique, usar una nueva variable)
+    FOR (v_iterator) IN (n1) .. (n2) LOOP
+        (accion)
+    END LOOP;
+
+
+    CASE
+        WHEN v_semaforo = 0 THEN
+            v_mensaje := 'Semáforo en rojo';
+        WHEN v_semaforo = 1 THEN
+            v_mensaje := 'Semáforo en ámbar';
+        WHEN v_semaforo = 2 THEN
+            v_mensaje := 'Semáforo en verde';
+        ELSE
+            v_mensaje := 'Semáforo en color absurdo';
+    END CASE;
+
+END;

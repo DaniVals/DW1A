@@ -43,7 +43,7 @@ anterior a la baja había cotizado 2 000 € más por horas extraordinarias. ¿Q
     Diciembre (18/33) 1245.09*18/33 = 679.14 €
 }
 
-3. Libro 2/117
+2. Libro 2/117
 Las siguientes actividades se asocian al ODS 8, al promover el empleo y el trabajo decente para todo. Lucía ha comenzado a
 trabajar en marzo como educadora (G.C. 2) en la ESCUELA INFANTIL COLORETES. Es su primer empleo. El 13 de mayo la operan de
 apendicitis, y permanece de baja hasta el 3 de julio. Tiene una BCCC de 1208,40 €. Calcula la cuantía de la prestación de incapaci-
@@ -53,7 +53,7 @@ dad temporal, si tuviera derecho a ella.
     No va a recibir prestacion porque no llega al periodo de carencia
 }
 
-4. Libro 3/117
+2. Libro 3/117
 Ruth es diseñadora gráfica (G.C, 2) en una agencia publicitaria desde hace 5 años, Del 12 de noviembre al 10 de diciembre ha causado
 baja médica por una contractura muscular no relacionada con su trabajo. La BCCC de octubre es de 1456,20 €. Si tiene derecho a
 la prestación de incapacidad temporal, calcula el importe del subsidio,
@@ -73,7 +73,7 @@ la prestación de incapacidad temporal, calcula el importe del subsidio,
 Indica en cada caso si se cumple los requisitos para cobrar la prestación de incapacidad
 temporal y la cuantía que corresponde. 
 
-5. AV 1/Ejercicios de incapacidad temporal
+3. AV 1/Ejercicios de incapacidad temporal
 Un trabajador afiliado y en alta desde febrero del año pasado, y encuadrado en
 el GC 4 del Régimen General, causa baja por enfermedad común el 27 de marzo
 de 2024, siendo dado de alta el 3 de mayo. Desde enero del presente año su BC
@@ -98,7 +98,7 @@ por contingencias comunes y profesionales es de 1.915,16 €.
 
 }
 
-6. AV 2/Ejercicios de incapacidad temporal
+3. AV 2/Ejercicios de incapacidad temporal
 Una trabajadora con contrato indefinido, afiliada y en alta en la Seguridad Social
 desde 2011, cotiza dentro del grupo de cotización de oficiales de primera. El 9 de
 marzo sufrió un accidente de trabajo que la ha mantenido de baja médica,
@@ -124,7 +124,7 @@ cotizadas fue de 2.890 €.
 
 }
 
-7. AV 3/Ejercicios de incapacidad temporal
+3. AV 3/Ejercicios de incapacidad temporal
 Un trabajador afiliado desde el año 2005, ha sido contratado el día 1 de marzo
 de 2024, siendo encuadrado en el GC 25. El salario pactado en su contrato es
 de 1.303,8 € (incluidas ya las pagas extraordinarias prorrateadas). Debido a un
@@ -150,4 +150,119 @@ contingencias fue de 1815 € (en febrero trabajaba en otra empresa).
 
     312.912 + 130.38 + 586.71 = 1030 €
 
+}
+
+
+4. Libro 22/124
+Alberto, de 24 años, ha finalizado su contrato para la obtención de la práctica profesional. Acredita 2 años de cotización 720
+días) en los últimos 6 años. La suma de bases de cotización por contingencias profesionales de los últimos 180 días ha sido 
+de 10 260 €. No tiene responsabilidades familiares. Indica la cuantía de la prestación por desempleo.
+{
+    1. Si es apto
+        ya que fue despedido por final de contrato de practica y llega al minimo de 360 dias de periodo de carencia (720)
+
+    2. Duracion
+        24 meses / 6 * 2 = 8 meses de prestacion
+
+    3. BR
+        BR = 10260 / 180 = 57 €/dia
+
+    4. Total
+        primer tramo = 57 * 0.7 * 30 = 1197 €/mes
+        segundo tramo = 57 * 0.6 * 30 = 1026 €/mes
+
+        estan dentro del rango 
+        (560 y 1225)
+
+}
+
+4. Libro 21/124
+Rodrigo, de 35 años, ha pasado a una situación de desempleo después de finalizar su contrato por sustitución que ha tenido una
+duración de 18 meses. Tiene acreditados, en los últimos 6 años, 2160 días de cotización. Las bases de cotización por desempleo
+y de contingencias comunes en los últimos 180 días son de 13 800 €. Está casado y tiene 3 hijos menores de edad. La familia no
+tiene otros ingresos porque su esposa no trabaja. Calcula la prestación por desempleo, si tiene derecho a ella,
+
+{
+    1. Si es apto
+        ya que fue despedido por final de contrato temporal y llega al minimo de 360 dias de periodo de carencia (18 meses)
+
+    2. Duracion
+        18 meses / 6 * 2 = 6 meses de prestacion
+
+    3. BR
+        BR = 13800 / 180 = 76.67 €/dia
+
+    4. Total
+        primer tramo = 76.67 * 0.7 * 30 = 1610.07 €/mes
+        segundo tramo = 76.67 * 0.6 * 30 = 1380.06 €/mes
+
+        Rango (749 y 1575)
+        (llega al maximo) primer tramo = 1575 €/mes
+
+        1575 * 180/30 = 9450€
+        1380.06 * (2160-180)/30 = 91083.96€
+
+    TOTAL = 9450 + 91083.96 = 100533.96 €
+
+}
+
+4. Libro 23/124
+Rosario, de 55 años, es despedida por causas objetivas el 31 de julio, Está casada y tiene 2 hijos de 26 y 20 años, ambos estu-
+diantes. La suma de las bases de cotización por contingencias profesionales de los 6 últimos meses es de 10 379,40 € No ha
+realizado horas extraordinarias, Solicita la prestación el 1 de septiembre, justo después de volver de la playa donde estaba de
+vacaciones. Señala todos los derechos que sobre prestación o subsidio por desempleo tiene Rosario.
+
+{
+    (cuenta como un hijo pq tiene 26 o mas)
+
+    1. Si es apto PERO se le paso el plazo, por lo que pierde tiempo del primer tramo
+        ya que fue despedido por despido
+
+    2. Duracion
+        no se sabe la cantidad exacta
+
+    3. BR
+        BR = 10379.40 / 180 = 57.66 €/dia
+
+    4. Total
+        primer tramo =  57.66 * 0.7 * 30 = 1210.86 €/mes
+        segundo tramo = 57.66 * 0.6 * 30 = 1037.88 €/mes
+
+        Rango (749 y 1400)
+}
+4. Libro 11/126
+El 30 de septiembre Roberto, de 45 años, ve extinguida su relación laboral con su em-
+presa por un despido colectivo. Llevaba 10 años trabajando. Tiene un hijo pequeño y
+su cónyuge no trabaja. 
+(IGNORAR => Recordemos que la garantía de unos ingresos mínimos contribuye a alcanzar el ODS 2 de hambre cero.)
+Las bases de cotización por contingencias profesionales de los últimos 6 meses
+son:
+
+Abril: 2250 €
+Mayo: 2650€
+Junio: 2250€
+Julio: 2950 €
+Agosto: 2250 €
+Septiembre: 2250 €
+
+Durante ese periodo ha percibido horas extraordinarias por un importe de 1100 €.
+¿Tiene derecho a percibir la prestación por desempleo?
+En caso afirmativo, calcula el tiempo de percepción y la cuantía.
+Además, señala si tiene derecho al subsidio por desempleo.
+{
+    1. Si es apto
+        ya que fue despedido por final de contrato temporal y llega al minimo de 360 dias de periodo de carencia (18 meses)
+
+    2. Duracion
+        no se sabe la cantidad exacta
+
+    3. BR
+        ultimos seis meses = 2250 * 4 +2950 + 2650 - 1100 = 13500 €
+        BR = 13500 / 180 = 75 €/dia
+
+    4. Total
+        primer tramo =  75 * 0.7 * 30 = 1575 €/mes
+        segundo tramo = 75 * 0.6 * 30 = 1350 €/mes
+
+        Rango (749 y 1400)
 }

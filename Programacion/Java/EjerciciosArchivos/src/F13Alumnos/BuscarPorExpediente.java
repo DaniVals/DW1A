@@ -6,6 +6,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
+import src.F16AlumnosRAF.Alumno;
+
 /*
 
 Pedir  por  teclado  un  número  de  expediente.  Buscar  ese  número  de  expediente  en  el 

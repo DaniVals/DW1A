@@ -2,6 +2,8 @@ package src.F13Alumnos;
 
 import java.util.Comparator;
 
+import src.F16AlumnosRAF.Alumno;
+
 public class OrdenarAlumno implements Comparator<Alumno> {
     
     @Override
