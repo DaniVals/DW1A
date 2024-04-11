@@ -1,0 +1,1 @@
+yo NO hago las interfaces como en clase, en clase nacho usa una funcion de eclipse (swing designer) que vscode no tiene, que simplifica agregar objetos en pantalla, yo (como soy un masoquista), los escribo y coloco por codigo, pero podeis seguir mirando como hago los ejercicios

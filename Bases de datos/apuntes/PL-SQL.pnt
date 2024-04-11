@@ -1,6 +1,21 @@
 DECLARE
-    v_iterator NUMBER := 1;
+    = SIGNOS =
+    [||] (para concatenar/sumar texto)
+    [=] (para comparar)
+    [:=] (para asignar)
+
+    v_iterator_para_un_for NUMBER := 1;
+    v_usar_tipo_de_columna PRODUCTS.PRODUCT_NAME%TYPE;
+	v_guardar_fila_entera_para_select Contacts%ROWTYPE; (luego se sacan los datos con un .columna)
+    nombre_de_excepcion_custom EXCEPTION;
+
 BEGIN
+
+    = BASES =
+    DBMS_OUTPUT.PUT_LINE();
+
+
+    = CONTROL DE FLUJO =
 
     IF (condicion 1) [AND] (condicion 2) [OR] (condicion 3) THEN
 
@@ -34,5 +49,9 @@ BEGIN
         ELSE
             v_mensaje := 'Semáforo en color absurdo';
     END CASE;
+
+EXCEPTION
+
+    WHEN (nombre de la excepcion) THEN
 
 END;
