@@ -72,5 +72,4 @@ public class Main {
     public static void CambiarTextoConCuestionario(){
         texto.setText("Has escrito: "+campoTexto.getText());
     }
-    // una calculadora (dos inputs de texto y cuatro botones) ademas que avise de que no se introduzca ambos valores "debe rellenar ambos campos"
 }

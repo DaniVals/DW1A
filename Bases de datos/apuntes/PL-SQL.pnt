@@ -55,3 +55,11 @@ EXCEPTION
     WHEN (nombre de la excepcion) THEN
 
 END;
+
+PROCEDURE
+    NO puede devolver nada con return
+    se puede ejecutar con 'exec'
+
+FUNCTION
+    DEBE puede devolver nada con return
+    NO se puede ejecutar con 'exec'

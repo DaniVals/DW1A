@@ -38,9 +38,8 @@ public class Main {
         // Agregar el panel a la ventana y la muestra
         ventana.add(panel);
         ventana.setVisible(true);
-        System.out.println("Se acabo el main");
+        System.out.println("Se acabo el main");        
     }
-
 
     public static void CambiarVentanaAlCentro(){
         // Obtener el tamaño de la pantalla
