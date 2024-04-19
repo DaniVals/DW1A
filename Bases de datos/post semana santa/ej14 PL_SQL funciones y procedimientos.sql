@@ -42,3 +42,41 @@ DROP PROCEDURE dividir;
 --5 Escribe un procedimiento mostrarEmpleados(p_id) que reciba un ID de empleado y muestre su nombre y los años que lleva en SouthWind. Usa la función diferenciaAnios para mostrar los años.
 
 --6 Desarrollar la función numSubordinados(p_nombre, p_apellidos) que devuelva el número de subordinados que tiene un empleado. Implementar las excepciones necesarias y una para error inesperado.
+CREATE OR REPLACE FUNCTION numSubordinados(p_nombre VARCHAR2, p_apellido VARCHAR2)
+RETURN NUMBER
+IS
+	v_select Employees.EMPLOYEE_ID%TYPE;
+	v_count NUMBER;
+BEGIN
+    SELECT EMPLOYEE_ID INTO v_select FROM Employees WHERE FIRST_NAME = p_nombre AND LAST_NAME = p_apellido;
+	v_count := 3;
+	RETURN v_count;
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+		DBMS_OUTPUT.PUT_LINE('No se encontro al empleado');
+    WHEN OTHERS THEN
+    	DBMS_OUTPUT.PUT_LINE('Se encontro otra excepcion ' || SQLCODE);
+END;
+/
+BEGIN
+    DBMS_OUTPUT.PUT_LINE(numSubordinados('Rose','Stephens'));
+END;
+--7 Crea un procedimiento crearProducto(p_nombre, p_descripcion, p_categoria, p_coste, p_precio). Ten en cuenta que:
+--    p_categoria es el nombre (texto) de una categoría, y se debe comprobar que ya exista. 
+--    El coste del producto no puede ser inferior al precio de venta. Además, como mínimo SouthWind exige un beneficio del 10% al vender.
+--    El nombre del producto no puede estar repetido.
+-- !SIN ACABAR
+CREATE OR REPLACE PROCEDURE crearProducto(p_nombre VARCHAR2, p_descripcion VARCHAR2, p_categoria NUMBER, p_coste NUMBER, p_precio NUMBER)
+IS
+	v_resultado NUMBER;
+BEGIN
+    v_resultado := p_dividendo / p_divisor;
+	DBMS_OUTPUT.PUT_LINE(v_resultado);
+END;
+/
+execute crearProducto('Intel D4N1', 'corre a todo lo que da',4,255.5,1234);
+DROP PROCEDURE crearProducto;
+
+-- SELECT * FROM Products;
+--8 Escribe un procedimiento cerrarAlmacen(p_nombre_almacen), que elimine un almacén de la base de datos, pero únicamente si tiene menos de 100 unidades de productos en sus instalaciones. Controla los errores que pueda haber, muestra el resultado y la cantidad de unidades que tiene disponibles.

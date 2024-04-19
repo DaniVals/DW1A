@@ -12,6 +12,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import src.I07TresEnRaya.PanelPartidaMaquina.Starts;
+
 public class PanelInicio {
     
     public static JPanel newPanel(int width, int height){
@@ -35,14 +37,41 @@ public class PanelInicio {
         }
 
 
-        // BOTON de inicio
+        // BOTON de partida multiplayer
         JButton boton = new JButton("Empezar partida multijugador local");
         final int widthBoton = 300;
         final int heightBoton = 40;
         boton.setBounds(width/2 - widthBoton/2, height/2 - heightBoton/2, widthBoton, heightBoton);
         boton.addActionListener(new ActionListener() {
 			@Override public void actionPerformed(ActionEvent e) {
-                Main.mostrarPartidaNueva();
+                Main.mostrarPartidaNuevaMultijugador();
+			}
+        });
+        panelInicio.add(boton);
+
+        // BOTON de partida IA
+        final int widthBoton3 = 300;
+        boton = new JButton("IA Facil");
+        boton.setBounds(width/2 - widthBoton3/2 + widthBoton3/3*0, height/2 - heightBoton/2 + 50, widthBoton3/3, heightBoton);
+        boton.addActionListener(new ActionListener() {
+			@Override public void actionPerformed(ActionEvent e) {
+                Main.mostrarPartidaNuevaMaquina(Starts.J1);
+			}
+        });
+        panelInicio.add(boton);
+        boton = new JButton("IA Normal");
+        boton.setBounds(width/2 - widthBoton3/2 + widthBoton3/3*1, height/2 - heightBoton/2 + 50, widthBoton3/3, heightBoton);
+        boton.addActionListener(new ActionListener() {
+			@Override public void actionPerformed(ActionEvent e) {
+                Main.mostrarPartidaNuevaMaquina(Starts.Random);
+			}
+        });
+        panelInicio.add(boton);
+        boton = new JButton("IA Dificil");
+        boton.setBounds(width/2 - widthBoton3/2 + widthBoton3/3*2, height/2 - heightBoton/2 + 50, widthBoton3/3, heightBoton);
+        boton.addActionListener(new ActionListener() {
+			@Override public void actionPerformed(ActionEvent e) {
+                Main.mostrarPartidaNuevaMaquina(Starts.J2);
 			}
         });
         panelInicio.add(boton);
@@ -51,7 +80,7 @@ public class PanelInicio {
         boton = new JButton("Salir");
         final int widthBoton2 = 100;
         final int heightBoton2 = 40;
-        boton.setBounds(width/2 - widthBoton2/2, height/2 - heightBoton/2 + 50, widthBoton2, heightBoton2);
+        boton.setBounds(width/2 - widthBoton2/2, height/2 - heightBoton/2 + 100, widthBoton2, heightBoton2);
         boton.addActionListener(new ActionListener() {
 			@Override public void actionPerformed(ActionEvent e) {
                 Main.ventana.dispose();

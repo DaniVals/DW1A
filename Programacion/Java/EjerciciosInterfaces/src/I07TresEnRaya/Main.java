@@ -1,22 +1,19 @@
 package src.I07TresEnRaya;
 
 import java.awt.CardLayout;
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+
+import src.I07TresEnRaya.PanelPartidaMaquina.Starts;
 
 public class Main {
     // tres en raya
@@ -44,10 +41,34 @@ public class Main {
                 JMenuItem nuevaPartida = new JMenuItem("Nueva PvP");
                 nuevaPartida.addActionListener(new ActionListener() {
 					@Override public void actionPerformed(ActionEvent e) {
-                        mostrarPartidaNueva();
+                        mostrarPartidaNuevaMultijugador();
 					}
                 });
                 menuPartida.add(nuevaPartida);
+
+                JMenuItem nuevaPartida2 = new JMenuItem("Nueva IA Facil");
+                nuevaPartida2.addActionListener(new ActionListener() {
+					@Override public void actionPerformed(ActionEvent e) {
+                        mostrarPartidaNuevaMaquina(Starts.J1);
+					}
+                });
+                menuPartida.add(nuevaPartida2);
+
+                JMenuItem nuevaPartida3 = new JMenuItem("Nueva IA Normal");
+                nuevaPartida3.addActionListener(new ActionListener() {
+					@Override public void actionPerformed(ActionEvent e) {
+                        mostrarPartidaNuevaMaquina(Starts.Random);
+					}
+                });
+                menuPartida.add(nuevaPartida3);
+
+                JMenuItem nuevaPartida4 = new JMenuItem("Nueva IA Dificil");
+                nuevaPartida4.addActionListener(new ActionListener() {
+					@Override public void actionPerformed(ActionEvent e) {
+                        mostrarPartidaNuevaMaquina(Starts.J2);
+					}
+                });
+                menuPartida.add(nuevaPartida4);
 
                 menuPartida.addSeparator(); // Separador entre elementos
 
@@ -67,14 +88,22 @@ public class Main {
         ventana.add(panelContainer);
 
         panelContainer.add(PanelInicio.newPanel(width, height), "inicio");
-        panelContainer.add(PanelPartida.newPanel(width, height), "juego");
+        PanelPartidaMultijugador.newPanel(width, height);
+        panelContainer.add(PanelPartidaMultijugador.panelJuego, "juego");
+        PanelPartidaMaquina.newPanel(width, height);
+        panelContainer.add(PanelPartidaMaquina.panelJuego, "juego2");
 
         ventana.setVisible(true);
     }
     
     // --------------- MOSTRAR PANELES
-    public static void mostrarPartidaNueva(){
+    public static void mostrarPartidaNuevaMultijugador(){
+        PanelPartidaMultijugador.resetPanel();
         cardLayout.show(panelContainer, "juego");
+    }
+    public static void mostrarPartidaNuevaMaquina(Starts ws){
+        PanelPartidaMaquina.resetPanel(ws);
+        cardLayout.show(panelContainer, "juego2");
     }
     public static void mostrarMenuInicio(){
         cardLayout.show(panelContainer, "inicio");
