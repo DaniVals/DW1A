@@ -139,51 +139,54 @@ public class InterfazInsert {
         String mensajeError = "";
         if (textareaId.getText().length()<=0) {
             devuelto = false;
-            mensajeError += "Introduzca una id \n";
+            mensajeError += "Introduzca una id     \n";
         }
         if (textareaNombre.getText().length()<=0) {
             devuelto = false;
-            mensajeError += "Introduzca un nombre \n";
+            mensajeError += "Introduzca un nombre     \n";
         }
         if (textareaApellido.getText().length()<=0) {
             devuelto = false;
-            mensajeError += "Introduzca un apellido \n";
+            mensajeError += "Introduzca un apellido     \n";
         }
         if (textareaEmail.getText().length()<=0) {
             devuelto = false;
-            mensajeError += "Introduzca un email \n";
+            mensajeError += "Introduzca un email     \n";
         }
         if (textareaTelefono.getText().length()<=0) {
             devuelto = false;
-            mensajeError += "Introduzca un telefono \n";
+            mensajeError += "Introduzca un telefono     \n";
         }
-        try {
-            Integer.parseInt(textareaId.getText());
-        } catch (NumberFormatException e) {
-            mensajeError += "Id no valida (un numero) \n";
-            devuelto = false;
-        }
-        try {
-            Integer.parseInt(textareaTelefono.getText());
-        } catch (NumberFormatException e) {
-            mensajeError += "Telefono no valido (un numero) \n";
-            devuelto = false;
-        }
-        
-        
-        try {
-            ResultSet selected = SingletonBBDD.getConnection().createStatement().executeQuery("SELECT COUNT(*) FROM contacto WHERE id = "+Integer.parseInt(textareaId.getText()));
-            selected.next();
-            int contContactos = selected.getInt("COUNT(*)");
-
-            if (0<contContactos) {
-                mensajeError += "No puedes usar esa id, esta repetida \n";
+        if (devuelto == true) {
+            
+            try {
+                Integer.parseInt(textareaId.getText());
+            } catch (NumberFormatException e) {
+                mensajeError += "Id no valida (un numero)     \n";
                 devuelto = false;
             }
-
-        } catch (SQLException e) {
-            mensajeError += "Error al comprobar si ya existe alguien con esa id \n";
-            devuelto = false;
+            try {
+                Integer.parseInt(textareaTelefono.getText());
+            } catch (NumberFormatException e) {
+                mensajeError += "Telefono no valido (un numero)     \n";
+                devuelto = false;
+            }
+        }
+        if (devuelto == true) {
+            try {
+                ResultSet selected = SingletonBBDD.getConnection().createStatement().executeQuery("SELECT COUNT(*) FROM contacto WHERE id = "+Integer.parseInt(textareaId.getText()));
+                selected.next();
+                int contContactos = selected.getInt("COUNT(*)");
+                
+                if (0<contContactos) {
+                    mensajeError += "No puedes usar esa id, esta repetida \n";
+                    devuelto = false;
+                }
+                
+            } catch (SQLException e) {
+                mensajeError += "Error al comprobar si ya existe alguien con esa id \n";
+                devuelto = false;
+            }
         }
 
         if (devuelto == false) {

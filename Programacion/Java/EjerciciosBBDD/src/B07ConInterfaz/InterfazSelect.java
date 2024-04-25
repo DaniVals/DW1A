@@ -219,30 +219,30 @@ public class InterfazSelect {
         }
         if (0<textareaNombre.getText().length()) {
             if (devuelto.length()<=0) {
-                devuelto += "nombre LIKE '"+textareaNombre.getText()+"'";
+                devuelto += "nombre LIKE '"+textareaNombre.getText()+"%'";
             }else{
-                devuelto += " AND nombre LIKE '"+textareaNombre.getText()+"'";
+                devuelto += " AND nombre LIKE '"+textareaNombre.getText()+"%'";
             }
         }
         if (0<textareaApellido.getText().length()) {
             if (devuelto.length()<=0) {
-                devuelto += "apellido LIKE '"+textareaApellido.getText()+"'";
+                devuelto += "apellido LIKE '"+textareaApellido.getText()+"%'";
             }else{
-                devuelto += " AND apellido LIKE '"+textareaApellido.getText()+"'";
+                devuelto += " AND apellido LIKE '"+textareaApellido.getText()+"%'";
             }
         }
         if (0<textareaTelefono.getText().length()) {
             if (devuelto.length()<=0) {
-                devuelto += "telefono = "+textareaTelefono.getText();
+                devuelto += "telefono LIKE '"+textareaTelefono.getText()+"%'";
             }else{
-                devuelto += " AND telefono = "+textareaTelefono.getText();
+                devuelto += " AND telefono LIKE '"+textareaTelefono.getText()+"%'";
             }
         }
         if (0<textareaEmail.getText().length()) {
             if (devuelto.length()<=0) {
-                devuelto += "email LIKE '"+textareaEmail.getText()+"'";
+                devuelto += "email LIKE '"+textareaEmail.getText()+"%'";
             }else{
-                devuelto += " AND email LIKE '"+textareaEmail.getText()+"'";
+                devuelto += " AND email LIKE '"+textareaEmail.getText()+"%'";
             }
         }
         return devuelto;
@@ -250,7 +250,6 @@ public class InterfazSelect {
     private static void seleccionarDatos(){
         if (chekearDatos()) {
             
-            // TODO datos vacios dan error y añadir % a los parametros
             String sql = "FROM contacto";
 
             // si puso un filtro
@@ -270,11 +269,15 @@ public class InterfazSelect {
                 selected.next();
                 int contContactos = selected.getInt("COUNT(*)");
 
-                cursor = SingletonBBDD.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY).executeQuery("SELECT * "+sql);
-                cursor.next();
-                showCursorPosition();
-                
-                labelError.setText("Se ha realizado el select " + contContactos);
+                if (contContactos <= 0) {
+                    labelError.setText("No se han encontrado datos");
+                }else{
+                    cursor = SingletonBBDD.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY).executeQuery("SELECT * "+sql);
+                    cursor.next();
+                    showCursorPosition();
+                    
+                    labelError.setText("Se ha realizado el select " + contContactos);
+                }
             } catch (SQLException e) {
                 labelError.setText("Error al hacer el select");
                 e.printStackTrace();
