@@ -80,3 +80,27 @@ DROP PROCEDURE crearProducto;
 
 -- SELECT * FROM Products;
 --8 Escribe un procedimiento cerrarAlmacen(p_nombre_almacen), que elimine un almacén de la base de datos, pero únicamente si tiene menos de 100 unidades de productos en sus instalaciones. Controla los errores que pueda haber, muestra el resultado y la cantidad de unidades que tiene disponibles.
+
+
+--9 Haz un procedimiento reubicarComercial(p_id_comercial, p_min_pedidos, p_nuevo_puesto) que cambie de puesto de trabajo ("job_title") a un comercial que no haya llegado a un mínimo de pedidos. Ten en cuenta:
+-- Hay que comprobar que el empleado es realmente un comercial.
+-- Muestra el nombre y cuántos pedidos ha logrado.
+-- Si lleva contratado menos de 6 meses, se asume que está aprendiendo y se le perdona (indícalo).
+-- !SIN ACABAR
+CREATE OR REPLACE PROCEDURE reubicarComercial(p_id_comercial NUMBER, p_min_pedidos NUMBER, p_nuevo_puesto VARCHAR2)
+IS
+	v_select Employees%ROWTYPE;
+	v_count_orders NUMBER;
+BEGIN
+
+    SELECT COUNT(order_id) INTO v_count_orders FROM ORDERS WHERE SALESMAN_ID = p_id_comercial;
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+		DBMS_OUTPUT.PUT_LINE('No se encontro al empleado');
+END;
+/
+execute reubicarComercial(1,2,'job_title');
+
+
+--10 Modifica el ejercicio anterior para que muestre además el número de subordinados que el comercial tiene a su cargo. Usa para ello la función numSubordinados que tienes.
