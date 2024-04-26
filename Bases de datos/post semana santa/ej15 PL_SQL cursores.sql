@@ -50,16 +50,41 @@ END;
 /
 EXEC verCargosDirectivos();
 
--- SELECT * FROM employees
--- 1. Crea un procedimiento verCargosDirectivos() que muestre aquellos empleados que dependen directamente del presidente de SouthWind (tiene el ID de empleado 1) junto con los años que llevan en la empresa. Haz el ejercicio con WHILE y luego con FOR.
 -- 2. Escribe un procedimiento verAlmacenes(p_nombre_ciudad) que enseñe todos los almacenes que están en una determinada ciudad. Se debe mostrar error si no existen almacenes o la ciudad.
+CREATE OR REPLACE PROCEDURE verAlmacenes(p_nombre_ciudad VARCHAR2)
+IS
+    CURSOR c_almacenes IS SELECT * FROM warehouses alm JOIN locations loc ON alm.LOCATION_ID = loc.LOCATION_ID WHERE loc.CITY LIKE p_nombre_ciudad;
+	v_fila c_almacenes%ROWTYPE;
+	v_cont NUMBER := 0;
+BEGIN
+    FOR v_fila IN c_almacenes LOOP
+    	v_cont := v_cont+1;
+    	DBMS_OUTPUT.PUT_LINE(v_fila.WAREHOUSE_NAME);
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE('Se han encontrado ' || v_cont || ' almacenes');
+END;
+/
+EXEC verAlmacenes('Southlake');
+
 -- 3. Haz un procedimiento verPedidos(p_nombre_cliente, p_fecha) que obtenga un listado con todos los pedidos que ha realizado un cliente desde una fecha determinada. Por ejemplo, si se ejecutara verPedidos('Mastercard', DATE '2002-01-01'), se obtendría:
 --      Pedido con ID 15 realizado por el vendedor Lilly Fisher el 2002-05-01.
 --      Pedido con ID 26 realizado por el vendedor Gracis Ellis el 2004-06-25.
 --      Total de pedidos: 2
 
--- 2. Escribe un procedimiento verAlmacenes(p_nombre_ciudad) que enseñe todos los almacenes que están en una determinada ciudad. Se debe mostrar error si no existen almacenes o la ciudad.
--- 3. Haz un procedimiento verPedidos(p_nombre_cliente, p_fecha) que obtenga un listado con todos los pedidos que ha realizado un cliente desde una fecha determinada. Por ejemplo, si se ejecutara verPedidos('Mastercard', DATE '2002-01-01'), se obtendría:
---      Pedido con ID 15 realizado por el vendedor Lilly Fisher el 2002-05-01.
---      Pedido con ID 26 realizado por el vendedor Gracis Ellis el 2004-06-25.
---      Total de pedidos: 2
+CREATE OR REPLACE PROCEDURE verPedidos(p_nombre_cliente VARCHAR2, p_fecha DATE)
+IS
+    CURSOR c_pedidos IS SELECT * FROM orders ord JOIN customers cus ON ord.CUSTOMER_ID = cus.CUSTOMER_ID;
+    -- WHERE cus.NAME LIKE p_nombre_cliente;
+	v_fila c_pedidos%ROWTYPE;
+	v_cont NUMBER := 0;
+BEGIN
+    FOR v_fila IN c_pedidos LOOP
+    	IF p_fecha < v_fila.order_date THEN
+    		v_cont := v_cont+1;
+    		DBMS_OUTPUT.PUT_LINE('- Pedido con ID '|| v_fila.order_id ||' realizado por el vendedor '||v_fila.name||' el '||v_fila.order_date);
+		END IF;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE('Se han encontrado ' || v_cont || ' pedidos');
+END;
+/
+EXEC verPedidos('DTE Energy', DATE '2016-01-01');
