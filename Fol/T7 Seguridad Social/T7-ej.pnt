@@ -266,3 +266,77 @@ Además, señala si tiene derecho al subsidio por desempleo.
 
         Rango (749 y 1400)
 }
+
+= REPASO 1º Trimestre =
+
+1. 
+Un trabajador (GC.7) con una antigüedad de 6 años, con contrato indefinido y 
+jornada  completa  sufre  una  enfermedad  común  desde  el  día  8  de  mayo,  y 
+permanece de baja el resto del mes (hasta el 31 de mayo). La base de cotización 
+por contingencias comunes del mes anterior fue de 1 500 €. La base de cotización 
+por contingencias profesionales del mes anterior fue de 1.600 €.  
+Determina si este trabajador tiene derecho a recibir la prestación por incapacidad 
+temporal, su cuantia, y quien realiza el pago y de quién está a cargo. 
+{
+    
+    Asumiendo que esta dado de alta en la seguridad social, si tiene derecho ya que cumple el periodo de carencia (180 dias)
+
+    BR = 1500 / 30 = 50 €/ dia
+    
+    9-11  (3)  - 0€
+    12-24 (12) - 50 * 0.6  * 12 = 360 €   (este tramo lo paga la empresa)
+    25-30 (5)  - 50 * 0.6  * 5  = 270 €   (este la aseguradora)
+    30-31 (2)  - 50 * 0.75 * 9  = 337.5 € (tambien la aseguradora)
+
+    360 + 270 + 337.5 = 967.5 €
+
+}
+
+2. 
+Un trabajador, de 52 años, con dos hijos a cargo, que cesa en su actividad laboral
+por finalización de un contrato por circunstancias de la producción, el día 30 de
+enero de 2024 habiendo cotizado 1.085 días durante los últimos 6 años. Durante
+los últimos 6 meses su base de cotización por contingencias profesionales ha sido
+de 1.200 €, sin haber realizado horas extraordinarias.
+Determina si este trabajador tiene derecho a recibir la prestación contributiva de
+desempleo, su cuantía, y quien realiza el pago y de quién está a cargo.
+{
+    
+    Si tiene derecho ya que cumple el periodo de carencia (360 dias)
+
+    ha generado 360 dias de prestacion de desempleo
+
+    ¿se tiene que multiplicar por 6 ya que es cu BCCP mensual, porque se me hace muy bajo?
+    BR = 1200 / 180 = 6.66 €/ dia 
+
+    primer tramo =  6.66 * 0.7 * 30 = 139.86 €/mes
+    segundo tramo = 6.66 * 0.6 * 30 = 119.88 €/mes
+
+
+    no llega al minimo en ambos casos (749 - 1575)
+    749 en ambos tramos
+
+    (multiplicandolo por 6 por lo de antes)
+
+    139.86 * 6 = 839.16
+    119.88 * 6 = 719.28
+
+    aqui solo se pasa del minimo en el segundo tramo, y da una cantidad mas razonable
+}
+3. 
+Una trabajadora con contrato indefinido, afiliada y en alta en la Seguridad Social
+desde 2011, cotiza dentro del grupo de cotización de oficiales de primera. El 28
+de marzo sufrió un accidente de trabajo que la ha mantenido de baja médica,
+recibiendo asistencia sanitaria, hasta el día 12 de abril de 2024. El mes anterior a
+la baja cotizó por contingencias profesionales sobre una base de 3.000 € , y
+de 330 € por horas extras. En el año anterior a la baja el total de horas extras
+cotizadas fue de 2.900 €.
+Determina si este trabajador tiene derecho a recibir la prestación por incapacidad
+temporal, su cuantía, y quien realiza el pago y de quién está a cargo.
+{
+    cotizacion diaria
+
+    Si tiene derecho ya que esta afiliada a la seguridad social
+
+
+}

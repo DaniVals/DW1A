@@ -1,6 +1,7 @@
 package B07ConInterfaz;
 
 import java.awt.Color;
+import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
@@ -14,7 +15,7 @@ import javax.swing.SwingConstants;
 
 import Singleton.SingletonBBDD;
 
-public class InterfazSelect {
+public class Interfaz {
     
     private static JPanel panel;
 
@@ -30,6 +31,7 @@ public class InterfazSelect {
     private static JLabel labelSelectedTelefono;
     private static JLabel labelSelectedEmail;
 
+    
     private static JLabel labelError;
     
     private static JTextField textareaNombre;
@@ -37,7 +39,12 @@ public class InterfazSelect {
     private static JTextField textareaId;
     private static JTextField textareaTelefono;
     private static JTextField textareaEmail;
-
+    
+    private static JLabel labelSelectedData;
+    private static JTextField textareaCurrentData;
+    private static int posCursor=0;
+    
+    private static JButton buttonInsertDelete;
     private static JButton buttonSelect;
     private static JButton buttonNext;
     private static JButton buttonPrev;
@@ -135,9 +142,18 @@ public class InterfazSelect {
         ////////////////////////////////////////////////////////////////
 
         final int offset = 60;
+        
+        buttonInsertDelete = new JButton("Insertar y reiniciar");
+        buttonInsertDelete.setBounds(Main.width-200-offset, yfraction*1, 200, yfraction*2);
+        buttonInsertDelete.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent e) {
+                insertarYBorrarTextarea();
+            }
+        });
+        panel.add(buttonInsertDelete);
 
-        buttonSelect = new JButton("Aplicar filtros");
-        buttonSelect.setBounds(Main.width-200-offset, yfraction*1, 200, yfraction*3);
+        buttonSelect = new JButton("Select where");
+        buttonSelect.setBounds(Main.width-200-offset, yfraction*4, 200, yfraction*2);
         buttonSelect.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent e) {
                 seleccionarDatos();
@@ -164,6 +180,22 @@ public class InterfazSelect {
         panel.add(buttonPrev);
 
         /////////////////////////////////////////////////////////////////
+        
+        
+        textareaCurrentData = new JTextField("0");
+        textareaCurrentData.setBounds(400 , yfraction*16, 50, yfraction);
+        textareaCurrentData.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent e) {
+                moveTo(2);
+            }
+        });
+        panel.add(textareaCurrentData);
+
+        labelSelectedData = new JLabel("/0");
+        labelSelectedData.setBounds(450, yfraction*16, 100, yfraction);
+        panel.add(labelSelectedData);
+        
+        /////////////////////////////////////////////////////////////////
 
         labelError = new JLabel("Consola");
         labelError.setBounds(50, yfraction*11, Main.width-50-offset, yfraction*4);
@@ -181,7 +213,8 @@ public class InterfazSelect {
         return panel;
     }
 
-
+    ////////////////////////////////////////////// GLOBAL //////////////////////////////////////////////
+    
     private static boolean chekearDatos(){
         boolean devuelto = true;
         String mensajeError = "";
@@ -207,7 +240,8 @@ public class InterfazSelect {
         labelError.setText(mensajeError);
         return devuelto;
     }
-
+    
+    ////////////////////////////////////////////// SELECT //////////////////////////////////////////////
     private static String crearWhere(){
         String devuelto="";
         if (0<textareaId.getText().length()) {
@@ -251,7 +285,7 @@ public class InterfazSelect {
         if (chekearDatos()) {
             
             String sql = "FROM contacto";
-
+            
             // si puso un filtro
             if (
                 0<textareaId.getText().length() 
@@ -259,33 +293,35 @@ public class InterfazSelect {
                 || 0<textareaApellido.getText().length()
                 || 0<textareaTelefono.getText().length()
                 || 0<textareaEmail.getText().length()
-            ) {
-                sql+=" WHERE "+crearWhere();
+                ) {
+                    sql+=" WHERE "+crearWhere();
             }
-
+                
             System.out.println(sql);
             try {
                 ResultSet selected = SingletonBBDD.getConnection().createStatement().executeQuery("SELECT COUNT(*) "+sql);
                 selected.next();
                 int contContactos = selected.getInt("COUNT(*)");
-
+                
                 if (contContactos <= 0) {
                     labelError.setText("No se han encontrado datos");
                 }else{
                     cursor = SingletonBBDD.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY).executeQuery("SELECT * "+sql);
                     cursor.next();
                     showCursorPosition();
+                    posCursor=0;
                     
-                    labelError.setText("Se ha realizado el select " + contContactos);
+                    labelError.setText("Se ha realizado el select");
+                    labelSelectedData.setText("/ "+contContactos);
                 }
             } catch (SQLException e) {
                 labelError.setText("Error al hacer el select");
                 e.printStackTrace();
             }
-
+            
         }
     }
-
+    
     private static void showCursorPosition() throws SQLException{
         if (cursor != null) {
             labelSelectedNombre.setText("N: "+cursor.getString("nombre"));
@@ -295,7 +331,7 @@ public class InterfazSelect {
             labelSelectedEmail.setText("E: "+cursor.getString("email"));
         }
     }
-
+    
     private static void moveCursor(int cant){
         if (cursor==null) {
             return;
@@ -309,9 +345,11 @@ public class InterfazSelect {
                     if (cursor.next()) {
                         labelError.setText("Mostrando contacto...");
                         showCursorPosition();
+                        posCursor++;
                         labelError.setText("Mostrando contacto");
                     }else{
                         labelError.setText("No hay un siguiente");
+                        cursor.previous();
                         break;
                     }
                 }
@@ -320,6 +358,7 @@ public class InterfazSelect {
                     if (cursor.previous()) {
                         labelError.setText("Mostrando contacto...");
                         showCursorPosition();
+                        posCursor--;
                         labelError.setText("Mostrando contacto");
                     }else{
                         labelError.setText("No hay un anterior");
@@ -334,7 +373,71 @@ public class InterfazSelect {
             e.printStackTrace();
         }
     }
+    private static void moveTo(int pos){
+        System.out.println("maximo :"+Integer.parseInt(labelSelectedData.getText().substring(2)));
+        if (cursor==null) {
+            return;
+        }
+        if (pos<0) {
+            return;
+        }
+        if (Integer.parseInt(labelSelectedData.getText().substring(2))<pos) {
+            return;
+        }
+        try {
+            if (posCursor<pos) {
+                System.out.println("superior");
+                for (int i = posCursor; i < pos; i++) {
+                    System.out.println("a");
+                    // cursor.next();
+                }
+            } else {
+                System.out.println("inferior");
+                System.out.println(posCursor+","+pos);
+                for (int i = posCursor-pos; i < posCursor; i++) {
+                    System.out.println("b");
+                    // cursor.previous();
+                }
+            }
+            cursor.next();
+            cursor.previous();
+        } catch (SQLException e) {
+            labelError.setText("Error al mover el cursor");
+            e.printStackTrace();
+        }
+    }
+    
+    ////////////////////////////////////////////// INSERT //////////////////////////////////////////////
+    
+    private static void insertarYBorrarTextarea(){
+        if (chekearDatos()) {
+            
+            String sql = 
+                "INSERT INTO contacto(id, nombre, apellido, telefono, email) "+
+                "VALUES ('"+Integer.parseInt(textareaId.getText())+
+                "', '"+textareaNombre.getText()+
+                "', '"+textareaApellido.getText()+
+                "', '"+Integer.parseInt(textareaTelefono.getText())+
+                "', '"+textareaEmail.getText()+
+                "')"
+            ;
 
-    // programacion 30 mins
-    // interfaz 1 horas
+            System.out.println(sql);
+            try {
+                SingletonBBDD.getConnection().createStatement().executeUpdate(sql);
+                labelError.setText("Se ha realizado el insert");
+
+                textareaApellido.setText("");
+                textareaNombre.setText("");
+                textareaId.setText("");
+                textareaTelefono.setText("");
+                textareaEmail.setText("");
+
+            } catch (SQLException e) {
+                labelError.setText("Error al hacer el insert");
+                e.printStackTrace();
+            }
+
+        }
+    }
 }
