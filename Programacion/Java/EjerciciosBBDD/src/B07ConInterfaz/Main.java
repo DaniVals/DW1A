@@ -4,14 +4,11 @@ import java.sql.SQLException;
 
 import javax.swing.JFrame;
 
-import Singleton.SingletonBBDD;
-
 public class Main {
 
     public static final int width=900;
     public static final int height=700;
     public static void main(String[] args) throws SQLException {
-        SingletonBBDD.createConnectionAsRoot("jdbc:mysql://localhost:3306/agenda");
         
         JFrame ventana = new JFrame();
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -20,7 +17,6 @@ public class Main {
         ventana.setSize(width, height);
 
         ventana.add(Interfaz.getPanel());
-
 
         ventana.setVisible(true);
     }

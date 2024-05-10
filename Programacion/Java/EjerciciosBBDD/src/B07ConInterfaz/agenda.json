@@ -1,0 +1,32 @@
+{
+    "contacto 5": {
+        "apellido": "pulido",
+        "telefono": 678223344,
+        "nombre": "gabi",
+        "email": "gatetor.lolicon.net"
+    },
+    "contacto 3": {
+        "apellido": "three",
+        "telefono": 333,
+        "nombre": "mr",
+        "email": "señortres"
+    },
+    "contacto 4": {
+        "apellido": "gus",
+        "telefono": 2,
+        "nombre": "valsimon",
+        "email": "gusamong"
+    },
+    "contacto 2": {
+        "apellido": "vals simon",
+        "telefono": 4324234,
+        "nombre": "daniel manuel",
+        "email": "dani@vals.simon"
+    },
+    "contacto 0": {
+        "apellido": "Mayo",
+        "telefono": 555,
+        "nombre": "Alex",
+        "email": "alexmayo@ejemplo.com"
+    }
+}

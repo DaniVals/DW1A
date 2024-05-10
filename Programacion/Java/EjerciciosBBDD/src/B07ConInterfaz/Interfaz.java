@@ -1,11 +1,8 @@
 package B07ConInterfaz;
 
 import java.awt.Color;
-import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -13,47 +10,55 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-import Singleton.SingletonBBDD;
+import B07ConInterfaz.helpers.ContactoBBDD;
 
 public class Interfaz {
     
     private static JPanel panel;
 
+    // los que indican que es cada textarea
     private static JLabel labelNombre;
     private static JLabel labelApellido;
     private static JLabel labelId;
     private static JLabel labelTelefono;
     private static JLabel labelEmail;
 
-    private static JLabel labelSelectedNombre;
-    private static JLabel labelSelectedApellido;
-    private static JLabel labelSelectedId;
-    private static JLabel labelSelectedTelefono;
-    private static JLabel labelSelectedEmail;
+    public static JLabel labelSelectedNombre;
+    public static JLabel labelSelectedApellido;
+    public static JLabel labelSelectedId;
+    public static JLabel labelSelectedTelefono;
+    public static JLabel labelSelectedEmail;
 
     
-    private static JLabel labelError;
+    public static JLabel labelError;
     
-    private static JTextField textareaNombre;
-    private static JTextField textareaApellido;
-    private static JTextField textareaId;
-    private static JTextField textareaTelefono;
-    private static JTextField textareaEmail;
+    public static JTextField textareaNombre;
+    public static JTextField textareaApellido;
+    public static JTextField textareaId;
+    public static JTextField textareaTelefono;
+    public static JTextField textareaEmail;
     
-    private static JLabel labelSelectedData;
-    private static JTextField textareaCurrentData;
-    private static int posCursor=0;
+    public static JLabel labelSelectedData;
+    public static JTextField textareaCurrentData;
     
     private static JButton buttonInsertDelete;
+    private static JButton buttonUpdate;
+    private static JButton buttonDelete;
+
+    private static JButton buttonSelectToJSON;
+    private static JButton buttonSelectAll;
     private static JButton buttonSelect;
     private static JButton buttonNext;
     private static JButton buttonPrev;
-
-    private static ResultSet cursor;
+    private static JButton buttonFirst;
+    private static JButton buttonLast;
+    
+    private static ContactoBBDD sql;
 
     private static void createPanel() {
         
         panel = new JPanel();
+        sql = new ContactoBBDD();
         panel.setLayout(null);
         
         final int yfraction = Main.height/20;
@@ -144,40 +149,97 @@ public class Interfaz {
         final int offset = 60;
         
         buttonInsertDelete = new JButton("Insertar y reiniciar");
-        buttonInsertDelete.setBounds(Main.width-200-offset, yfraction*1, 200, yfraction*2);
+        buttonInsertDelete.setBounds(Main.width-200-offset, yfraction*1, 200, (int)(yfraction*1.5));
         buttonInsertDelete.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent e) {
-                insertarYBorrarTextarea();
+                sql.insertarContacto();
             }
         });
         panel.add(buttonInsertDelete);
 
+        buttonUpdate = new JButton("Update por id");
+        buttonUpdate.setBounds(Main.width-200-offset, yfraction*3, 200, (int)(yfraction*1.5));
+        buttonUpdate.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent e) {
+                sql.updatePorIdContacto();
+            }
+        });
+        panel.add(buttonUpdate);
+
+        buttonDelete = new JButton("Delete por id");
+        buttonDelete.setBounds(Main.width-200-offset, yfraction*5, 200, (int)(yfraction*1.5));
+        buttonDelete.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent e) {
+                sql.deletePorIdContacto();
+            }
+        });
+        panel.add(buttonDelete);
+
         buttonSelect = new JButton("Select where");
-        buttonSelect.setBounds(Main.width-200-offset, yfraction*4, 200, yfraction*2);
+        buttonSelect.setBounds(Main.width-200-offset, yfraction*7, 200, (int)(yfraction*1.5));
         buttonSelect.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent e) {
-                seleccionarDatos();
+                sql.selectContactosFiltrado();
             }
         });
         panel.add(buttonSelect);
 
+        buttonSelectAll = new JButton("Select All");
+        buttonSelectAll.setBounds(Main.width-200-offset, yfraction*9, 200, (int)(yfraction*1.5));
+        buttonSelectAll.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent e) {
+                sql.selectContactosAll();
+            }
+        });
+        panel.add(buttonSelectAll);
+
+        buttonSelectToJSON = new JButton("To JSON");
+        buttonSelectToJSON.setBounds(Main.width-200-offset, yfraction*11, 200, (int)(yfraction*1.5));
+        buttonSelectToJSON.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent e) {
+                sql.crearJson();
+            }
+        });
+        panel.add(buttonSelectToJSON);
+
+
+
+        final int botonpequenoWidth = 50;
         buttonNext = new JButton(">");
-        buttonNext.setBounds(Main.width-100-offset, yfraction*16, 100, yfraction);
+        buttonNext.setBounds(Main.width-50-offset, yfraction*16, botonpequenoWidth, yfraction);
         buttonNext.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent e) {
-                moveCursor(1);
+                sql.siguienteContacto();
             }
         });
         panel.add(buttonNext);
 
         buttonPrev = new JButton("<");
-        buttonPrev.setBounds(50, yfraction*16, 100, yfraction);
+        buttonPrev.setBounds(50, yfraction*16, botonpequenoWidth, yfraction);
         buttonPrev.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent e) {
-                moveCursor(-1);
+                sql.anteriorContacto();
             }
         });
         panel.add(buttonPrev);
+
+        buttonLast = new JButton(">>");
+        buttonLast.setBounds(Main.width-55-botonpequenoWidth-offset, yfraction*16, botonpequenoWidth, yfraction);
+        buttonLast.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent e) {
+                sql.ultimoContacto();
+            }
+        });
+        panel.add(buttonLast);
+
+        buttonFirst = new JButton("<<");
+        buttonFirst.setBounds(botonpequenoWidth+55, yfraction*16, botonpequenoWidth, yfraction);
+        buttonFirst.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent e) {
+                sql.primerContacto();
+            }
+        });
+        panel.add(buttonFirst);
 
         /////////////////////////////////////////////////////////////////
         
@@ -186,7 +248,7 @@ public class Interfaz {
         textareaCurrentData.setBounds(400 , yfraction*16, 50, yfraction);
         textareaCurrentData.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent e) {
-                moveTo(2);
+                sql.irAContacto(0);
             }
         });
         panel.add(textareaCurrentData);
@@ -198,11 +260,14 @@ public class Interfaz {
         /////////////////////////////////////////////////////////////////
 
         labelError = new JLabel("Consola");
-        labelError.setBounds(50, yfraction*11, Main.width-50-offset, yfraction*4);
+        labelError.setBounds(50, yfraction*11, Main.width-300-offset, yfraction*4);
         labelError.setBackground(Color.gray);
         labelError.setOpaque(true);
         labelError.setVerticalAlignment(SwingConstants.NORTH);
         panel.add(labelError);
+
+
+        sql.selectContactosFiltrado();
         
     }
 
@@ -213,231 +278,4 @@ public class Interfaz {
         return panel;
     }
 
-    ////////////////////////////////////////////// GLOBAL //////////////////////////////////////////////
-    
-    private static boolean chekearDatos(){
-        boolean devuelto = true;
-        String mensajeError = "";
-        if (0<textareaId.getText().length()) {
-            try {
-                Integer.parseInt(textareaId.getText());
-            } catch (NumberFormatException e) {
-                mensajeError += "Id no valida (un numero) \n";
-                devuelto = false;
-            }
-        }
-        if (0<textareaTelefono.getText().length()) {
-            try {
-                Integer.parseInt(textareaTelefono.getText());
-            } catch (NumberFormatException e) {
-                mensajeError += "Telefono no valido (un numero) \n";
-                devuelto = false;
-            }
-        }
-        if (!devuelto) {
-            labelError.setText(mensajeError);
-        }
-        labelError.setText(mensajeError);
-        return devuelto;
-    }
-    
-    ////////////////////////////////////////////// SELECT //////////////////////////////////////////////
-    private static String crearWhere(){
-        String devuelto="";
-        if (0<textareaId.getText().length()) {
-            if (devuelto.length()<=0) {
-                devuelto += "id = "+textareaId.getText();
-            }else{
-                devuelto += " AND id = "+textareaId.getText();
-            }
-        }
-        if (0<textareaNombre.getText().length()) {
-            if (devuelto.length()<=0) {
-                devuelto += "nombre LIKE '"+textareaNombre.getText()+"%'";
-            }else{
-                devuelto += " AND nombre LIKE '"+textareaNombre.getText()+"%'";
-            }
-        }
-        if (0<textareaApellido.getText().length()) {
-            if (devuelto.length()<=0) {
-                devuelto += "apellido LIKE '"+textareaApellido.getText()+"%'";
-            }else{
-                devuelto += " AND apellido LIKE '"+textareaApellido.getText()+"%'";
-            }
-        }
-        if (0<textareaTelefono.getText().length()) {
-            if (devuelto.length()<=0) {
-                devuelto += "telefono LIKE '"+textareaTelefono.getText()+"%'";
-            }else{
-                devuelto += " AND telefono LIKE '"+textareaTelefono.getText()+"%'";
-            }
-        }
-        if (0<textareaEmail.getText().length()) {
-            if (devuelto.length()<=0) {
-                devuelto += "email LIKE '"+textareaEmail.getText()+"%'";
-            }else{
-                devuelto += " AND email LIKE '"+textareaEmail.getText()+"%'";
-            }
-        }
-        return devuelto;
-    }
-    private static void seleccionarDatos(){
-        if (chekearDatos()) {
-            
-            String sql = "FROM contacto";
-            
-            // si puso un filtro
-            if (
-                0<textareaId.getText().length() 
-                || 0<textareaNombre.getText().length()
-                || 0<textareaApellido.getText().length()
-                || 0<textareaTelefono.getText().length()
-                || 0<textareaEmail.getText().length()
-                ) {
-                    sql+=" WHERE "+crearWhere();
-            }
-                
-            System.out.println(sql);
-            try {
-                ResultSet selected = SingletonBBDD.getConnection().createStatement().executeQuery("SELECT COUNT(*) "+sql);
-                selected.next();
-                int contContactos = selected.getInt("COUNT(*)");
-                
-                if (contContactos <= 0) {
-                    labelError.setText("No se han encontrado datos");
-                }else{
-                    cursor = SingletonBBDD.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY).executeQuery("SELECT * "+sql);
-                    cursor.next();
-                    showCursorPosition();
-                    posCursor=0;
-                    
-                    labelError.setText("Se ha realizado el select");
-                    labelSelectedData.setText("/ "+contContactos);
-                }
-            } catch (SQLException e) {
-                labelError.setText("Error al hacer el select");
-                e.printStackTrace();
-            }
-            
-        }
-    }
-    
-    private static void showCursorPosition() throws SQLException{
-        if (cursor != null) {
-            labelSelectedNombre.setText("N: "+cursor.getString("nombre"));
-            labelSelectedApellido.setText("A: "+cursor.getString("apellido"));
-            labelSelectedId.setText("I: "+cursor.getInt("id"));
-            labelSelectedTelefono.setText("T: "+cursor.getInt("telefono"));
-            labelSelectedEmail.setText("E: "+cursor.getString("email"));
-        }
-    }
-    
-    private static void moveCursor(int cant){
-        if (cursor==null) {
-            return;
-        }
-        if (cant==0) {
-            return;
-        }
-        try {
-            if (0<cant) {
-                for (int i = 0; i < cant; i++) {
-                    if (cursor.next()) {
-                        labelError.setText("Mostrando contacto...");
-                        showCursorPosition();
-                        posCursor++;
-                        labelError.setText("Mostrando contacto");
-                    }else{
-                        labelError.setText("No hay un siguiente");
-                        cursor.previous();
-                        break;
-                    }
-                }
-            } else {
-                for (int i = cant; i < 0; i++) {
-                    if (cursor.previous()) {
-                        labelError.setText("Mostrando contacto...");
-                        showCursorPosition();
-                        posCursor--;
-                        labelError.setText("Mostrando contacto");
-                    }else{
-                        labelError.setText("No hay un anterior");
-                        cursor.next();
-                        break;
-                    }
-                }
-                
-            }
-        } catch (SQLException e) {
-            labelError.setText("Error al mover el cursor");
-            e.printStackTrace();
-        }
-    }
-    private static void moveTo(int pos){
-        System.out.println("maximo :"+Integer.parseInt(labelSelectedData.getText().substring(2)));
-        if (cursor==null) {
-            return;
-        }
-        if (pos<0) {
-            return;
-        }
-        if (Integer.parseInt(labelSelectedData.getText().substring(2))<pos) {
-            return;
-        }
-        try {
-            if (posCursor<pos) {
-                System.out.println("superior");
-                for (int i = posCursor; i < pos; i++) {
-                    System.out.println("a");
-                    // cursor.next();
-                }
-            } else {
-                System.out.println("inferior");
-                System.out.println(posCursor+","+pos);
-                for (int i = posCursor-pos; i < posCursor; i++) {
-                    System.out.println("b");
-                    // cursor.previous();
-                }
-            }
-            cursor.next();
-            cursor.previous();
-        } catch (SQLException e) {
-            labelError.setText("Error al mover el cursor");
-            e.printStackTrace();
-        }
-    }
-    
-    ////////////////////////////////////////////// INSERT //////////////////////////////////////////////
-    
-    private static void insertarYBorrarTextarea(){
-        if (chekearDatos()) {
-            
-            String sql = 
-                "INSERT INTO contacto(id, nombre, apellido, telefono, email) "+
-                "VALUES ('"+Integer.parseInt(textareaId.getText())+
-                "', '"+textareaNombre.getText()+
-                "', '"+textareaApellido.getText()+
-                "', '"+Integer.parseInt(textareaTelefono.getText())+
-                "', '"+textareaEmail.getText()+
-                "')"
-            ;
-
-            System.out.println(sql);
-            try {
-                SingletonBBDD.getConnection().createStatement().executeUpdate(sql);
-                labelError.setText("Se ha realizado el insert");
-
-                textareaApellido.setText("");
-                textareaNombre.setText("");
-                textareaId.setText("");
-                textareaTelefono.setText("");
-                textareaEmail.setText("");
-
-            } catch (SQLException e) {
-                labelError.setText("Error al hacer el insert");
-                e.printStackTrace();
-            }
-
-        }
-    }
 }
