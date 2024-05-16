@@ -14,13 +14,6 @@ EXCEPTION
 		RETURN 'El empleado no existe.';
 END;
 /
-BEGIN
-    DBMS_OUTPUT.PUT_LINE(nombreOficio(100));
-END;
-
--- SELECT * FROM hr.employees
--- SELECT * FROM hr.jobs
-
 -- 2. Desarrollar el procedimiento listadoEmpleados(p_id_departamento) que muestre todos los empleados que tiene un determinado ID de departamento:
 -- Para cada empleado muestra: su ID, nombre, apellidos y nombre de su puesto de trabajo.
 -- El puesto de trabajo debes obtenerlo usando la función que has realizado antes.
@@ -31,4 +24,29 @@ END;
 -- Empleado/a 105: David Austin trabaja como Programmer
 -- Empleado/a 106: Valli Pataballa trabaja como Programmer
 -- Empleado/a 107: Diana Lorentz trabaja como Programmer
+CREATE OR REPLACE PROCEDURE listadoEmpleados(p_id_departamento NUMBER)
+IS
+    CURSOR c_empleados IS SELECT * FROM hr.employees WHERE DEPARTMENT_ID = p_id_departamento;
+	v_fila c_empleados%ROWTYPE;
+BEGIN
+    OPEN c_empleados;
+    FETCH c_empleados INTO v_fila;
+    IF c_empleados%FOUND THEN
+    	WHILE c_empleados%FOUND LOOP
+        	DBMS_OUTPUT.PUT_LINE('- Empleado/a '|| v_fila.EMPLOYEE_ID ||': '||v_fila.FIRST_NAME||' '||v_fila.LAST_NAME||' trabaja como '||nombreOficio(v_fila.EMPLOYEE_ID));
+    		FETCH c_empleados INTO v_fila;
+        END LOOP;
+	ELSE
+    	DBMS_OUTPUT.PUT_LINE('No existe el departamento');
+    END IF;
+EXCEPTION
+    WHEN OTHERS THEN
+    	DBMS_OUTPUT.PUT_LINE('Se encontro otra excepcion ' || SQLCODE);
+END;
+/
+execute listadoEmpleados(60);
+
 -- 3. Desarrollar una vista con los 5 empleados que más ganan de la empresa, pero solo si entraron a trabajar a partir del 2004 . Muestra el nombre, apellidos, sueldo y años que llevan contratados.
+CREATE OR REPLACE VIEW los_cinco_primeros AS (SELECT FIRST_NAME, LAST_NAME, SALARY, HIRE_DATE FROM hr.employees WHERE HIRE_DATE >= DATE '2004-01-01' ORDER BY SALARY DESC FETCH FIRST 5 ROWS ONLY);
+
+SELECT * FROM los_cinco_primeros

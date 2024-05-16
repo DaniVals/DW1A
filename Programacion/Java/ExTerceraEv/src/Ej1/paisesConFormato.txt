@@ -1,0 +1,6 @@
+Pais1;Poblacion1*Extension1;Pib1
+Pais 2;Poblacion 2.0*Extension 2.0;Pib 2
+Pais 3;22*500500;69420
+Pais 4;42*50000;69420
+Pais 5;42*500500;69420
+Pais 6;42*600500;69420
